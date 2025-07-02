@@ -1,0 +1,102 @@
+import argparse
+import glob
+import re
+import os
+import google.generativeai as genai
+
+gemini_key = os.getenv("GENAI_API_KEY", "ENTER KEY HERE") # replace with your actual key
+genai.configure(api_key=gemini_key)
+
+DEFAULT_MODEL = "gemini-2.0-flash"
+
+model = genai.GenerativeModel(model_name=DEFAULT_MODEL)
+
+def extract_sections(input_path, output_path):
+    """
+    Read input_path, send to Gemini with the market-definition prompt,
+    and write the extracted section to output_path.
+    """
+    text = open(input_path, encoding="utf-8").read()
+    prompt = (
+        "For text which I will provide, search for the first instance of the words market definition. "
+        "Starting from a line before the first instance of the words market definition extract ONLY the market definition section. "
+        "You can find when the market definition section starts as that is a line before the first instance of the words market definition. "
+        "You can see when the market definition section ends as that is when you will see another heading. "
+        "You might see some subheadings, but do not stop at the subheadings. Instead, stop at the heading. "
+        "This heading typically follows the bullet point pattern of the first instance of market definition. "
+        "For example, if the first instance of market definition is the following \"A. Market Definition\" then the next heading which you would stop at would be \"B. (Insert heading here)\". "
+        "If the first instance of market definition was \"IV. Market Definition\" then the next heading which you would stop at would be \"V. (Insert heading here)\". "
+        "Do not include the text of the heading which you stop at in the final output. "
+        "Also, at the very start of the document, you will find the words \"Case Number:\" followed by the case number, the word \"Year:\" followed by the year, "
+        "the phrase \"Policy Area:\" followed by the policy area, and the word \"Link:\" followed by the link. "
+        "Make sure that you keep the same exact case number, year, policy area, and link in your output. "
+        "You should have it so that at the top of your output file the case number, year, policy area, and link are listed. "
+        "Now, based on what I just told you, extract only the market definition sections (and the case number, year, policy area, and link) from the following text:\n\n"
+        + text
+    )
+    response = model.generate_content([prompt])
+    os.makedirs(os.path.dirname(output_path) or '.', exist_ok=True)
+    with open(output_path, 'w', encoding='utf-8') as fo:
+        fo.write(response.text)
+    print(f"[chunks] Wrote extracted sections → {os.path.basename(output_path)}")
+
+
+def main():
+    p = argparse.ArgumentParser(
+        description="Batch-extract market-definition sections from pdf_texts files using Gemini"
+    )
+    p.add_argument(
+        "--indir", default="data/extracted_batches",
+        help="Directory containing pdf_texts_<size>_batch_<n>.txt files"
+    )
+    p.add_argument(
+        "--outdir", default="data/extracted_sections",
+        help="Directory to write extract-sections_batch_<n>.txt files"
+    )
+    p.add_argument(
+        "--size", choices=["79","80","both"], default="both",
+        help="Which batch size to process: '79', '80', or 'both'"
+    )
+    p.add_argument(
+        "--model", default=DEFAULT_MODEL,
+        help="Gemini model to use (default: %(default)s)"
+    )
+    args = p.parse_args()
+
+    # reconfigure model if overridden
+    global model
+    if args.model != DEFAULT_MODEL:
+        model = genai.GenerativeModel(model_name=args.model)
+
+    # ensure directories
+    if not os.path.isdir(args.indir):
+        print(f"Error: indir not found: {args.indir}")
+        return
+    os.makedirs(args.outdir, exist_ok=True)
+
+    # determine pattern(s)
+    sizes = [args.size] if args.size in ["79","80"] else ["79","80"]
+    all_files = []
+    for size in sizes:
+        pat = os.path.join(args.indir, f"pdf_texts_{size}_batch_*.txt")
+        all_files.extend(sorted(glob.glob(pat)))
+
+    if not all_files:
+        print(f"No files matched size={args.size} in {args.indir}")
+        return
+
+    for input_path in all_files:
+        fname = os.path.basename(input_path)
+        m = re.search(r"pdf_texts_[0-9]+_batch_(\d+)\.txt$", fname)
+        if not m:
+            continue
+        batch = m.group(1)
+        output_path = os.path.join(
+            args.outdir,
+            f"extract-sections_batch_{batch}.txt"
+        )
+        print(f"[chunks] Processing {fname} → {os.path.basename(output_path)}")
+        extract_sections(input_path, output_path)
+
+if __name__ == '__main__':
+    main()
