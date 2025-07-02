@@ -99,7 +99,7 @@ Follow the steps below to install the required Python packages using `pip`.
 
 4. Go to [competition-cases.ec.europa.eu/search](https://competition-cases.ec.europa.eu/search) and export the Merger cases you want to process. Rename the excel file `cases.xlsx`. Move the file into the data directory.
 
-5. Remove the .gitkeep files from the data/extracted_batches and data/extracted_sections directories.
+5. Remove the `.gitkeep` files from the data/extracted_batches and data/extracted_sections directories.
 
 6. Open the `scrape-chunks.py` and `scrape-individual.py` scripts. At the beginning of both files, where it says `ENTER KEY HERE`, replace that which your actual API key.
 
