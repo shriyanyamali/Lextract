@@ -44,7 +44,7 @@ Do not change the location of any files or directories as that break the pipelin
 │   └── json-merge.py
 ├── debugging/
 │   ├── word-counter.py
-│   └── #_of_unique_cases.py
+│   └── unique_cases_counter.py
 ├── data/
 │   ├── cases.xlsx*
 │   ├── extracted_links.txt*
@@ -133,7 +133,7 @@ Combines all batch-level JSON files of market definitions and their metadata int
 
 These scripts are not part of the pipeline and can be manually executed. They are helpful for debugging, and are aptly placed in the debugging directory.
 
-- `#_of_unique_cases.py`
+- `unique_cases_counter.py`
 Counts the number of unique case numbers found in the merged JSON output.
 
 - `word_counter.py`
