@@ -1,5 +1,5 @@
 ![Maintained](https://img.shields.io/badge/Maintained-yes-green.svg) ![License](https://img.shields.io/badge/License-MIT-green.svg) 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue) ![Last Commit](https://img.shields.io/github/last-commit/shriyanyamali/ec-market-def-scraper)
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue) ![Last Commit](https://img.shields.io/github/last-commit/shriyanyamali/market-def-scraper)
 
 
 # European Commission Market Definition Scraper
@@ -91,7 +91,7 @@ Follow the steps below to install the required Python packages using `pip`.
 
 2. Clone the repo:
 
-    `git clone https://github.com/shriyanyamali/ec-market-def-scraper.git`
+    `git clone https://github.com/shriyanyamali/market-def-scraper.git`
 
 3. Run the following command to install the required packages:
 
@@ -99,11 +99,13 @@ Follow the steps below to install the required Python packages using `pip`.
 
 4. Go to [competition-cases.ec.europa.eu/search](https://competition-cases.ec.europa.eu/search) and export the Merger cases you want to process. Rename the excel file `cases.xlsx`. Move the file into the data directory.
 
-5. Open the `scrape-chunks.py` and `scrape-individual.py` scripts. At the beginning of both files, where it says `ENTER KEY HERE`, replace that which your actual API key.
+5. Remove the .gitkeep files from the data/extracted_batches and data/extracted_sections directories.
 
-6. Open the `run_pipeline.py` script. On line 10, follow the instructions and set `CHUNKS_SIZE` equal to `79`, `80`, or `both`. 79 means that you will only process individual batches with less than 80,000 characters, 80 means that you will only process individual batches with more than 80,000 characters, and both means you will process all batches. 79 uses the least number of tokens, and both uses the most.
+6. Open the `scrape-chunks.py` and `scrape-individual.py` scripts. At the beginning of both files, where it says `ENTER KEY HERE`, replace that which your actual API key.
 
-7. Execute `run_pipeline.py` and wait for the pipeline to finish. You will receive an output detailing how many files of each type were created
+7. Open the `run_pipeline.py` script. On line 10, follow the instructions and set `CHUNKS_SIZE` equal to `79`, `80`, or `both`. 79 means that you will only process individual batches with less than 80,000 characters, 80 means that you will only process individual batches with more than 80,000 characters, and both means you will process all batches. 79 uses the least number of tokens, and both uses the most.
+
+8. Execute `run_pipeline.py` and wait for the pipeline to finish. You will receive an output detailing how many files of each type were created
 
 ## Pipeline Scripts
 
