@@ -85,7 +85,7 @@ Locally hosted LLMs like Ollama or Deepseek can also work, but only use locally 
 
 The setup for the code is the same for Windows, Mac, and Linux.
 
-1. Open your terminal or command prompt
+1. Open your terminal or command prompt.
 
 2. Clone the repo:
 
