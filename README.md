@@ -85,8 +85,6 @@ Locally hosted LLMs like Ollama or Deepseek can also work, but only use locally 
 
 The setup for the code is the same for Windows, Mac, and Linux.
 
-Follow the steps below to install the required Python packages using `pip`. 
-
 1. Open your terminal or command prompt
 
 2. Clone the repo:
