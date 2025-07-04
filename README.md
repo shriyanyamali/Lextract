@@ -103,9 +103,9 @@ Follow the steps below to install the required Python packages using `pip`.
 
 6. Open the `scrape-chunks.py` and `scrape-individual.py` scripts. At the beginning of both files, where it says `ENTER KEY HERE`, replace that which your actual API key.
 
-7. Open the `run_pipeline.py` script. On line 10, follow the instructions and set `CHUNKS_SIZE` equal to `79`, `80`, or `both`. 79 means that you will only process individual batches with less than 80,000 characters, 80 means that you will only process individual batches with more than 80,000 characters, and both means you will process all batches. 79 uses the least number of tokens, and both uses the most.
+7. Open the `run_pipeline.py` script. On line 10, follow the instructions and set `CHUNKS_SIZE` equal to `79`, `80`, or `both`. 79 means that you will only process individual batches with less than 80,000 characters, 80 means that you will only process individual batches with more than 80,000 characters, and both means you will process all batches. `79` uses the least number of tokens, and `both` uses the most.
 
-8. Execute `run_pipeline.py` and wait for the pipeline to finish. You will receive an output detailing how many files of each type were created
+8. Execute `run_pipeline.py` and wait for the pipeline to finish. You will receive an output detailing how many files of each type were created.
 
 ## Pipeline Scripts
 
@@ -147,21 +147,21 @@ This code was used in order to create the database for [Verdictr](https://verdic
 
 Here are all the links, in order, that were referred to in this README:
 
-1. [https://competition-cases.ec.europa.eu/search](https://competition-cases.ec.europa.eu/search) - European Commission Case Search Database  
+1. [competition-cases.ec.europa.eu/search/](https://competition-cases.ec.europa.eu/search) - European Commission Case Search Database  
 
-2. [https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:C_202401645](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:C_202401645) - EU Market Definition Explanation and Use
+2. [eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:C_202401645/](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:C_202401645) - EU Market Definition Explanation and Use
 
-3. [https://www.justice.gov/atr/merger-guidelines/tools/market-definition](https://www.justice.gov/atr/merger-guidelines/tools/market-definition) - DOJ Market Definition Explanation  
+3. [www.justice.gov/atr/merger-guidelines/tools/market-definition/](https://www.justice.gov/atr/merger-guidelines/tools/market-definition) - DOJ Market Definition Explanation  
 
-4. [https://www.python.org/downloads/](https://www.python.org/downloads/) - Python Download
+4. [www.python.org/downloads/](https://www.python.org/downloads/) - Python Download
 
-5. [https://ai.google.dev/](https://ai.google.dev/) - Google Gemini API Key Signup  
+5. [ai.google.dev](https://ai.google.dev/) - Google Gemini API Key Signup  
 
-6. [https://ai.google.dev/gemini-api/docs/models](https://ai.google.dev/gemini-api/docs/models) - Gemini API Model Documentation  
+6. [ai.google.dev/gemini-api/docs/models/](https://ai.google.dev/gemini-api/docs/models) - Gemini API Model Documentation  
 
-7. [https://ai.google.dev/gemini-api/docs/rate-limits](https://ai.google.dev/gemini-api/docs/rate-limits) - Gemini API Rate Limits 
+7. [ai.google.dev/gemini-api/docs/rate-limits/](https://ai.google.dev/gemini-api/docs/rate-limits) - Gemini API Rate Limits 
 
-8. [https://verdictr.shriyanyamali.tech/](https://verdictr.shriyanyamali.tech/) - Verdictr (Usage Example)  
+8. [verdictr.shriyanyamali.tech/](https://verdictr.shriyanyamali.tech/) - Verdictr (Usage Example)  
 
 
 ## Contact
@@ -172,4 +172,4 @@ Personal Website: [shriyanyamali.tech](https://shriyanyamali.tech/)
 
 Copyright © 2025 Shriyan Yamali. All rights reserved.
 
-File last updated on 7/2/2025.
+File last updated on 7/4/2025.
