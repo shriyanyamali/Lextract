@@ -89,11 +89,15 @@ The setup for the code is the same for Windows, Mac, and Linux.
 
 2. Clone the repo:
 
-    `git clone https://github.com/shriyanyamali/market-def-scraper.git`
+    ```
+    git clone https://github.com/shriyanyamali/market-def-scraper.git
+    ```
 
 3. Run the following command to install the required packages:
 
-    `pip install pandas PyPDF2 google-generativeai requests`
+    ```
+    pip install pandas PyPDF2 google-generativeai requests
+    ```
 
 4. Go to [competition-cases.ec.europa.eu/search](https://competition-cases.ec.europa.eu/search) and export the Merger cases you want to process. Rename the excel file `cases.xlsx`. Move the file into the data directory.
 
