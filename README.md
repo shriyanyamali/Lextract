@@ -4,8 +4,6 @@
 
 # European Commission Market Definition Scraper
 
-&#9733; Star this repo on GitHub — it supports me a lot!
-
 ## Table of Contents
 
 - [<u>Purpose</u>](#purpose)
