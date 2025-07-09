@@ -22,7 +22,7 @@
 
 This repository extracts relevant market definitions from European Commission competition case decision PDFs, which are available through their [online case search database](https://competition-cases.ec.europa.eu/search), using an automated pipeline. Market definitions help identify the specific market in which a merger is assessed. According to [EU](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:C_202401645), a "market definition is a tool that the Commission uses to identify and define the boundaries of competition between undertakings. The main purpose of market definition is to identify in a systematic way the effective and immediate competitive constraints faced by the undertakings involved when they offer particular products in a particular area." You can learn more about market definitions [here](https://www.justice.gov/atr/merger-guidelines/tools/market-definition).
 
-It is imperative to use an LLM in order to extract these market definitions, as the EC's decision PDFs assert the market definitions portion of the PDF differently each time, making it difficult to regex or another form of pattern matching while still maintaining a high level of reliability.
+It is imperative to use an LLM in order to extract these market definitions, as the EC's decision PDFs assert the market definitions portion of the PDF differently each time, making it difficult to use regex or another form of pattern matching while still maintaining a high level of reliability.
 
 ## Project Tree
 
