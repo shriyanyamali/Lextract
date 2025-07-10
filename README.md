@@ -107,6 +107,8 @@ The setup for the code is the same for Windows, Mac, and Linux.
 
 8. Execute `run_pipeline.py` and wait for the pipeline to finish. You will receive an output detailing how many files of each type were created.
 
+Note: Please do not change the file names while the code is being executed, as all script rely on the name of the file matching exactly what the script is matching for.
+
 ## Pipeline Scripts
 
 These scripts are part of the pipeline and are executed alongside `run_pipeline.py`. The scripts run in the following order:
@@ -118,10 +120,10 @@ Extracts PDF links, case numbers, years, and policy areas from an Excel file and
 Downloads decision PDFs from extracted links, filters out irrelevant cases, and saves the full text of valid documents into batch text files based on size. Files greater than 80,000 characters are titled `pdf_texts_80_batch_{batch_num}.txt`. Smaller files are labeled `pdf_texts_79_batch_{batch_num}.txt`. Despite the name, each "batch" contains only 1 extracted decision PDF.
 
 3. `scrape-chunks.py`
-Uses Gemini AI to extract the "Market Definition" section from each document and saves it in text files titled `extract-sections_batch_{batch_num}.txt` with the metadata at the top of the file. If processing 79 batches, the number of extract-sections_batch files should match the number of pdf_texts_79_batch files. For 80 batches, it should match the number of pdf_texts_80_batch files. If processing both, it should equal the total of both pdf_texts_79_batch and pdf_texts_80_batch files.
+Uses Gemini AI to extract the "Market Definition" section from each document and saves it in text files titled `extract-sections_79/80_batch_{batch_num}.txt` with the metadata at the top of the file. If processing just 79 batches, the number of extract-sections_batch files should match the number of pdf_texts_79_batch files. For just 80 batches, it should match the number of pdf_texts_80_batch files. If processing both, it should equal the total of both pdf_texts_79_batch and pdf_texts_80_batch files.
 
 4. `scrape-individual.py`
-Uses Gemini AI to extract individual relevant market definitions from each chunked section and outputs them as JSON titled `extract-definitions_batch_{batch_num}.json` with fields like topic, text, case_number, etc. You should have as many extract-definitions_batch files as extract-sections_batch files.
+Uses Gemini AI to extract individual relevant market definitions from each chunked section and outputs them as JSON titled `extract-definitions_79/80_batch_{batch_num}.json` with fields like topic, text, case_number, etc. You should have as many extract-definitions_79/80_batch files as extract-sections_79/80_batch files.
 
 5. `clean-json.py`
 Cleans up the JSON files by removing leading and trailing markdown fences ( '''json and  ``` ) which are created by Gemini in the last stage of processing. Does not create any new files.

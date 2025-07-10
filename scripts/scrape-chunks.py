@@ -4,7 +4,8 @@ import re
 import os
 import google.generativeai as genai
 
-gemini_key = os.getenv("GENAI_API_KEY", "ENTER KEY HERE") # replace with your actual key
+
+gemini_key = os.getenv("GENAI_API_KEY", "ENTER KEY HERE")  # replace with your actual key
 genai.configure(api_key=gemini_key)
 
 DEFAULT_MODEL = "gemini-2.0-flash"
@@ -74,12 +75,12 @@ def main():
         return
     os.makedirs(args.outdir, exist_ok=True)
 
-    # determine pattern(s)
+    # determine which size files to process
     sizes = [args.size] if args.size in ["79","80"] else ["79","80"]
     all_files = []
     for size in sizes:
-        pat = os.path.join(args.indir, f"pdf_texts_{size}_batch_*.txt")
-        all_files.extend(sorted(glob.glob(pat)))
+        pattern = os.path.join(args.indir, f"pdf_texts_{size}_batch_*.txt")
+        all_files.extend(sorted(glob.glob(pattern)))
 
     if not all_files:
         print(f"No files matched size={args.size} in {args.indir}")
@@ -87,15 +88,17 @@ def main():
 
     for input_path in all_files:
         fname = os.path.basename(input_path)
-        m = re.search(r"pdf_texts_[0-9]+_batch_(\d+)\.txt$", fname)
-        if not m:
+        # Capture both size and batch number to avoid overwrites
+        match = re.search(r"pdf_texts_(\d+)_batch_(\d+)\.txt$", fname)
+        if not match:
             continue
-        batch = m.group(1)
-        output_path = os.path.join(
-            args.outdir,
-            f"extract-sections_batch_{batch}.txt"
-        )
-        print(f"[chunks] Processing {fname} → {os.path.basename(output_path)}")
+        size_label, batch_num = match.group(1), match.group(2)
+
+        # include size in output filename (extract-sections_{size}_batch_{batch}.txt)
+        out_fname = f"extract-sections_{size_label}_batch_{batch_num}.txt"
+        output_path = os.path.join(args.outdir, out_fname)
+
+        print(f"[chunks] Processing {fname} → {out_fname}")
         extract_sections(input_path, output_path)
 
 if __name__ == '__main__':

@@ -1,18 +1,16 @@
 import argparse
 import os
 import glob
+import re
 import google.generativeai as genai
 
 gemini_key = "ENTER KEY HERE"  # replace with your actual key
 genai.configure(api_key=gemini_key)
 
 DEFAULT_MODEL = "gemini-2.0-flash"
-
 model = genai.GenerativeModel(model_name=DEFAULT_MODEL)
 
-total_batches = None  # not used, we auto-detect
-
-# Original generate_content logic, with exact prompt
+total_batches = None  
 
 def generate_content(model, input_text):
     response = model.generate_content([
@@ -84,13 +82,13 @@ def generate_content(model, input_text):
         Example: Detergents: The Commission has previously considered that there could be a separate segment for detergents, as compared to dispersants, but left the product market definition open.9 The Commission has suggested a possible subsegmentation of detergents based on the chemical group: (i) sulphonates; (ii) phenates; and (iii) salicylates; it however finally left open the product market definition. The Notifying Party considers that it is not necessary to sub-divide the market further.10 
         Example: “3.1.2. Chemical intermediates for the production of lubricant additives (20) There are multiple chemical intermediates used in the production of lubricant additives. Aniline and diphenylamine ("DPA") are two such chemical intermediates, used as an input for aminic primary antioxidants and other lubricant additives. The Commission has not previously analysed the markets for aniline or DPA. The Notifying Party submits that the precise market definition can be left open in this case. 19 (21) Vertically affected markets arise in relation to antioxidants and the sub-segment of aminic antioxidants for which aniline and DPA are inputs and are therefore considered below in the competitive assessment. (22) For the purposes of the present decision, the exact product market definition for chemical intermediates, in particular aniline and DPA, can be left open since the Proposed Transaction does not raise serious doubts as to its compatibility with the internal market,”
         Example: Flame retardants are chemicals incorporated into a variety of manufactured materials to increase their resistance to ignition, or by acting to slow down combustion. (27) The Notifying Party submits that flame retardants should be sub-segmented according to the chemistry used, for example: (i) brominated; (ii) chlorinated; (iii) aluminium tri-hydroxide based; and (iv) phosphorus based. It argues that it would not be appropriate to sub-segment the market further based on end application, for example for use in: (i) PVC; (ii) polyamides; or (iii) polyurethane ("PU"); because the same type of flame retardants can be used for different applications and different types of flame retardants can be used for the same application.21 (28) The Commission has previously noted that flame retardants can differ depending on the chemistry used or on the basis of the application but that manufacturers of flame retardants can use different inputs to achieve flame retardants with comparable characteristics. 22 The Commission found that the market could potentially be sub-segmented by type but it ultimately left the market definition open, undertaking the assessment based on the market broken down by chemistry and end application. 23 (29) The market investigation was inconclusive as to whether it would be appropriate to further segment the market according to chemistry used. The vast majority of respondents consider that flame retardants based on different chemistries can be used for the same end applications in some cases, but not all. 24 (30) In turn, the market investigation was also inconclusive as to whether it could be appropriate to sub-segment either phosphorus or bromine based flame retardants according to end use. The vast majority of respondents consider that products based on a particular chemistry are partially interchangeable in that they can be used for some end-applications, but not all. 25 In particular, a slight majority consider that certain phosphorus based flame retardants are better suited for PVC applications26 and the majority of respondents consider that certain phosphorus based flame retardants are better suited for PU applications. 27 (31) A horizontally affected market arises in relation to bromine based flame retardants and a few market participants raised concerns regarding phosphorus based flame retardants which are therefore considered below in the competitive assessment. For the purpose of the present decision, the exact scope of the product market definition for flame retardants and its sub-segments therein can be left open, since no serious doubts as to the compatibility of the Proposed Transaction with the internal market arise, regardless of whether the market is considered to be broken down by chemistry or further broken down by end application.
-        Example: Trimethylolpropane ("TMP") is a polyhydric alcohol that serves, inter alia, as an input into trimethylolpropane branched hydroxyl terminated saturated polyester and it is, thus, a common building block in the polymer industry. Chemtura uses TMP for the production of: (i) resins; (ii) PU-hardeners; and (iii) lubricant products; although it also has other uses.29 (37) The Commission has previously considered whether TMP is part of an overall market for polyhydric alcohols or forms a separate product market but has left the product market definition open.30 It has never considered further segmenting the market for TMP. (38) The Notifying Party considers that TMP is substitutable with other polyhydric alcohols therefore that the relevant market should be defined as including all polyhydric alcohols. Moreover, the Notifying Party submits that it supplies one grade of TMP for all applications.31 (39) A vertically affected market arises in relation to the supply of TMP therefore this market which is therefore considered below in the competitive assessment. (40) For the purpose of the present decision, the exact scope of the product market definition for the supply of TMP can be left open, since no serious doubts as to its compatibility with the internal market arise even under the narrowest possible market definition (that is TMP).
+        Example: Trimethylolpropane ("TMP") is a polyhydric alcohol that serves, inter alia, as an input into trimethylolpropane branched hydroxyl terminated saturated polyester and it is, thus, a common building block in the polymer industry. Chemtura uses TMP for the production of: (i) resins; (ii) PU-hardeners; and (iii) lubricant products; although it also has other uses.29 (37) The Commission has previously considered whether TMP is part of an overall market for polyhydric alcohols or forms a separate product market but has left the product market definition open.30 It has never considered further segmenting the market for TMP. (38) The Notifying Party considers that TMP is substitutable with other polyhydric alcohols therefore that the relevant market should be defined as including all polyhydric alcohols. Moreover, the Notifying Party submits that it supplies one grade of TMP for all applications.31 (39) A vertically affected market arises in relation to the supply of TMP therefore this market which is therefore considered below in the competitive assessment. (40) For the purpose of the present decision, the exact scope of the product market definition for the supply of TMP can be left open, since no serious doubts as to the compatibility of the Proposed Transaction with the internal market arise even under the narrowest possible market definition (that is TMP).
         Also, the text I provide you might have some words separated by spaces. For example, the word "example" might be displayed as "exa mple". If you see any words like that, remove the space or spaces that are separating both parts of the word and put the word back together. If there are two words that are spelled correctly, and are separated by a space, do not remove the space or spaces. Only put word fragments together if you know that by putting the fragments together, it fixes the word. Lastly, the relevant market definition is always at least 4 sentences long, but never longer than 12 sentences. Also, it is typically the ending part of a certain topic or product.
-        Now, based on what I just told you, extract all of the individual relevant market definitions (and make sure you separate them with a line) from the following text:
+        Now, based on what I just told you, extract all of the individual relevant market definitions from the following text:
         """ + input_text
-    ]
-    )
+    ])
     return response
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -98,11 +96,11 @@ def main():
     )
     parser.add_argument(
         "--indir", default="data/extracted_sections",
-        help="Directory containing extract-sections_batch_<n>.txt files"
+        help="Directory containing extract-sections_<_size_>_batch_<n>.txt files"
     )
     parser.add_argument(
         "--outdir", default="json",
-        help="Directory to write extract-definitions_batch_<n>.json files"
+        help="Directory to write extract-definitions_<size>_batch_<n>.json files"
     )
     parser.add_argument(
         "--model", default=DEFAULT_MODEL,
@@ -118,19 +116,27 @@ def main():
     os.makedirs(args.indir, exist_ok=True)
     os.makedirs(args.outdir, exist_ok=True)
 
-    files = sorted(glob.glob(os.path.join(args.indir, 'extract-sections_batch_*.txt')))
+    # match both 79 and 80 size files
+    pattern = os.path.join(args.indir, 'extract-sections_*_batch_*.txt')
+    files = sorted(glob.glob(pattern))
     if not files:
-        print(f"No section files found in {args.indir}")
+        print(f"No section files found in {args.indir} matching pattern")
         return
 
     for path in files:
         fname = os.path.basename(path)
-        batch = fname.split('_')[-1].split('.')[0]
-        out_fname = f"extract-definitions_batch_{batch}.json"
+
+        m = re.search(r"extract-sections_(\d+)_batch_(\d+)\.txt$", fname)
+        if not m:
+            continue
+        size_label, batch = m.group(1), m.group(2)
+        out_fname = f"extract-definitions_{size_label}_batch_{batch}.json"
         out_path = os.path.join(args.outdir, out_fname)
 
         print(f"Processing {fname} → {out_fname}")
-        response = generate_content(model, open(path, encoding='utf-8').read())
+        with open(path, encoding='utf-8') as f:
+            input_text = f.read()
+        response = generate_content(model, input_text)
         with open(out_path, 'w', encoding='utf-8') as fo:
             fo.write(response.text)
         print(f"Saved JSON → {out_fname}")
