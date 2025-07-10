@@ -108,7 +108,6 @@ def main():
     )
     args = parser.parse_args()
 
-    # optionally override model
     global model
     if args.model != DEFAULT_MODEL:
         model = genai.GenerativeModel(model_name=args.model)
@@ -116,7 +115,6 @@ def main():
     os.makedirs(args.indir, exist_ok=True)
     os.makedirs(args.outdir, exist_ok=True)
 
-    # match both 79 and 80 size files
     pattern = os.path.join(args.indir, 'extract-sections_*_batch_*.txt')
     files = sorted(glob.glob(pattern))
     if not files:

@@ -4,7 +4,6 @@ import re
 import os
 import google.generativeai as genai
 
-
 gemini_key = os.getenv("GENAI_API_KEY", "ENTER KEY HERE")  # replace with your actual key
 genai.configure(api_key=gemini_key)
 
@@ -64,12 +63,10 @@ def main():
     )
     args = p.parse_args()
 
-    # reconfigure model if overridden
     global model
     if args.model != DEFAULT_MODEL:
         model = genai.GenerativeModel(model_name=args.model)
 
-    # ensure directories
     if not os.path.isdir(args.indir):
         print(f"Error: indir not found: {args.indir}")
         return
@@ -88,13 +85,11 @@ def main():
 
     for input_path in all_files:
         fname = os.path.basename(input_path)
-        # Capture both size and batch number to avoid overwrites
         match = re.search(r"pdf_texts_(\d+)_batch_(\d+)\.txt$", fname)
         if not match:
             continue
         size_label, batch_num = match.group(1), match.group(2)
 
-        # include size in output filename (extract-sections_{size}_batch_{batch}.txt)
         out_fname = f"extract-sections_{size_label}_batch_{batch_num}.txt"
         output_path = os.path.join(args.outdir, out_fname)
 

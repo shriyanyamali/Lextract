@@ -1,5 +1,8 @@
-![Maintained](https://img.shields.io/badge/Maintained-yes-green.svg) ![License](https://img.shields.io/badge/License-MIT-green.svg) 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue) ![Last Commit](https://img.shields.io/github/last-commit/shriyanyamali/market-def-scraper)
+![Maintained](https://img.shields.io/badge/Maintained-yes-green.svg) 
+![License](https://img.shields.io/badge/License-MIT-green.svg) 
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python) 
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue) 
+![Last Commit](https://img.shields.io/github/last-commit/shriyanyamali/market-def-scraper) 
 
 
 # European Commission Market Definition Scraper
