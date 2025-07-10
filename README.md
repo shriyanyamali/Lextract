@@ -34,8 +34,6 @@ Do not change the location of any files or directories as that breaks the pipeli
 ├── README.md
 ├── LICENSE
 ├── run_pipeline.py
-├── .vscode/
-│   └── settings.json
 ├── scripts/
 │   ├── scrape-links.py
 │   ├── scrape-pdf-text.py
