@@ -27,7 +27,7 @@ It is imperative to use an LLM in order to extract these market definitions, as 
 
 ## Project Tree
 
-Do not change the location of any files or directories as that break the pipeline. If you change the location of any files or directories, make sure to reflect the changes in the `run_pipeline.py` file and all affected scripts.
+Do not change the location of any files or directories as that breaks the pipeline. If you change the location of any files or directories, make sure to reflect the changes in the `run_pipeline.py` file and all affected scripts.
 
 ```
 .
