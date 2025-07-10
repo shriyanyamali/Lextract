@@ -171,5 +171,3 @@ Email: [yamalishriyan@gmail.com](mailto:yamalishriyan@gmail.com)
 Personal Website: [shriyanyamali.tech](https://shriyanyamali.tech/)
 
 Copyright © 2025 Shriyan Yamali. All rights reserved.
-
-File last updated on 7/4/2025.
