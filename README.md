@@ -33,6 +33,8 @@ Do not change the location of any files or directories as that breaks the pipeli
 .
 ├── README.md
 ├── LICENSE
+├── Dockerfile
+├── requirements.txt
 ├── run_pipeline.py
 ├── scripts/
 │   ├── scrape-links.py
