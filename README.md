@@ -59,8 +59,8 @@ Do not change the location of any files or directories as that breaks the pipeli
     │       ├── extract-sections_79_batch_XX.txt***
     │       └── extract-sections_80_batch_XX.txt***
     └── json/
-    ├── extract-definitions_79_batch_XX.json***
-    └── extract-definitions_80_batch_XX.json***
+        ├── extract-definitions_79_batch_XX.json***
+        └── extract-definitions_80_batch_XX.json***
 
 
 `*` File will be created during execution <br>
