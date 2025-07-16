@@ -29,40 +29,39 @@ It is imperative to use an LLM in order to extract these market definitions, as 
 
 Do not change the location of any files or directories as that breaks the pipeline. If you change the location of any files or directories, make sure to reflect the changes in the `run_pipeline.py` file and all affected scripts.
 
-```
-.
-├── README.md
-├── LICENSE
-├── Dockerfile
-├── requirements.txt
-├── run_pipeline.py
-├── scripts/
-│   ├── scrape-links.py
-│   ├── scrape-pdf-text.py
-│   ├── scrape-chunks.py
-│   ├── scrape-individual.py
-│   ├── clean-json.py
-│   └── json-merge.py
-├── debugging/
-│   ├── word-counter.py
-│   └── unique_cases_counter.py
-├── data/
-│   ├── cases.xlsx*
-│   ├── extracted_links.txt*
-│   ├── excluded_cases.txt*
-│   ├── included_cases.txt*
-│   ├── output.json*
-│   ├── extracted_batches/
-│   │   ├── pdf_texts_79_batch_XX.txt***
-│   │   └── pdf_texts_80_batch_XX.txt***
-│   └── extracted_sections/
-│       ├── extract-sections_79_batch_XX.txt***
-│       └── extract-sections_80_batch_XX.txt***
-└── json/
+
+    .
+    ├── README.md
+    ├── LICENSE
+    ├── Dockerfile
+    ├── requirements.txt
+    ├── run_pipeline.py
+    ├── scripts/
+    │   ├── scrape-links.py
+    │   ├── scrape-pdf-text.py
+    │   ├── scrape-chunks.py
+    │   ├── scrape-individual.py
+    │   ├── clean-json.py
+    │   └── json-merge.py
+    ├── debugging/
+    │   ├── word-counter.py
+    │   └── unique_cases_counter.py
+    ├── data/
+    │   ├── cases.xlsx*
+    │   ├── extracted_links.txt*
+    │   ├── excluded_cases.txt*
+    │   ├── included_cases.txt*
+    │   ├── output.json*
+    │   ├── extracted_batches/
+    │   │   ├── pdf_texts_79_batch_XX.txt***
+    │   │   └── pdf_texts_80_batch_XX.txt***
+    │   └── extracted_sections/
+    │       ├── extract-sections_79_batch_XX.txt***
+    │       └── extract-sections_80_batch_XX.txt***
+    └── json/
     ├── extract-definitions_79_batch_XX.json***
     └── extract-definitions_80_batch_XX.json***
-    
-```
+
 
 `*` File will be created during execution <br>
 `***` Multiple files may be created during execution <br>
@@ -72,10 +71,6 @@ The "XX" in the file names is a placeholder. When the files are created during e
 Eg. `pdf_texts_79_batch_1.txt` will be followed by `pdf_texts_79_batch_2.txt`. If the biggest number is 82, say as the file `pdf_texts_79_batch_82.txt`, then there are 82 batches of pdf_texts_79.
 
 ## Requirements
-
-Make sure that Git and Python is installed on your system. If not, you can install the latest version of Python from [python.org/downloads](https://www.python.org/downloads/).
-
-For Windows users, make sure that "Add to PATH" is check during installation, or else you will not be able to install the following packages.
 
 You will need a Google Gemini API key in order to run the `scrape-chunks.py` and `scrape-individual.py` scripts. You can get a free api key [here](https://ai.google.dev/). The code is preset to use the Gemini 2.0 Flash model. Though other models have higher accuracy, the Flash models have higher usage limits, making them the only viable option when using the free API key, as you will run into the rate limit very quickly. If you are paying for an API key and have a high budget, you can use 1.5 Pro or 2.5 Pro models for higher accuracy, but they are less cost-efficient. 
 
@@ -89,7 +84,9 @@ Locally hosted LLMs like Ollama or Deepseek can also work, but only use locally 
 
 ### Native (pip)
 
-The setup for the code is the same for Windows, Mac, and Linux.
+Make sure that Git and Python is installed on your system. If not, you can install the latest version of Python from [python.org/downloads](https://www.python.org/downloads/).
+
+For Windows users, make sure that you check "Add to PATH" while installing Python, or else you will not be able to install the following packages.
 
 1. Open your terminal or command prompt.
 
@@ -105,7 +102,7 @@ The setup for the code is the same for Windows, Mac, and Linux.
    cd market-def-scraper
    ``` 
 
-4. Run the following command to install the required packages:
+4. Install the required packages:
 
     ```
     pip install pandas PyPDF2 google-generativeai requests
@@ -171,7 +168,7 @@ The setup for the code is the same for Windows, Mac, and Linux.
     docker run --rm -v "%cd%\data:/app/data" market-def-scraper
     ```
 
-**Note:** Please do not change the file names while the code is being executed, as all script rely on the name of the file matching exactly what the script is matching for.
+**Note:** Do not change the names of any files, as all scripts require the file names to stay exactly the same as the original.
 
 ## Pipeline Scripts
 
