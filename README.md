@@ -229,7 +229,6 @@ Here are all the links, in order, that were referred to in this README:
 
 8. [verdictr.shriyanyamali.tech/](https://verdictr.shriyanyamali.tech/) - Verdictr Usage Example
 
-
 ## Contact
 
 Email: [yamalishriyan@gmail.com](mailto:yamalishriyan@gmail.com)
