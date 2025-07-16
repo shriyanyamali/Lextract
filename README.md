@@ -85,6 +85,8 @@ Locally hosted LLMs like Ollama or Deepseek can also work, but only use locally 
 
 ## Installation and Setup
 
+### Native (pip)
+
 The setup for the code is the same for Windows, Mac, and Linux.
 
 1. Open your terminal or command prompt.
@@ -95,23 +97,79 @@ The setup for the code is the same for Windows, Mac, and Linux.
     git clone https://github.com/shriyanyamali/market-def-scraper.git
     ```
 
-3. Run the following command to install the required packages:
+3. Move into the project directory:
+
+   ```
+   cd market-def-scraper
+   ``` 
+
+4. Run the following command to install the required packages:
 
     ```
     pip install pandas PyPDF2 google-generativeai requests
     ```
 
-4. Go to [competition-cases.ec.europa.eu/search](https://competition-cases.ec.europa.eu/search) and export the Merger cases you want to process. Rename the excel file `cases.xlsx`. Move the file into the data directory.
+5. Go to [competition-cases.ec.europa.eu/search](https://competition-cases.ec.europa.eu/search) and export the Merger cases you want to process. Rename the excel file `cases.xlsx`. Move the file into the data directory.
 
-5. Remove the `.gitkeep` files from the data/extracted_batches and data/extracted_sections directories.
+6. Remove the `.gitkeep` files from the data/extracted_batches and data/extracted_sections directories.
 
-6. Open the `scrape-chunks.py` and `scrape-individual.py` scripts. At the beginning of both files, where it says `ENTER KEY HERE`, replace that which your actual API key.
+7. Open the `scrape-chunks.py` and `scrape-individual.py` scripts. At the beginning of both files, where it says `ENTER KEY HERE`, replace that which your actual API key.
 
-7. Open the `run_pipeline.py` script. On line 10, follow the instructions and set `CHUNKS_SIZE` equal to `79`, `80`, or `both`. 79 means that you will only process individual batches with less than 80,000 characters, 80 means that you will only process individual batches with more than 80,000 characters, and both means you will process all batches. `79` uses the least number of tokens, and `both` uses the most.
+8. Open the `run_pipeline.py` script. On line 10, follow the instructions and set `CHUNKS_SIZE` equal to `79`, `80`, or `both`. 79 means that you will only process individual batches with less than 80,000 characters, 80 means that you will only process individual batches with more than 80,000 characters, and both means you will process all batches. `79` uses the least number of tokens, and `both` uses the most.
 
-8. Execute `run_pipeline.py` and wait for the pipeline to finish. You will receive an output detailing how many files of each type were created.
+9. Execute `run_pipeline.py` and wait for the pipeline to finish. You will receive an output detailing how many files of each type were created.
 
-Note: Please do not change the file names while the code is being executed, as all script rely on the name of the file matching exactly what the script is matching for.
+### Docker
+
+1. Open your terminal or command prompt.
+
+2. Clone the repo:
+
+    ```
+    git clone https://github.com/shriyanyamali/market-def-scraper.git
+    ```
+
+3. Move into the project directory:
+
+   ```
+   cd market-def-scraper
+   ``` 
+
+4. Build the image:  
+
+    ```
+    docker build -t market-def-scraper .
+    ```  
+
+5. Go to [competition-cases.ec.europa.eu/search](https://competition-cases.ec.europa.eu/search) and export the Merger cases you want to process. Rename the excel file `cases.xlsx`. Move the file into the data directory.
+
+6. Remove the `.gitkeep` files from the data/extracted_batches and data/extracted_sections directories.
+
+7. Open the `scrape-chunks.py` and `scrape-individual.py` scripts. At the beginning of both files, where it says `ENTER KEY HERE`, replace that which your actual API key.
+
+8. Open the `run_pipeline.py` script. On line 10, follow the instructions and set `CHUNKS_SIZE` equal to `79`, `80`, or `both`. 79 means that you will only process individual batches with less than 80,000 characters, 80 means that you will only process individual batches with more than 80,000 characters, and both means you will process all batches. `79` uses the least number of tokens, and `both` uses the most.
+
+9. Run the container, which will execute `run_pipeline.py`:  
+
+    **macOS / Linux:**
+
+    ```
+    docker run --rm -v "$(pwd)/data:/app/data" market-def-scraper
+    ```  
+
+    **PowerShell:**
+
+    ```
+    docker run --rm -v ${PWD}\data:/app/data market-def-scraper
+    ```
+
+    **Command Prompt:**
+
+    ```
+    docker run --rm -v "%cd%\data:/app/data" market-def-scraper
+    ```
+
+**Note:** Please do not change the file names while the code is being executed, as all script rely on the name of the file matching exactly what the script is matching for.
 
 ## Pipeline Scripts
 
@@ -167,7 +225,7 @@ Here are all the links, in order, that were referred to in this README:
 
 7. [ai.google.dev/gemini-api/docs/rate-limits/](https://ai.google.dev/gemini-api/docs/rate-limits) - Gemini API Rate Limits 
 
-8. [verdictr.shriyanyamali.tech/](https://verdictr.shriyanyamali.tech/) - Verdictr (Usage Example)  
+8. [verdictr.shriyanyamali.tech/](https://verdictr.shriyanyamali.tech/) - Verdictr Usage Example
 
 
 ## Contact
