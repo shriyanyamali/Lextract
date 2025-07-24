@@ -16,9 +16,9 @@
 - [<u>Pipeline Scripts</u>](#pipeline-scripts)
 - [<u>Non-Required Scripts</u>](#non-required-scripts)
 - [<u>Usage Example</u>](#usage-example)
-- [<u>Attribution</u>](#attribution)
-- [<u>License</u>](#license)
 - [<u>Links</u>](#links)
+- [<u>License</u>](#license)
+- [<u>Attribution</u>](#attribution)
 - [<u>Contact</u>](#contact)
 
 ## Purpose
@@ -208,27 +208,6 @@ Counts the total number of words in a specific batch text file. Can be helpful t
 
 This code was used in order to create the database for [Verdictr](https://verdictr.shriyanyamali.tech/). Verdictr used the scripts in this repo to extract the market definitions and allows you to search a database of thousands of market definitions.
 
-## Attribution
-
-When using the code from this repo (i.e. shriyanyamali/market-def-scraper) you must provide proper attribution.
-
-Specifically, in any work, including but not limited to public, published, commercialized, or derived work that uses or builds upon this repository's code, you must cite the original repository by including the following citation:
-
-```
-This project uses code from the market-def-scraper repository Copyright (c) 2025 Shriyan Yamali, 
-licensed under the GNU Affero General Public License v3.0 (AGPL-3.0) License.
-
-https://github.com/shriyanyamali/market-def-scraper
-```
-
-Failure to include proper attribution when using Verdictr’s code may be considered a violation of the license terms.
-
-## License
-
-The code in this repository is licensed under the AGPL-3.0 License.
-
-View the full license at [www.gnu.org/licenses/agpl-3.0](https://www.gnu.org/licenses/agpl-3.0).
-
 ## Links
 
 Here are all the links, in order, that were referred to in this README:
@@ -248,6 +227,27 @@ Here are all the links, in order, that were referred to in this README:
 7. [ai.google.dev/gemini-api/docs/rate-limits/](https://ai.google.dev/gemini-api/docs/rate-limits) - Gemini API Rate Limits 
 
 8. [verdictr.shriyanyamali.tech/](https://verdictr.shriyanyamali.tech/) - Verdictr Usage Example
+
+## License
+
+The code in this repository is licensed under the AGPL-3.0 License.
+
+View the full license at [www.gnu.org/licenses/agpl-3.0](https://www.gnu.org/licenses/agpl-3.0).
+
+## Attribution
+
+When using the code from this repo (i.e. shriyanyamali/market-def-scraper) you must provide proper attribution.
+
+Specifically, in any work, including but not limited to public, published, commercialized, or derived work that uses or builds upon this repository's code, you must cite the original repository by including the following citation:
+
+```
+This project uses code from the market-def-scraper repository Copyright (c) 2025 Shriyan Yamali, 
+licensed under the GNU Affero General Public License v3.0 (AGPL-3.0) License.
+
+https://github.com/shriyanyamali/market-def-scraper
+```
+
+Failure to include proper attribution when using Verdictr’s code may be considered a violation of the license terms.
 
 ## Contact
 
