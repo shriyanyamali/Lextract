@@ -16,6 +16,8 @@
 - [<u>Pipeline Scripts</u>](#pipeline-scripts)
 - [<u>Non-Required Scripts</u>](#non-required-scripts)
 - [<u>Usage Example</u>](#usage-example)
+- [<u>Attribution</u>](#attribution)
+- [<u>License</u>](#license)
 - [<u>Links</u>](#links)
 - [<u>Contact</u>](#contact)
 
@@ -213,7 +215,8 @@ When using the code from this repo (i.e. shriyanyamali/market-def-scraper) you m
 Specifically, in any work, including but not limited to public, published, commercialized, or derived work that uses or builds upon this repository's code, you must cite the original repository by including the following citation:
 
 ```
-This project uses code from the market-def-scraper repository Copyright (c) 2025 Shriyan Yamali, licensed under the  GNU Affero General Public License v3.0 (AGPL-3.0) License.
+This project uses code from the market-def-scraper repository Copyright (c) 2025 Shriyan Yamali, 
+licensed under the GNU Affero General Public License v3.0 (AGPL-3.0) License.
 
 https://github.com/shriyanyamali/market-def-scraper
 ```
