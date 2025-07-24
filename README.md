@@ -21,7 +21,7 @@
 
 ## Purpose
 
-This repository extracts relevant market definitions from European Commission competition case decision PDFs, which are available through their [online case search database](https://competition-cases.ec.europa.eu/search), using an automated pipeline. Market definitions help identify the specific market in which a merger is assessed. According to [EU](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:C_202401645), a "market definition is a tool that the Commission uses to identify and define the boundaries of competition between undertakings. The main purpose of market definition is to identify in a systematic way the effective and immediate competitive constraints faced by the undertakings involved when they offer particular products in a particular area." You can learn more about market definitions [here](https://www.justice.gov/atr/merger-guidelines/tools/market-definition).
+This repository extracts relevant market definitions from European Commission's competition case decision PDFs, which are available through their [online case search database](https://competition-cases.ec.europa.eu/search), using an automated pipeline. Market definitions help identify the specific market in which a merger is assessed. According to [EU](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:C_202401645), a "market definition is a tool that the Commission uses to identify and define the boundaries of competition between undertakings. The main purpose of [a] market definition is to identify in a systematic way the effective and immediate competitive constraints faced by the undertakings involved when they offer particular products in a particular area." You can learn more about market definitions [here](https://www.justice.gov/atr/merger-guidelines/tools/market-definition).
 
 It is imperative to use an LLM in order to extract these market definitions, as the EC's decision PDFs assert the market definitions portion of the PDF differently each time, making it difficult to use regex or another form of pattern matching while still maintaining a high level of reliability.
 
@@ -205,6 +205,26 @@ Counts the total number of words in a specific batch text file. Can be helpful t
 ## Usage Example
 
 This code was used in order to create the database for [Verdictr](https://verdictr.shriyanyamali.tech/). Verdictr used the scripts in this repo to extract the market definitions and allows you to search a database of thousands of market definitions.
+
+## Attribution
+
+When using the code from this repo (i.e. shriyanyamali/market-def-scraper) you must provide proper attribution.
+
+Specifically, in any work, including but not limited to public, published, commercialized, or derived work that uses or builds upon this repository's code, you must cite the original repository by including the following citation:
+
+```
+This project uses code from the market-def-scraper repository Copyright (c) 2025 Shriyan Yamali, licensed under the  GNU Affero General Public License v3.0 (AGPL-3.0) License.
+
+https://github.com/shriyanyamali/market-def-scraper
+```
+
+Failure to include proper attribution when using Verdictr’s code may be considered a violation of the license terms.
+
+## License
+
+The code in this repository is licensed under the AGPL-3.0 License.
+
+View the full license at [www.gnu.org/licenses/agpl-3.0](https://www.gnu.org/licenses/agpl-3.0).
 
 ## Links
 
