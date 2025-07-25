@@ -206,7 +206,7 @@ Counts the total number of words in a specific batch text file. Can be helpful t
 
 ## Usage Example
 
-This code was used in order to create the database for [Verdictr](https://verdictr.shriyanyamali.tech/). Verdictr used the scripts in this repo to extract the market definitions and allows you to search a database of thousands of market definitions.
+This code was used in order to create the database for [Verdictr](https://verdictr.vercel.app/). Verdictr used the scripts in this repo to extract the market definitions and allows you to search a database of thousands of market definitions.
 
 ## Links
 
@@ -226,7 +226,7 @@ Here are all the links, in order, that were referred to in this README:
 
 7. [ai.google.dev/gemini-api/docs/rate-limits/](https://ai.google.dev/gemini-api/docs/rate-limits) - Gemini API Rate Limits 
 
-8. [verdictr.shriyanyamali.tech/](https://verdictr.shriyanyamali.tech/) - Verdictr Usage Example
+8. [verdictr.vercel.app/](https://verdictr.vercel.app/) - Verdictr Usage Example
 
 ## License
 
