@@ -201,6 +201,37 @@ These scripts are not part of the pipeline and can be manually executed. They ar
 - `word_counter.py`
   Counts the total number of words in a specific batch text file. Can be helpful to see approximately how many tokens a file is using during processing.
 
+## Example Outputs
+
+After the script finishes running, your database.json should have objects that look like this:
+
+```json
+{
+    "case_number": "M.9466",
+    "year": "2019",
+    "policy_area": "Merger",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9466_208_3.pdf",
+    "topic": "Geographic scope of the semiconductor markets",
+    "text": "In NXP/Freescale , the Commission found that the geographic scope of the semiconductor markets was..."
+  },
+    {
+    "case_number": "M.11050",
+    "year": "2023",
+    "policy_area": "Merger",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf",
+    "topic": "Vegetable-Based Bread Toppings Geographic Market Definition",
+    "text": "In this case, the exact geographic market definition can..."
+  },
+  {
+    "case_number": "M.9504",
+    "year": "2019",
+    "policy_area": "Merger",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9504_41_3.pdf",
+    "topic": "Wholesale distribution of building materials, sanitary, heating and plumbing materials, and DIY products",
+    "text": "The Parties submit that the relevant product markets are the..."
+  }
+```
+
 ## Usage Example
 
 This code was used in order to create the database for [JurisMercatus](https://jurismercatus.vercel.app/). JurisMercatus used the scripts in this repo to extract the market definitions and allows you to search a database of thousands of market definitions.
