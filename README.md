@@ -147,26 +147,18 @@ For Windows users, make sure that you check "Add to PATH" while installing Pytho
 8. Open the `run_pipeline.py` script. On line 10, follow the instructions and set `CHUNKS_SIZE` equal to `79`, `80`, or `both`. 79 means that you will only process individual batches with less than 80,000 characters, 80 means that you will only process individual batches with more than 80,000 characters, and both means you will process all batches. `79` uses the least number of tokens, and `both` uses the most.
 
 9. Run the container, which will execute `run_pipeline.py`:
-
-   **macOS / Linux:**
-
-   ```
+   ```bash
+   # macOS / Linux
    docker run --rm -v "$(pwd)/data:/app/data" market-def-scraper
-   ```
 
-   **PowerShell:**
-
-   ```
+   # PowerShell
    docker run --rm -v ${PWD}\data:/app/data market-def-scraper
-   ```
 
-   **Command Prompt:**
-
-   ```
+   # Command Prompt
    docker run --rm -v "%cd%\data:/app/data" market-def-scraper
    ```
 
-> Note: Do not change the names of any files, as all scripts require the file names to stay exactly the same as the original.
+   > Note: Do not change the names of any files, as all scripts require the file names to stay exactly the same as the original.
 
 ## Pipeline Scripts
 
