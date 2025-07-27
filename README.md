@@ -198,29 +198,29 @@ After the script finishes running, your database.json should have objects that l
 
 ```json
 {
-    "case_number": "M.9466",
-    "year": "2019",
-    "policy_area": "Merger",
-    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9466_208_3.pdf",
-    "topic": "Geographic scope of the semiconductor markets",
-    "text": "In NXP/Freescale , the Commission found that the geographic scope of the semiconductor markets was..."
-  },
-    {
-    "case_number": "M.11050",
-    "year": "2023",
-    "policy_area": "Merger",
-    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf",
-    "topic": "Vegetable-Based Bread Toppings Geographic Market Definition",
-    "text": "In this case, the exact geographic market definition can..."
-  },
-  {
-    "case_number": "M.9504",
-    "year": "2019",
-    "policy_area": "Merger",
-    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9504_41_3.pdf",
-    "topic": "Wholesale distribution of building materials, sanitary, heating and plumbing materials, and DIY products",
-    "text": "The Parties submit that the relevant product markets are the..."
-  }
+   "case_number": "M.9466",
+   "year": "2019",
+   "policy_area": "Merger",
+   "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9466_208_3.pdf",
+   "topic": "Geographic scope of the semiconductor markets",
+   "text": "In the Commission found that the geographic scope of the semiconductor markets was..."
+},
+{
+   "case_number": "M.11050",
+   "year": "2023",
+   "policy_area": "Merger",
+   "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf",
+   "topic": "Vegetable-Based Bread Toppings Geographic Market Definition",
+   "text": "In this case, the exact geographic market definition can..."
+},
+{
+   "case_number": "M.9504",
+   "year": "2019",
+   "policy_area": "Merger",
+   "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9504_41_3.pdf",
+   "topic": "Wholesale distribution of building materials, sanitary, and plumbing materials",
+   "text": "The Parties submit that the relevant product markets are the..."
+}
 ```
 
 ## Usage Example
