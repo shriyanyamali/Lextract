@@ -1,7 +1,5 @@
 ![Maintained](https://img.shields.io/badge/Maintained-yes-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue)
 ![Last Commit](https://img.shields.io/github/last-commit/shriyanyamali/market-def-scraper)
 
 # European Commission Market Definition Scraper
@@ -14,6 +12,7 @@
 - [<u>Installation and Setup</u>](#installation-and-setup)
 - [<u>Pipeline Scripts</u>](#pipeline-scripts)
 - [<u>Non-Required Scripts</u>](#non-required-scripts)
+- [<u>Example Outputs</u>](#example-outputs)
 - [<u>Usage Example</u>](#usage-example)
 - [<u>Links</u>](#links)
 - [<u>License</u>](#license)
@@ -167,7 +166,7 @@ For Windows users, make sure that you check "Add to PATH" while installing Pytho
    docker run --rm -v "%cd%\data:/app/data" market-def-scraper
    ```
 
-**Note:** Do not change the names of any files, as all scripts require the file names to stay exactly the same as the original.
+> Note: Do not change the names of any files, as all scripts require the file names to stay exactly the same as the original.
 
 ## Pipeline Scripts
 
