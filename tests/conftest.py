@@ -20,13 +20,11 @@ class DummyPage:
 
 @pytest.fixture(autouse=True)
 def preserve_cwd(monkeypatch, tmp_path):
-    """Run tests in isolated temporary directory."""
     monkeypatch.chdir(tmp_path)
     yield
 
 @pytest.fixture
 def sample_pdf_bytes():
-    """Create a PDF (4 pages) for testing text extraction."""
     writer = PdfWriter()
     for _ in range(4):
         writer.add_blank_page(width=72, height=72)
@@ -36,7 +34,6 @@ def sample_pdf_bytes():
 
 @pytest.fixture
 def short_pdf_bytes():
-    """Create a PDF (3 pages) for testing exclusion logic."""
     writer = PdfWriter()
     for _ in range(3):
         writer.add_blank_page(width=72, height=72)
