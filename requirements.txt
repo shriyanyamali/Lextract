@@ -3,3 +3,4 @@ pytest
 PyPDF2
 google-generativeai
 requests
+openpyxl
