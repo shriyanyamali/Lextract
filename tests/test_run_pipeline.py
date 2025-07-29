@@ -1,6 +1,7 @@
 import os
 import sys
-# Add project root (parent directory) to sys.path
+
+# Add project root to sys.path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
 
 import glob
@@ -11,7 +12,7 @@ import run_pipeline
 
 
 def test_safe_run_missing_paths(monkeypatch, capsys):
-    # Simulate that no input paths exist
+
     monkeypatch.setattr(os.path, "exists", lambda path: False)
     run_pipeline.safe_run(
         ["python", "script.py"],
@@ -80,10 +81,9 @@ def test_safe_run_called_process_error(monkeypatch, capsys):
 
 
 def test_main_counts(monkeypatch, capsys):
-    # Stub out safe_run so the pipeline steps themselves don’t run
+
     monkeypatch.setattr(run_pipeline, "safe_run", lambda *a, **k: None)
 
-    # Fake out glob patterns
     def fake_glob(pattern):
         if "pdf_texts_79_batch_" in pattern:
             return ["b79_1.txt", "b79_2.txt", "b79_3.txt"]
@@ -96,10 +96,9 @@ def test_main_counts(monkeypatch, capsys):
         return []
 
     monkeypatch.setattr(glob, "glob", fake_glob)
-    # Pretend the merged file exists
+
     monkeypatch.setattr(os.path, "exists", lambda path: path.endswith(os.path.join("data", "output.json")))
 
-    # Run and capture
     run_pipeline.main()
     out = capsys.readouterr().out
 
