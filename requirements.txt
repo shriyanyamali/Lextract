@@ -1,4 +1,5 @@
 pandas
+pytest
 PyPDF2
 google-generativeai
 requests
