@@ -1,26 +1,36 @@
-name: React Build
+name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [3.13]
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Use Node.js
-        uses: actions/setup-node@v3
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          node-version: 18
+          python-version: ${{ matrix.python-version }}
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install openpyxl  # Needed for Excel tests
+          pip install PyPDF2    # For PDF parsing
+          pip install pytest    # To run the test suite
+          pip install pytest-mock
 
-      - name: Run build
-        run: npm run build
+      - name: Run tests
+        run: pytest -q
