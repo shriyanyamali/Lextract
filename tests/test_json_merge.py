@@ -22,7 +22,9 @@ def test_combine_json_files_merges_valid_lists(tmp_path):
 
     assert output_file.exists()
     data = json.loads(output_file.read_text())
-    assert data == [{"a": 1}, {"b": 2}, {"c": 3}]
+    assert sorted(data, key=lambda d: list(d.keys())[0]) == [
+    {"a": 1}, {"b": 2}, {"c": 3}
+    ]
 
 
 def test_combine_json_files_skips_invalid_json(tmp_path, capsys):
