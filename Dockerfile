@@ -11,7 +11,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN mkdir -p /app/data
+RUN pip install --no-cache-dir pytest flake8
+
+RUN mkdir -p /app/data /app/json
+
 VOLUME ["/app/data"]
 
-CMD ["python", "run_pipeline.py"]
+# Default command
+CMD ["make", "run"]

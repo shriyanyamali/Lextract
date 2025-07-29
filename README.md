@@ -9,13 +9,17 @@
 
 - [<u>Purpose</u>](#purpose)
 - [<u>Project Tree</u>](#project-tree)
-- [<u>Requirements</u>](#requirements)
-- [<u>Installation and Setup</u>](#installation-and-setup)
-- [<u>Pipeline Scripts</u>](#pipeline-scripts)
-- [<u>Non-Required Scripts</u>](#non-required-scripts)
+- [<u>API Keys</u>](#api-keys)
+- [<u>Installation</u>](#installation-and-setup)
+   - [<u>Pip</u>](#pip)
+   - [<u>Docker</u>](#docker)
+   - [<u>Setup</u>](#setup)
+   - [<u>Running Tests</u>](#running-tests)
 - [<u>Example Outputs</u>](#example-outputs)
 - [<u>Usage Example</u>](#usage-example)
-- [<u>Links</u>](#links)
+- [<u>File Descriptions</u>](#pipeline-scripts)
+   - [<u>Setup</u>](#pipeline-scripts)
+   - [<u>Utility Scripts</u>](#utility-scripts)
 - [<u>License</u>](#license)
 - [<u>Attribution</u>](#attribution)
 - [<u>Contact</u>](#contact)
@@ -69,7 +73,7 @@ The "XX" in the file names is a placeholder. When the files are created during e
 
 Eg. `pdf_texts_79_batch_1.txt` will be followed by `pdf_texts_79_batch_2.txt`. If the biggest number is 82, say as the file `pdf_texts_79_batch_82.txt`, then there are 82 batches of pdf_texts_79.
 
-## Requirements
+## API Keys
 
 You will need a Google Gemini API key in order to run the `scrape-chunks.py` and `scrape-individual.py` scripts. You can get a free api key [here](https://ai.google.dev/). The code is preset to use the Gemini 2.0 Flash model. Though other models have higher accuracy, the Flash models have higher usage limits, making them the only viable option when using the free API key, as you will run into the rate limit very quickly. If you are paying for an API key and have a high budget, you can use 1.5 Pro or 2.5 Pro models for higher accuracy, but they are less cost-efficient.
 
@@ -81,117 +85,89 @@ Locally hosted LLMs like Ollama or Deepseek can also work, but only use locally 
 
 ## Installation and Setup
 
-### Native (pip)
+Make sure that [Git](https://git-scm.com/downloads) and [Python](https://www.python.org/downloads/) are installed on your system.
 
-Make sure that Git and Python is installed on your system. If not, you can install the latest version of Python from [python.org/downloads](https://www.python.org/downloads/).
+### Pip
 
-For Windows users, make sure that you check "Add to PATH" while installing Python, or else you will not be able to install the following packages.
+```bash
+# Clone the repo
+git clone https://github.com/shriyanyamali/market-def-scraper.git
 
-1. Open your terminal or command prompt.
+# Change into the project directory
+cd market-def-scraper
 
-2. Clone the repo:
-
-   ```
-   git clone https://github.com/shriyanyamali/market-def-scraper.git
-   ```
-
-3. Move into the project directory:
-
-   ```
-   cd market-def-scraper
-   ```
-
-4. Install the required packages:
-
-   ```
-   pip install pandas pytest PyPDF2 google-generativeai requests openpyxl
-   ```
-
-5. Go to [competition-cases.ec.europa.eu/search](https://competition-cases.ec.europa.eu/search) and export the Merger cases you want to process. Rename the excel file `cases.xlsx`. Move the file into the data directory.
-
-6. Remove the `.gitkeep` files from the data/extracted_batches and data/extracted_sections directories.
-
-7. Open the `scrape-chunks.py` and `scrape-individual.py` scripts. At the beginning of both files, where it says `ENTER KEY HERE`, replace that which your actual API key.
-
-8. Open the `run_pipeline.py` script. On line 10, follow the instructions and set `CHUNKS_SIZE` equal to `79`, `80`, or `both`. 79 means that you will only process individual batches with less than 80,000 characters, 80 means that you will only process individual batches with more than 80,000 characters, and both means you will process all batches. `79` uses the least number of tokens, and `both` uses the most.
-
-9. Execute `run_pipeline.py` and wait for the pipeline to finish. You will receive an output detailing how many files of each type were created.
+# Install the required packages
+pip install pandas pytest PyPDF2 google-generativeai requests openpyxl
+```
 
 ### Docker
 
-1. Open your terminal or command prompt.
+```bash
+# Clone the repo
+git clone https://github.com/shriyanyamali/market-def-scraper.git
 
-2. Clone the repo:
+# Change into the project directory
+cd market-def-scraper
 
-   ```
-   git clone https://github.com/shriyanyamali/market-def-scraper.git
-   ```
+# Build the image:
+docker build -t market-def-scraper.
+```
 
-3. Move into the project directory:
+### Setup
 
-   ```
-   cd market-def-scraper
-   ```
+1. Go to [competition-cases.ec.europa.eu/search](https://competition-cases.ec.europa.eu/search) and export the Merger cases you want to process. Rename the excel file `cases.xlsx`. Move the file into the data directory.
 
-4. Build the image:
+2. Remove the `.gitkeep` files from the data/extracted_batches and data/extracted_sections directories.
 
-   ```
-   docker build -t market-def-scraper .
-   ```
+3. Open the `scrape-chunks.py` and `scrape-individual.py` scripts. At the beginning of both files, where it says `ENTER KEY HERE`, replace that which your actual API key.
 
-5. Go to [competition-cases.ec.europa.eu/search](https://competition-cases.ec.europa.eu/search) and export the Merger cases you want to process. Rename the excel file `cases.xlsx`. Move the file into the data directory.
+4. Open the `run_pipeline.py` script. On line 10, follow the instructions and set CHUNKS_SIZE equal to `79`, `80`, or `both`.
 
-6. Remove the `.gitkeep` files from the data/extracted_batches and data/extracted_sections directories.
+5. Run the pipeline:
 
-7. Open the `scrape-chunks.py` and `scrape-individual.py` scripts. At the beginning of both files, where it says `ENTER KEY HERE`, replace that which your actual API key.
+      Pip:
 
-8. Open the `run_pipeline.py` script. On line 10, follow the instructions and set `CHUNKS_SIZE` equal to `79`, `80`, or `both`. 79 means that you will only process individual batches with less than 80,000 characters, 80 means that you will only process individual batches with more than 80,000 characters, and both means you will process all batches. `79` uses the least number of tokens, and `both` uses the most.
+      ```bash
+      python run_pipeline.py
+      ```
 
-9. Run the container, which will execute `run_pipeline.py`:
-   ```bash
-   # macOS / Linux
-   docker run --rm -v "$(pwd)/data:/app/data" market-def-scraper
+      Docker:
 
-   # PowerShell
-   docker run --rm -v ${PWD}\data:/app/data market-def-scraper
+      ```bash
+      # macOS / Linux
+      docker run --rm -v "$(pwd)/data:/app/data" market-def-scraper
 
-   # Command Prompt
-   docker run --rm -v "%cd%\data:/app/data" market-def-scraper
-   ```
+      # PowerShell
+      docker run --rm -v ${PWD}\data:/app/data market-def-scraper
 
-   > Note: Do not change the names of any files, as all scripts require the file names to stay exactly the same as the original.
+      # Command Prompt
+      docker run --rm -v "%cd%\data:/app/data" market-def-scraper
+      ```
 
-## Pipeline Scripts
+      Wait for the pipeline to finish. You will receive an output detailing how many files of each type were created.
 
-These scripts are part of the pipeline and are executed alongside `run_pipeline.py`. The scripts run in the following order:
+      > Note: Do not change the names of any files, as all scripts require the file names to stay exactly the same as the original.
 
-1. `scrape-links.py`
-   Extracts PDF links, case numbers, years, and policy areas from an Excel file and saves them to extracted_links.txt. Note that the excel file must include all of the aforementioned columns titled exactly how they are presented in the code or else the information will not be extracted.
+### Running Tests
 
-2. `scrape-pdf-text.py`
-   Downloads decision PDFs from extracted links, filters out irrelevant cases, and saves the full text of valid documents into batch text files based on size. Files greater than 80,000 characters are titled `pdf_texts_80_batch_{batch_num}.txt`. Smaller files are labeled `pdf_texts_79_batch_{batch_num}.txt`. Despite the name, each "batch" contains only 1 extracted decision PDF.
+```bash
+pytest -q
+```
 
-3. `scrape-chunks.py`
-   Uses Gemini AI to extract the "Market Definition" section from each document and saves it in text files titled `extract-sections_79/80_batch_{batch_num}.txt` with the metadata at the top of the file. If processing just 79 batches, the number of extract-sections_batch files should match the number of pdf_texts_79_batch files. For just 80 batches, it should match the number of pdf_texts_80_batch files. If processing both, it should equal the total of both pdf_texts_79_batch and pdf_texts_80_batch files.
+With coverage:
 
-4. `scrape-individual.py`
-   Uses Gemini AI to extract individual relevant market definitions from each chunked section and outputs them as JSON titled `extract-definitions_79/80_batch_{batch_num}.json` with fields like topic, text, case_number, etc. You should have as many extract-definitions_79/80_batch files as extract-sections_79/80_batch files.
+```bash
+pytest --cov=scripts --cov=tests
+```
 
-5. `clean-json.py`
-   Cleans up the JSON files by removing leading and trailing markdown fences ( '''json and ``` ) which are created by Gemini in the last stage of processing. Does not create any new files.
-
-6. `json-merge.py`
-   Combines all batch-level JSON files of market definitions and their metadata into a single merged JSON output file titled `output.json` located in the data directory. This is helpful if you plan to put the definitions into a database.
-
-## Non-Required Scripts
-
-These scripts are not part of the pipeline and can be manually executed. They are helpful for debugging, and are aptly placed in the debugging directory.
-
-- `unique_cases_counter.py`
-  Counts the number of unique case numbers found in the merged JSON output.
-
-- `word_counter.py`
-  Counts the total number of words in a specific batch text file. Can be helpful to see approximately how many tokens a file is using during processing.
+Using Make:
+```bash
+make test       # Run all tests
+make coverage   # Run tests with coverage report
+make format     # Auto-format code
+make lint       # Lint code
+make clean      # Remove __pycache__ and test artifacts
+```
 
 ## Example Outputs
 
@@ -207,14 +183,6 @@ After the script finishes running, your database.json should have objects that l
    "text": "In the Commission found that the geographic scope of the semiconductor markets was..."
 },
 {
-   "case_number": "M.11050",
-   "year": "2023",
-   "policy_area": "Merger",
-   "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf",
-   "topic": "Vegetable-Based Bread Toppings Geographic Market Definition",
-   "text": "In this case, the exact geographic market definition can..."
-},
-{
    "case_number": "M.9504",
    "year": "2019",
    "policy_area": "Merger",
@@ -226,27 +194,56 @@ After the script finishes running, your database.json should have objects that l
 
 ## Usage Example
 
-This code was used in order to create the database for [JurisMercatus](https://jurismercatus.vercel.app/). JurisMercatus used the scripts in this repo to extract the market definitions and allows you to search a database of thousands of market definitions.
+This code was used in order to create the database for [JurisMercatus](https://jurismercatus.vercel.app/). JurisMercatus is a market definition database aggregated from the European Commission's merger and antitrust case decisions. It brings all the definitions together natural language searches.
 
-## Links
+## File Descriptions
 
-Here are all the links, in order, that were referred to in this README:
+### Pipeline Scripts
 
-1. [competition-cases.ec.europa.eu/search/](https://competition-cases.ec.europa.eu/search) - European Commission Case Search Database
+These scripts are part of the pipeline and are executed alongside `run_pipeline.py`. The scripts run in the following order:
 
-2. [eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:C_202401645/](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:C_202401645) - EU Market Definition Explanation and Use
+1. **scrape-links.py**
 
-3. [www.justice.gov/atr/merger-guidelines/tools/market-definition/](https://www.justice.gov/atr/merger-guidelines/tools/market-definition) - DOJ Market Definition Explanation
+   * Extracts PDF links, case numbers, years, and policy areas from an Excel file.
+   * Outputs to `extracted_links.txt`.
+   * Excel must have correctly named columns (correct by default).
 
-4. [www.python.org/downloads/](https://www.python.org/downloads/) - Python Download
+2. **scrape-pdf-text.py**
 
-5. [ai.google.dev](https://ai.google.dev/) - Google Gemini API Key Signup
+   * Downloads PDFs from links.
+   * Filters out irrelevant cases.
+   * Saves one PDF per text file.
+   * Files >80,000 chars: `pdf_texts_80_batch_{n}.txt`.
+   * Files ≤79,999 chars: `pdf_texts_79_batch_{n}.txt`.
 
-6. [ai.google.dev/gemini-api/docs/models/](https://ai.google.dev/gemini-api/docs/models) - Gemini API Model Documentation
+3. **scrape-chunks.py**
 
-7. [ai.google.dev/gemini-api/docs/rate-limits/](https://ai.google.dev/gemini-api/docs/rate-limits) - Gemini API Rate Limits
+   * Uses Gemini AI to extract "Market Definition" sections.
+   * Saves as `extract-sections_79/80_batch_{n}.txt`.
+   * Includes metadata at top.
 
-8. [jurismercatus.vercel.app/](https://jurismercatus.vercel.app/) - JurisMercatus Usage Example
+4. **scrape-individual.py**
+
+   * Uses Gemini AI to extract individual market definitions.
+   * Saves as `extract-definitions_79/80_batch_{n}.json`.
+   * Includes metadata with each object.
+
+5. **clean-json.py**
+
+   * Removes markdown fences ('''json or \`\`\`) from JSON files.
+   * Edits in-place, creates no new files.
+
+6. **json-merge.py**
+
+   * Merges all JSON batch files into one.
+   * Output is `output.json` in `data/` directory.
+
+### Utility Scripts
+
+These scripts are not part of the pipeline and can be manually executed.
+
+- **unique_cases_counter.py**
+- **word_counter.py**
 
 ## License
 
@@ -267,12 +264,8 @@ licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
 https://github.com/shriyanyamali/market-def-scraper
 ```
 
-Failure to include proper attribution when using this code may be considered a violation of the license terms.
-
 ## Contact
 
 Email: [yamalishriyan@gmail.com](mailto:yamalishriyan@gmail.com)
-
-Personal Website: [shriyanyamali.tech](https://shriyanyamali.tech/)
 
 Copyright © 2025 Shriyan Yamali. All rights reserved.
