@@ -104,7 +104,7 @@ For Windows users, make sure that you check "Add to PATH" while installing Pytho
 4. Install the required packages:
 
    ```
-   pip install pandas PyPDF2 google-generativeai requests
+   pip install pandas pytest PyPDF2 google-generativeai requests openpyxl
    ```
 
 5. Go to [competition-cases.ec.europa.eu/search](https://competition-cases.ec.europa.eu/search) and export the Merger cases you want to process. Rename the excel file `cases.xlsx`. Move the file into the data directory.
