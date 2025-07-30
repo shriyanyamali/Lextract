@@ -154,7 +154,7 @@ make clean      # Remove __pycache__ and test artifacts
 
 ## Example Outputs
 
-After the script finishes running, your database.json should have objects that look like this:
+After the script finishes running, your database.json file should have objects that look like this:
 
 ```json
 {
