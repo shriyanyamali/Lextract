@@ -15,7 +15,7 @@
 - [<u>Example Outputs</u>](#example-outputs)
 - [<u>Usage Example</u>](#usage-example)
 - [<u>File Descriptions</u>](#pipeline-scripts)
-   - [<u>Setup</u>](#pipeline-scripts)
+   - [<u>Pipeline Scripts</u>](#pipeline-scripts)
    - [<u>Utility Scripts</u>](#utility-scripts)
 - [<u>Attribution</u>](#attribution)
 
