@@ -30,7 +30,7 @@ import os
 # "79" for batches with <80,000 characters
 # "80" for batches with >80,000 characters
 # "both" to process all batches
-CHUNKS_SIZE = "both"
+CHUNKS_SIZE = "79"
 
 
 def safe_run(cmd, description=None, input_paths=None):
@@ -55,55 +55,55 @@ def safe_run(cmd, description=None, input_paths=None):
 
 
 def main():
-    # 1) scrape-links.py
+    # 1) scrape_links.py
     safe_run(
-        [sys.executable, "scripts/scrape-links.py",
+        [sys.executable, "scripts/scrape_links.py",
          "-i", "data/cases.xlsx",
          "-o", "data/extracted_links.txt"],
-        description="scrape-links",
+        description="scrape_links",
         input_paths=["data/cases.xlsx"]
     )
 
-    # 2) scrape-pdf-text.py
+    # 2) scrape_pdf_text.py
     safe_run(
-        [sys.executable, "scripts/scrape-pdf-text.py",
+        [sys.executable, "scripts/scrape_pdf_text.py",
          "-i", "data/extracted_links.txt",
          "--datadir", "data"],
-        description="scrape-pdf-text",
+        description="scrape_pdf_text",
         input_paths=["data/extracted_links.txt", "data"]
     )
 
-    # 3) scrape-chunks.py
+    # 3) scrape_chunks.py
     safe_run(
-        [sys.executable, "scripts/scrape-chunks.py",
+        [sys.executable, "scripts/scrape_chunks.py",
          "--indir", "data/extracted_batches",
          "--outdir", "data/extracted_sections",
          "--size", CHUNKS_SIZE],
-        description="scrape-chunks",
+        description="scrape_chunks",
         input_paths=["data/extracted_batches"]
     )
 
-    # 4) scrape-individual.py
+    # 4) scrape_individual.py
     safe_run(
-        [sys.executable, "scripts/scrape-individual.py",
+        [sys.executable, "scripts/scrape_individual.py",
          "--indir", "data/extracted_sections",
          "--outdir", "json"],
-        description="scrape-individual",
+        description="scrape_individual",
         input_paths=["data/extracted_sections"]
     )
 
-    # 5) clean-json.py
+    # 5) clean_json.py
     safe_run(
-        [sys.executable, "scripts/clean-json.py",
+        [sys.executable, "scripts/clean_json.py",
          "--indir", "json"],
-        description="clean-json",
+        description="clean_json",
         input_paths=["json"]
     )
 
-    # 6) json-merge.py
+    # 6) json_merge.py
     safe_run(
-        [sys.executable, "scripts/json-merge.py"],
-        description="json-merge",
+        [sys.executable, "scripts/json_merge.py"],
+        description="json_merge",
         input_paths=["json"]
     )
 
@@ -112,7 +112,6 @@ def main():
     
     sections = len(glob.glob(os.path.join('data', 'extracted_sections', 'extract-sections_batch_*.txt')))
     
-    # This number should be the same as the sections count. If it is not, some of the sections may not have been processed.
     json_files = len(glob.glob(os.path.join('json', '*.json')))
 
     # This should always be 1. It will be 0 if the merge fails or is not run.
