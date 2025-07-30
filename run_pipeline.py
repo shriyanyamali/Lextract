@@ -30,7 +30,7 @@ import os
 # "79" for batches with <80,000 characters
 # "80" for batches with >80,000 characters
 # "both" to process all batches
-CHUNKS_SIZE = "79"
+CHUNKS_SIZE = "both"
 
 
 def safe_run(cmd, description=None, input_paths=None):
