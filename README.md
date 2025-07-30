@@ -50,9 +50,9 @@ Example use cases include:
 * [Python](https://www.python.org/downloads/)
 * [Gemini API Key](https://ai.google.dev/)
 
-The Gemini key is for `scrape_chunks.py` and `scrape_individual.py`. You can get one for free [here](https://ai.google.dev/). The code defaults to the Gemini 2.0 Flash model for its higher free-tier limits. While Pro models (e.g., 1.5 or 2.5 Pro) offer better accuracy, they have lower rate limits so are less practical to use with a free key.
+The Gemini key is for `scrape-chunks.py` and `scrape-individual.py`. You can get one for free [here](https://ai.google.dev/). The code defaults to the Gemini 2.0 Flash model for its higher free-tier limits. While Pro models (e.g., 1.5 or 2.5 Pro) offer better accuracy, they have lower rate limits so are less practical to use with a free key.
 
-Gemini 2.0 Flash should be suitable for analyzing 300-600 cases/day depending on the length of the case decisions. See model options [here](https://ai.google.dev/gemini-api/docs/models) and rate limits [here](https://ai.google.dev/gemini-api/docs/rate-limits).
+Gemini 2.0 Flash should be suitable for analyzing 50-100 cases/day depending on the length of the case decisions. See model options [here](https://ai.google.dev/gemini-api/docs/models) and rate limits [here](https://ai.google.dev/gemini-api/docs/rate-limits).
 
 You can use other APIs (e.g., OpenAI), but you'll need to modify the code accordingly. Only use local LLMs (e.g., Ollama, Deepseek) if they’re large models (70B+ recommended); otherwise, accuracy will significantly drop. The code optimized for Gemini models.
 
@@ -73,7 +73,7 @@ pip install -r requirements.txt
 
 ### Setup
 
-1. Remove the .gitkeep files from the `json`, `data/extracted_batches`, and `data/extracted_sections` directories.
+1. Remove the .gitkeep files from the `json`, `data/extracted_batches`, and `data/extracted_sections` directories:
    ```bash
    # macOS / Linux
    rm json/.gitkeep data/extracted_batches/.gitkeep data/extracted_sections/.gitkeep
@@ -89,9 +89,19 @@ pip install -r requirements.txt
 
 3. Rename the exported excel file `cases.xlsx`. Move the file into the data directory.
 
-4. Open `scrape_chunks.py` and `scrape_individual.py`. Replace `GEMINI_API_KEY` with your API key.
+4. Open the `run_pipeline.py` script. On line 33, follow the instructions and set CHUNKS_SIZE equal to `79`, `80`, or `both`.
 
-5. Open the `run_pipeline.py` script. On line 33, follow the instructions and set CHUNKS_SIZE equal to `79`, `80`, or `both`.
+5. Set the `GEMINI_API_KEY` Environment Variable:
+   ```bash
+   # macOS / Linux
+   export GEMINI_API_KEY="your-api-key-here"
+
+   # PowerShell
+   $env:GEMINI_API_KEY="your-api-key-here"
+
+   # Command Prompt
+   set GEMINI_API_KEY=your-api-key-here
+   ```
 
 6. Run the pipeline:
 
@@ -152,13 +162,13 @@ This code was used in order to create the database for [JurisMercatus](https://j
 
 These scripts are part of the pipeline and are executed alongside `run_pipeline.py`. The scripts run in the following order:
 
-1. **scrape_links.py**
+1. **scrape-links.py**
 
    * Extracts PDF links, case numbers, years, and policy areas from an Excel file.
    * Outputs to `extracted_links.txt`.
    * Excel must have correctly named columns (correct by default).
 
-2. **scrape_pdf-text.py**
+2. **scrape-pdf-text.py**
 
    * Downloads PDFs from links.
    * Filters out irrelevant cases.
@@ -166,13 +176,13 @@ These scripts are part of the pipeline and are executed alongside `run_pipeline.
    * Files >80,000 chars: `pdf_texts_80_batch_{n}.txt`.
    * Files ≤79,999 chars: `pdf_texts_79_batch_{n}.txt`.
 
-3. **scrape_chunks.py**
+3. **scrape-chunks.py**
 
    * Uses Gemini AI to extract "Market Definition" sections.
    * Saves as `extract-sections_79/80_batch_{n}.txt`.
    * Includes metadata at top.
 
-4. **scrape_individual.py**
+4. **scrape-individual.py**
 
    * Uses Gemini AI to extract individual market definitions.
    * Saves as `extract-definitions_79/80_batch_{n}.json`.
