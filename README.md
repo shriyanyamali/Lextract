@@ -94,6 +94,16 @@ docker info
 2. Rename the exported excel file `cases.xlsx`. Move the file into the data directory.
 
 3. Remove the .gitkeep files from the `json`, `data/extracted_batches`, and `data/extracted_sections` directories.
+   ```bash
+   # macOS / Linux
+   rm json/.gitkeep data/extracted_batches/.gitkeep data/extracted_sections/.gitkeep
+
+   # PowerShell
+   Remove-Item json/.gitkeep, data/extracted_batches/.gitkeep, data/extracted_sections/.gitkeep -Force
+
+   # Command Prompt
+   del json\.gitkeep data\extracted_batches\.gitkeep data\extracted_sections\.gitkeep
+   ```
 
 4. Open the `scrape-chunks.py` and `scrape-individual.py` scripts. At the beginning of both files, where it says "ENTER KEY HERE", replace that with your actual API key.
 
