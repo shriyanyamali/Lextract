@@ -9,7 +9,9 @@
 
 - [<u>Purpose</u>](#purpose)
 - [<u>Research Applications</u>](#research-applications)
-- [<u>Installation</u>](#installation-and-setup)
+- [<u>Instructions</u>](#instructions)
+   - [<u>Prerequisites</u>](#prerequisites)
+   - [<u>Installation</u>](#installation)
    - [<u>Setup</u>](#setup)
    - [<u>Testing</u>](#testing)
 - [<u>Example Outputs</u>](#example-outputs)
@@ -17,7 +19,9 @@
 - [<u>File Descriptions</u>](#pipeline-scripts)
    - [<u>Pipeline Scripts</u>](#pipeline-scripts)
    - [<u>Utility Scripts</u>](#utility-scripts)
+- [<u>License</u>](#license)
 - [<u>Attribution</u>](#attribution)
+- [<u>Contact</u>](#contact)
 
 ## Purpose
 
@@ -37,21 +41,23 @@ Example use cases include:
 * Analyze how market definitions have evolved across sectors
 * Identify how markets have been defined the in past
 
-## Installation and Setup
+## Instructions
 
-> At no point throughout the installation, setup, or usage of this code should you change the location or name of any files as scripts rely on the original names. See [PROJECT_TREE.md](PROJECT_TREE.md) for how the file structure should be.
+### Prerequisites
 
-Make sure that [Git](https://git-scm.com/downloads) and [Python](https://www.python.org/downloads/) are installed on your system.
+* [Git](https://git-scm.com/downloads)
+* [Python](https://www.python.org/downloads/)
+* [Gemini API Key](https://ai.google.dev/)
 
-### API Keys
+The Gemini key is for `scrape-chunks.py` and `scrape-individual.py`. You can get one for free [here](https://ai.google.dev/). The code defaults to the Gemini 2.0 Flash model for its higher free-tier limits. While Pro models (e.g., 1.5 or 2.5 Pro) offer better accuracy, they have lower rate limits so are less practical to use with a free key.
 
-To run the pipline (specifically `scrape-chunks.py` and `scrape-individual.py`), you'll need a Google Gemini API key. You can get one [here](https://ai.google.dev/). The code defaults to the Gemini 2.0 Flash model for its higher free-tier limits. While Pro models (e.g., 1.5 or 2.5 Pro) offer better accuracy, they have lower rate limits so are less practical to use with a free key.
-
-Gemini 2.0 Flash may be suitable for analyzing 300-600 cases/day depending on the length of the case decisions. See model options [here](https://ai.google.dev/gemini-api/docs/models) and rate limits [here](https://ai.google.dev/gemini-api/docs/rate-limits).
+Gemini 2.0 Flash should be suitable for analyzing 300-600 cases/day depending on the length of the case decisions. See model options [here](https://ai.google.dev/gemini-api/docs/models) and rate limits [here](https://ai.google.dev/gemini-api/docs/rate-limits).
 
 You can use other APIs (e.g., OpenAI), but you'll need to modify the code accordingly. Only use local LLMs (e.g., Ollama, Deepseek) if they’re large models (70B+ recommended); otherwise, accuracy will significantly drop. The code optimized for Gemini models.
 
-### Pip
+### Installation
+
+> At no point throughout the installation, setup, or usage of this code should you change the location or name of any files as scripts rely on the original names. See [PROJECT_TREE.md](PROJECT_TREE.md) for how the file structure should be.
 
 ```bash
 # Clone the repo
