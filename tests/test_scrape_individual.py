@@ -1,3 +1,26 @@
+# ------------------------------------------------------------------------------------------
+#
+# market-def-scraper - Extracts market definitions from European Commission's decision PDFs
+#
+# Copyright (C) 2025 Shriyan Yamali
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#
+# Contact: yamalishriyan@gmail.com
+#
+# ------------------------------------------------------------------------------------------
+
 import os
 import sys
 import pytest
@@ -9,20 +32,18 @@ from scripts import scrape_individual
 
 
 def test_scrape_individual_main(tmp_path):
-    # Setup input + output directories
+    # Setup input and output directories
     indir = tmp_path / "extracted_sections"
     outdir = tmp_path / "json"
     indir.mkdir()
     outdir.mkdir()
 
-    # Create a fake input file that matches the pattern
     input_file = indir / "extract-sections_79_batch_0.txt"
     input_file.write_text(
         "Case Number: M.1234\nYear: 2024\nPolicy Area: merger\nLink: https://fake.url\n\n"
         "This is a mock input text to simulate a real section."
     )
 
-    # Define a fake Gemini JSON response
     fake_response_text = """[
         {
             "case_number": "M.1234",
@@ -34,7 +55,6 @@ def test_scrape_individual_main(tmp_path):
         }
     ]"""
 
-    # Patch generate_content to return fake Gemini response
     mock_response = mock.Mock()
     mock_response.text = fake_response_text
 
@@ -47,7 +67,7 @@ def test_scrape_individual_main(tmp_path):
         ]
         scrape_individual.main()
 
-    # Check output file was created
+    # Check if output file was created
     output_file = outdir / "extract-definitions_79_batch_0.json"
     assert output_file.exists()
 
