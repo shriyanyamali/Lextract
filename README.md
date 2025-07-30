@@ -89,15 +89,17 @@ docker info
 
 ### Setup
 
-1. Go to [competition-cases.ec.europa.eu/search](https://competition-cases.ec.europa.eu/search) and export the Merger cases you want to process. Rename the excel file `cases.xlsx`. Move the file into the data directory.
+1. Go to [competition-cases.ec.europa.eu/search](https://competition-cases.ec.europa.eu/search) and export the Merger and Antitrust cases you want to process.
 
-2. Remove the `.gitkeep` files from the json/, data/extracted_batches/, and data/extracted_sections/ directories.
+2. Rename the exported excel file `cases.xlsx`. Move the file into the data directory.
 
-3. Open the scrape-chunks.py and scrape-individual.py scripts. At the beginning of both files, where it says `ENTER KEY HERE`, replace that with your actual API key.
+3. Remove the .gitkeep files from the `json`, `data/extracted_batches`, and `data/extracted_sections` directories.
 
-4. Open the `run_pipeline.py` script. On line 10, follow the instructions and set CHUNKS_SIZE equal to `79`, `80`, or `both`.
+4. Open the `scrape-chunks.py` and `scrape-individual.py` scripts. At the beginning of both files, where it says "ENTER KEY HERE", replace that with your actual API key.
 
-5. Run the pipeline:
+5. Open the `run_pipeline.py` script. On line 10, follow the instructions and set CHUNKS_SIZE equal to `79`, `80`, or `both`.
+
+6. Run the pipeline:
 
       Pip:
 
@@ -122,17 +124,14 @@ docker info
 
 ### Testing
 
+Pytest:
+
 ```bash
 pytest -q
 ```
 
-With coverage:
+Make:
 
-```bash
-pytest --cov=scripts --cov=tests
-```
-
-Using Make:
 ```bash
 make test       # Run all tests
 make coverage   # Run tests with coverage report
@@ -140,6 +139,8 @@ make format     # Auto-format code
 make lint       # Lint code
 make clean      # Remove __pycache__ and test artifacts
 ```
+
+> To use the `make` commands on windows use WSL or install make.
 
 ## Example Outputs
 
