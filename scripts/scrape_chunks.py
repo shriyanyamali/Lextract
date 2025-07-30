@@ -26,8 +26,10 @@ import glob
 import re
 import os
 import google.generativeai as genai
+from dotenv import load_dotenv
 
-gemini_key = os.getenv("GENAI_API_KEY", "ENTER KEY HERE")  # replace with your actual key
+load_dotenv()
+gemini_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=gemini_key)
 
 DEFAULT_MODEL = "gemini-2.0-flash"

@@ -22,18 +22,19 @@
 # ------------------------------------------------------------------------------------------
 
 import argparse
-import os
 import glob
 import re
+import os
 import google.generativeai as genai
+from dotenv import load_dotenv
 
-gemini_key = "ENTER KEY HERE"  # replace with your actual key
+load_dotenv()
+gemini_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=gemini_key)
 
 DEFAULT_MODEL = "gemini-2.0-flash"
-model = genai.GenerativeModel(model_name=DEFAULT_MODEL)
 
-total_batches = None  
+model = genai.GenerativeModel(model_name=DEFAULT_MODEL)
 
 def generate_content(model, input_text):
     response = model.generate_content([
