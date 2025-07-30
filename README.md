@@ -10,9 +10,6 @@
 - [<u>Purpose</u>](#purpose)
 - [<u>Research Applications</u>](#research-applications)
 - [<u>Installation</u>](#installation-and-setup)
-   - [<u>API Keys</u>](#api-keys)
-   - [<u>Pip</u>](#pip)
-   - [<u>Docker</u>](#docker)
    - [<u>Setup</u>](#setup)
    - [<u>Testing</u>](#testing)
 - [<u>Example Outputs</u>](#example-outputs)
@@ -20,9 +17,7 @@
 - [<u>File Descriptions</u>](#pipeline-scripts)
    - [<u>Setup</u>](#pipeline-scripts)
    - [<u>Utility Scripts</u>](#utility-scripts)
-- [<u>License</u>](#license)
 - [<u>Attribution</u>](#attribution)
-- [<u>Contact</u>](#contact)
 
 ## Purpose
 
@@ -67,21 +62,6 @@ cd market-def-scraper
 
 # Install the required packages
 pip install -r requirements.txt
-```
-
-### Docker
-
-Make sure that [Docker](https://www.docker.com/products/docker-desktop/) is installed and running on your system.
-
-```bash
-# Clone the repo
-git clone https://github.com/shriyanyamali/market-def-scraper.git
-
-# Change into the project directory
-cd market-def-scraper
-
-# Build the image
-docker build -t market-def-scraper .
 ```
 
 ### Setup
