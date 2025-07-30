@@ -80,7 +80,7 @@ git clone https://github.com/shriyanyamali/market-def-scraper.git
 # Change into the project directory
 cd market-def-scraper
 
-# Build the image:
+# Build the image
 docker build -t market-def-scraper .
 
 # Confirm installation
