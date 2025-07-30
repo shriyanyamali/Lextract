@@ -33,12 +33,10 @@
 │   ├── output.json*
 │   ├── extracted_batches/
 │   │   ├── pdf_texts_79_batch_{n}.txt***
-│   │   ├── pdf_texts_80_batch_{n}.txt***
-│   │   └── .gitkeep
+│   │   └── pdf_texts_80_batch_{n}.txt***
 │   └── extracted_sections/
 │       ├── extract-sections_79_batch_{n}.txt***
-│       ├── extract-sections_80_batch_{n}.txt***
-│       └── .gitkeep
+│       └── extract-sections_80_batch_{n}.txt***
 ├── json/
 │   ├── extract-definitions_79_batch_{n}.json***
 │   └── extract-definitions_80_batch_{n}.json***
