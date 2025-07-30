@@ -1,6 +1,6 @@
 ![Maintained](https://img.shields.io/badge/Maintained-yes-green.svg)
 ![License](https://img.shields.io/badge/License-AGPL%203.0-green.svg)
-![Build Status](https://img.shields.io/github/actions/workflow/status/shriyanyamali/shriyanyamali.github.io/ci.yml?branch=main)
+![Tests Status](https://img.shields.io/github/actions/workflow/status/shriyanyamali/shriyanyamali.github.io/ci.yml?branch=main&label=tests)
 ![Last Commit](https://img.shields.io/github/last-commit/shriyanyamali/market-def-scraper)
 
 # European Commission Market Definition Scraper
