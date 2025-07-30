@@ -27,7 +27,7 @@ import re
 import os
 import google.generativeai as genai
 
-gemini_key = os.getenv("GEMINI_API_KEY") # replace with your actual key
+gemini_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=gemini_key)
 
 DEFAULT_MODEL = "gemini-2.0-flash"
@@ -50,7 +50,7 @@ def generate_content(model, input_text):
                 "policy_area:" "Merger",
                 "link": "https://www.example1.com",
                 "topic": "Smartphone",
-                "text": "jsdklfjsadkljfkdsjl"
+                "text": "market definition text goes here"
             },
             {
                 "case_number": "10000",
@@ -58,7 +58,7 @@ def generate_content(model, input_text):
                 "policy_area:" "Merger",
                 "link": "https://www.example1.com",
                 "topic": "Laptop",
-                "text": "kajks;ldfkadls;f"
+                "text": "market definition text goes here"
             },
             {
                 "case_number": "10001",
@@ -66,7 +66,7 @@ def generate_content(model, input_text):
                 "policy_area:" "Merger",
                 "link": "https://www.example2.com",
                 "topic": "Tablet",
-                "text": "asdfadsdfas"
+                "text": "market definition text goes here"
             },
             {
                 "case_number": "10002",
@@ -74,7 +74,7 @@ def generate_content(model, input_text):
                 "policy_area:" "Merger",
                 "link": "https://www.example3.com",
                 "topic": "Headphones",
-                "text": "jkdalkfdjkajsdkkl;"
+                "text": "market definition text goes here;"
             },
             {
                 "case_number": "10003",
@@ -82,7 +82,7 @@ def generate_content(model, input_text):
                 "policy_area:" "Merger",
                 "link": "https://www.example4.com",
                 "topic": "Smartwatch",
-                "text": "dshnajkfjkdasj;fdlkja"
+                "text": "market definition text goes here"
             },
             {
                 "case_number": "10004",
@@ -90,7 +90,7 @@ def generate_content(model, input_text):
                 "policy_area:" "Merger",
                 "link": "https://www.example5.com",
                 "topic": "Camera",
-                "text": "jasdklfjd;aklfjdkl"
+                "text": "market definition text goes here"
             }
         ]
         It is possible that any given case number or link can have more than one relevant market definition.
