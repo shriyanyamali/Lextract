@@ -8,13 +8,13 @@
 ## Table of Contents
 
 - [<u>Purpose</u>](#purpose)
-- [<u>Project Tree</u>](#project-tree)
-- [<u>API Keys</u>](#api-keys)
+- [<u>Research Applications</u>](#research-applications)
 - [<u>Installation</u>](#installation-and-setup)
+   - [<u>API Keys</u>](#api-keys)
    - [<u>Pip</u>](#pip)
    - [<u>Docker</u>](#docker)
    - [<u>Setup</u>](#setup)
-   - [<u>Running Tests</u>](#running-tests)
+   - [<u>Testing</u>](#testing)
 - [<u>Example Outputs</u>](#example-outputs)
 - [<u>Usage Example</u>](#usage-example)
 - [<u>File Descriptions</u>](#pipeline-scripts)
@@ -26,66 +26,35 @@
 
 ## Purpose
 
-This repository extracts relevant market definitions from European Commission's competition case decision PDFs, which are available through their [online case search database](https://competition-cases.ec.europa.eu/search), using an automated pipeline. Market definitions help identify the specific market in which a merger is assessed. According to [EU](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:C_202401645), a "market definition is a tool that the Commission uses to identify and define the boundaries of competition between undertakings. The main purpose of [a] market definition is to identify in a systematic way the effective and immediate competitive constraints faced by the undertakings involved when they offer particular products in a particular area." You can learn more about market definitions [here](https://www.justice.gov/atr/merger-guidelines/tools/market-definition).
+This repository extracts relevant market definitions from European Commission's competition case decision PDFs, which are available through their [online case search database](https://competition-cases.ec.europa.eu/search), using an automated pipeline. Market definitions help identify the specific market in which a merger is assessed. A market definition is a tool that defines the boundaries of competition between undertakings.
 
-It is imperative to use an LLM in order to extract these market definitions, as the EC's decision PDFs assert the market definitions portion of the PDF differently each time, making it difficult to use regex or another form of pattern matching while still maintaining a high level of reliability.
+This project uses AI to extract market definitions as the EC's decision PDFs assert the market definitions sections differently each time, making it very difficult to use regex or another form of pattern matching.
 
-## Project Tree
+## Research Applications
 
-Do not change the location of any files or directories as that breaks the pipeline. If you change the location of any files or directories, make sure to reflect the changes in the `run_pipeline.py` file and all affected scripts.
+This tool is intended to support research in competition law, antitrust policy, mergers, and economic regulation. Outputs can be filtered, extended, applied, or repurposed to fit a wide range of empirical and legal research projects.
 
-    .
-    ├── README.md
-    ├── LICENSE
-    ├── Dockerfile
-    ├── requirements.txt
-    ├── run_pipeline.py
-    ├── scripts/
-    │   ├── scrape-links.py
-    │   ├── scrape-pdf-text.py
-    │   ├── scrape-chunks.py
-    │   ├── scrape-individual.py
-    │   ├── clean-json.py
-    │   └── json-merge.py
-    ├── debugging/
-    │   ├── word-counter.py
-    │   └── unique_cases_counter.py
-    ├── data/
-    │   ├── cases.xlsx*
-    │   ├── extracted_links.txt*
-    │   ├── excluded_cases.txt*
-    │   ├── included_cases.txt*
-    │   ├── output.json*
-    │   ├── extracted_batches/
-    │   │   ├── pdf_texts_79_batch_XX.txt***
-    │   │   └── pdf_texts_80_batch_XX.txt***
-    │   └── extracted_sections/
-    │       ├── extract-sections_79_batch_XX.txt***
-    │       └── extract-sections_80_batch_XX.txt***
-    └── json/
-        ├── extract-definitions_79_batch_XX.json***
-        └── extract-definitions_80_batch_XX.json***
+Example use cases include:
 
-`*` File will be created during execution <br>
-`***` Multiple files may be created during execution <br>
-
-The "XX" in the file names is a placeholder. When the files are created during execution, "XX" will be replaced by the number 1 in the first file. Subsequent files of the same type will have "XX" replaced by increasing numbers (2, 3, 4, ...)
-
-Eg. `pdf_texts_79_batch_1.txt` will be followed by `pdf_texts_79_batch_2.txt`. If the biggest number is 82, say as the file `pdf_texts_79_batch_82.txt`, then there are 82 batches of pdf_texts_79.
-
-## API Keys
-
-You will need a Google Gemini API key in order to run the `scrape-chunks.py` and `scrape-individual.py` scripts. You can get a free api key [here](https://ai.google.dev/). The code is preset to use the Gemini 2.0 Flash model. Though other models have higher accuracy, the Flash models have higher usage limits, making them the only viable option when using the free API key, as you will run into the rate limit very quickly. If you are paying for an API key and have a high budget, you can use 1.5 Pro or 2.5 Pro models for higher accuracy, but they are less cost-efficient.
-
-Currently, the latest Flash model is Gemini 2.5 Flash. You can use that model if the usage rates increase in the future or if you are only extracting definitions from a few cases (around 5). You can read more about all the Gemini API models [here](https://ai.google.dev/gemini-api/docs/models) and the rate limits [here](https://ai.google.dev/gemini-api/docs/rate-limits).
-
-You are free to use the OpenAI API key or another API key, but you will need to rewrite to code to match the documentation of that API. Note that as of July 2025, this code has only been tested using the Google Gemini API, and accuracy and efficiency using other APIs cannot be guaranteed.
-
-Locally hosted LLMs like Ollama or Deepseek can also work, but only use locally hosted LLMs if you are using a larger model (at least 70b+ but ideally 671b+) or else the accuracy will be depreciated. The installation detailed below, however, will explain how to use a Gemini API key.
+* Analyze trends in market definition language and scope
+* Support research or policy reports using market definition data
+* Find market definition precedents for court use
+* Analyze how market definitions have evolved across sectors
+* Identify how markets have been defined the in past
 
 ## Installation and Setup
 
+> At no point throughout the installation, setup, or usage of this code should you change the location or name of any files as scripts rely on the original names. See [PROJECT_TREE.md](PROJECT_TREE.md) for how the file structure should be.
+
 Make sure that [Git](https://git-scm.com/downloads) and [Python](https://www.python.org/downloads/) are installed on your system.
+
+### API Keys
+
+To run the pipline (specifically `scrape-chunks.py` and `scrape-individual.py`), you'll need a Google Gemini API key. You can get one [here](https://ai.google.dev/). The code defaults to the Gemini 2.0 Flash model for its higher free-tier limits. While Pro models (e.g., 1.5 or 2.5 Pro) offer better accuracy, they have lower rate limits so are less practical to use with a free key.
+
+Gemini 2.0 Flash may be suitable for analyzing 300-600 cases/day depending on the length of the case decisions. See model options [here](https://ai.google.dev/gemini-api/docs/models) and rate limits [here](https://ai.google.dev/gemini-api/docs/rate-limits).
+
+You can use other APIs (e.g., OpenAI), but you'll need to modify the code accordingly. Only use local LLMs (e.g., Ollama, Deepseek) if they’re large models (70B+ recommended); otherwise, accuracy will significantly drop. The code optimized for Gemini models.
 
 ### Pip
 
@@ -146,9 +115,7 @@ docker build -t market-def-scraper.
 
       Wait for the pipeline to finish. You will receive an output detailing how many files of each type were created.
 
-      > Note: Do not change the names of any files, as all scripts require the file names to stay exactly the same as the original.
-
-### Running Tests
+### Testing
 
 ```bash
 pytest -q
