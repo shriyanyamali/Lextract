@@ -17,5 +17,4 @@ RUN mkdir -p /app/data /app/json
 
 VOLUME ["/app/data"]
 
-# Default command
-CMD ["make", "run"]
+CMD ["python", "run_pipeline.py"]
