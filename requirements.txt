@@ -2,6 +2,5 @@ pandas
 pytest
 PyPDF2
 google-generativeai
-dotenv
 requests
 openpyxl

@@ -66,7 +66,7 @@ git clone https://github.com/shriyanyamali/market-def-scraper.git
 cd market-def-scraper
 
 # Install the required packages
-pip install pandas pytest PyPDF2 google-generativeai dotenv requests openpyxl
+pip install pandas pytest PyPDF2 google-generativeai requests openpyxl
 ```
 
 ### Docker
@@ -102,29 +102,14 @@ docker build -t market-def-scraper .
 
 3. Rename the exported excel file `cases.xlsx`. Move the file into the data directory.
 
-4. Open [`.env`](/.env) and enter you API key.
+4. Open `scrape-chunks.py` and `scrape-individual.py`. Replace `GEMINI_API_KEY` with your API key.
 
 5. Open the `run_pipeline.py` script. On line 33, follow the instructions and set CHUNKS_SIZE equal to `79`, `80`, or `both`.
 
 6. Run the pipeline:
 
-      Pip:
-
       ```bash
       python run_pipeline.py
-      ```
-
-      Docker:
-
-      ```bash
-      # macOS / Linux
-      docker run --rm -v "$(pwd)/data:/app/data" market-def-scraper
-
-      # PowerShell
-      docker run --rm -v ${PWD}\data:/app/data market-def-scraper
-
-      # Command Prompt
-      docker run --rm -v "%cd%\data:/app/data" market-def-scraper
       ```
 
 ### Testing
