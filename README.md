@@ -107,7 +107,7 @@ docker info
 
 4. Open the `scrape-chunks.py` and `scrape-individual.py` scripts. At the beginning of both files, where it says "ENTER KEY HERE", replace that with your actual API key.
 
-5. Open the `run_pipeline.py` script. On line 10, follow the instructions and set CHUNKS_SIZE equal to `79`, `80`, or `both`.
+5. Open the `run_pipeline.py` script. On line 33, follow the instructions and set CHUNKS_SIZE equal to `79`, `80`, or `both`.
 
 6. Run the pipeline:
 
