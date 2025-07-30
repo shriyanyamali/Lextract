@@ -86,9 +86,9 @@ docker build -t market-def-scraper.
 
 1. Go to [competition-cases.ec.europa.eu/search](https://competition-cases.ec.europa.eu/search) and export the Merger cases you want to process. Rename the excel file `cases.xlsx`. Move the file into the data directory.
 
-2. Remove the `.gitkeep` files from the data/extracted_batches and data/extracted_sections directories.
+2. Remove the `.gitkeep` files from the json/, data/extracted_batches/ and data/extracted_sections/ directories.
 
-3. Open the `scrape-chunks.py` and `scrape-individual.py` scripts. At the beginning of both files, where it says `ENTER KEY HERE`, replace that which your actual API key.
+3. Open the scrape-chunks.py and scrape-individual.py scripts. At the beginning of both files, where it says `ENTER KEY HERE`, replace that with your actual API key.
 
 4. Open the `run_pipeline.py` script. On line 10, follow the instructions and set CHUNKS_SIZE equal to `79`, `80`, or `both`.
 
