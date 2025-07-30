@@ -66,7 +66,7 @@ git clone https://github.com/shriyanyamali/market-def-scraper.git
 cd market-def-scraper
 
 # Install the required packages
-pip install pandas pytest PyPDF2 google-generativeai requests openpyxl
+pip install pandas pytest PyPDF2 google-generativeai dotenv requests openpyxl
 ```
 
 ### Docker
@@ -82,18 +82,11 @@ cd market-def-scraper
 
 # Build the image
 docker build -t market-def-scraper .
-
-# Confirm installation
-docker info
 ```
 
 ### Setup
 
-1. Go to [competition-cases.ec.europa.eu/search](https://competition-cases.ec.europa.eu/search) and export the Merger and Antitrust cases you want to process.
-
-2. Rename the exported excel file `cases.xlsx`. Move the file into the data directory.
-
-3. Remove the .gitkeep files from the `json`, `data/extracted_batches`, and `data/extracted_sections` directories.
+1. Remove the .gitkeep files from the `json`, `data/extracted_batches`, and `data/extracted_sections` directories.
    ```bash
    # macOS / Linux
    rm json/.gitkeep data/extracted_batches/.gitkeep data/extracted_sections/.gitkeep
@@ -105,7 +98,11 @@ docker info
    del json\.gitkeep data\extracted_batches\.gitkeep data\extracted_sections\.gitkeep
    ```
 
-4. Open the `scrape-chunks.py` and `scrape-individual.py` scripts. At the beginning of both files, where it says "ENTER KEY HERE", replace that with your actual API key.
+2. Go to [competition-cases.ec.europa.eu/search](https://competition-cases.ec.europa.eu/search) and export the Merger and Antitrust cases you want to process.
+
+3. Rename the exported excel file `cases.xlsx`. Move the file into the data directory.
+
+4. Open [`.env`](/.env) and enter you API key.
 
 5. Open the `run_pipeline.py` script. On line 33, follow the instructions and set CHUNKS_SIZE equal to `79`, `80`, or `both`.
 
@@ -129,8 +126,6 @@ docker info
       # Command Prompt
       docker run --rm -v "%cd%\data:/app/data" market-def-scraper
       ```
-
-      Wait for the pipeline to finish. You will receive an output detailing how many files of each type were created.
 
 ### Testing
 
