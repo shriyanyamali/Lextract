@@ -71,6 +71,8 @@ pip install pandas pytest PyPDF2 google-generativeai requests openpyxl
 
 ### Docker
 
+Make sure that [Docker](https://www.docker.com/products/docker-desktop/) is installed and running on your system.
+
 ```bash
 # Clone the repo
 git clone https://github.com/shriyanyamali/market-def-scraper.git
@@ -79,7 +81,10 @@ git clone https://github.com/shriyanyamali/market-def-scraper.git
 cd market-def-scraper
 
 # Build the image:
-docker build -t market-def-scraper.
+docker build -t market-def-scraper .
+
+# Confirm installation
+docker info
 ```
 
 ### Setup
