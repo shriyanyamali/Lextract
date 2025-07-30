@@ -66,7 +66,7 @@ git clone https://github.com/shriyanyamali/market-def-scraper.git
 cd market-def-scraper
 
 # Install the required packages
-pip install pandas pytest PyPDF2 google-generativeai requests openpyxl
+pip install -r requirements.txt
 ```
 
 ### Docker
