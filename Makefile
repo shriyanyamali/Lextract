@@ -13,7 +13,7 @@ lint:
 	flake8 scripts tests debugging run_pipeline.py
 
 clean:
-	rm -rf __pycache__ scripts/__pycache__ tests/__pycache__ .pytest_cache
+	rm -rf __pycache__ scripts/__pycache__ tests/__pycache__ utils/__pycache__ .pytest_cache
 
 venv:
 	python -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt
