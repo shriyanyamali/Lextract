@@ -111,10 +111,15 @@ pip install -r requirements.txt
 
 ### Testing
 
-Pytest:
+Run all tests:
 
 ```bash
 pytest -q
+```
+
+Run all tests with coverage report:
+```bash
+pytest --cov=scripts --cov=tests
 ```
 
 Make:
