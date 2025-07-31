@@ -21,12 +21,14 @@
 #
 # ------------------------------------------------------------------------------------------
 
-count = 0
+def count_words(file_path):
+    count = 0
+    with open(file_path, "r", encoding="utf-8") as file:
+        for line in file:
+            words = line.split(" ")
+            count += len(words)
+    print("Number of words present in given file: " + str(count))
+    return count
 
-# Open the file with utf-8 encoding
-with open("", "r", encoding="utf-8") as file: # specify the path to your file
-    for line in file:    
-        words = line.split(" ")
-        count += len(words)
-
-print("Number of words present in given file: " + str(count))
+if __name__ == "__main__":
+    count_words("") # specify the path to your file
