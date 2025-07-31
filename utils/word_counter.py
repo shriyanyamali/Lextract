@@ -30,5 +30,6 @@ def count_words(file_path):
     print("Number of words present in given file: " + str(count))
     return count
 
-if __name__ == "__main__":
-    count_words("") # specify the path to your file
+if __name__ == "__main__": # pragma: no cover
+     # specify the path to your file
+    count_words("") # pragma: no cover
