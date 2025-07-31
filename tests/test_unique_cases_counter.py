@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------------------
 #
-# market-def-scraper - Extracts market definitions from European Commission's decision PDFs
+# Lextract - Extracts market definitions from European Commission's decision PDFs
 #
 # Copyright (C) 2025 Shriyan Yamali
 #
