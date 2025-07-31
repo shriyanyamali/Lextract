@@ -26,9 +26,8 @@ import os
 import requests
 from PyPDF2 import PdfReader
 from io import BytesIO
-import re
 
-# 1) PDF exclusion phrases
+# Exclude PDFs with these phrases
 EXCLUSION_PHRASES = [
     "For the reasons set out in the Notice on a simplified",
     "European Commission has decided not to oppose the notified operation",
@@ -60,7 +59,6 @@ def get_pdf_text(url):
         return None, f"Error: {e}"
 
 def main():
-    # 2) Argparse
     p = argparse.ArgumentParser(
         description="Download case PDFs, extract text, and batch into files"
     )
@@ -80,7 +78,7 @@ def main():
     inc_path = os.path.join(args.datadir, "included_cases.txt")
     exc_path = os.path.join(args.datadir, "excluded_cases.txt")
 
-    # 4) Read links
+    # read links
     links = []
     with open(args.input, encoding="utf-8") as f:
         block = []
@@ -97,7 +95,6 @@ def main():
                 block = []
             else:
                 block.append(line)
-        # catch any trailing block
         if block:
             info = {k: v for k, v in (l.split(": ",1) for l in block)}
             links.append((
@@ -107,7 +104,7 @@ def main():
                 info["Link"]
             ))
 
-    # 5) Download & classify
+    # download as plain text file and classify file
     pdf_texts = []
     included  = []
     excluded  = []
@@ -123,7 +120,6 @@ def main():
             excluded.append((case, year, area, url, reason))
             print(f"[excluded] Case {case} → {reason}")
 
-    # 6) Batch counts by area & size
     batches_79 = {}
     batches_80 = {}
 
@@ -147,7 +143,7 @@ def main():
 
         print(f"[batch] wrote {fname}")
 
-    # 7) Write included_cases.txt
+    # write included_cases.txt
     with open(inc_path, "w", encoding="utf-8") as fo:
         for case, year, area, url in included:
             fo.write(f"Case Number: {case}\n")
@@ -156,7 +152,7 @@ def main():
             fo.write(f"Link: {url}\n\n")
     print(f"[included] {len(included)} → {inc_path}")
 
-    # 8) Write excluded_cases.txt
+    # write excluded_cases.txt
     with open(exc_path, "w", encoding="utf-8") as fo:
         for case, year, area, url, reason in excluded:
             fo.write(f"Case Number: {case}\n")
@@ -166,7 +162,7 @@ def main():
             fo.write(f"Reason: {reason}\n\n")
     print(f"[excluded] {len(excluded)} → {exc_path}")
 
-    # 9) Summary
+    # summary of batches
     total_79 = sum(batches_79.values())
     total_80 = sum(batches_80.values())
     total   = total_79 + total_80

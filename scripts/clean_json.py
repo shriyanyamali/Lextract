@@ -35,6 +35,7 @@ def clean_file(path):
     # Drop leading ```json fence
     if lines and lines[0].strip().startswith('```json'):
         lines = lines[1:]
+
     # Drop trailing ``` fence
     if lines and lines[-1].strip() == '```':
         lines = lines[:-1]
@@ -55,6 +56,7 @@ def main():
     )
     args = p.parse_args()
 
+    # find all JSON files in the input directory
     pattern = os.path.join(args.indir, '*.json')
     files = glob.glob(pattern)
     if not files:

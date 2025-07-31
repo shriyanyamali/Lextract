@@ -24,6 +24,7 @@
 import json
 import os
 
+# combine all JSON files into a single file
 def combine_json_files(input_folder, output_file):
     combined_data = []
 

@@ -44,7 +44,6 @@ def get_policy_area(link):
         return "Unknown"
 
 def main():
-    # 1) Parse command‐line arguments
     p = argparse.ArgumentParser(
         description="Extract case links from an Excel file")
     p.add_argument(
@@ -55,21 +54,21 @@ def main():
         help="Where to save the extracted links (e.g. data/extracted_links.txt)")
     args = p.parse_args()
 
-    # 2) Debug: show where we’re running from
+    # debugging
     print(f"Current Working Directory: {os.getcwd()}")
 
-    # 3) Check that the input file exists
+    # debugging
     if not os.path.isfile(args.input):
         print(f"Error: The file {args.input} does not exist.")
         return
 
-    # 4) Load the Excel and normalize column names
+    # oad excel file
     df = pd.read_excel(args.input)
     print("File loaded successfully.")
     df.columns = df.columns.str.strip()
     print("Column Names:", list(df.columns))
 
-    # 5) Verify required columns
+    # make sure required columns exist
     required = {'Decisions', 'Case number', 'Last decision date'}
     if not required.issubset(df.columns):
         missing = required - set(df.columns)
@@ -78,7 +77,7 @@ def main():
 
     all_links = []
 
-    # 6) Iterate rows and extract links + metadata
+    # extract links and metadata
     for idx, row in df.iterrows():
         decision_text = row['Decisions'] or ""
         case_number    = row['Case number']
@@ -87,7 +86,7 @@ def main():
         m = re.search(r'\d{2}\.\d{2}\.(\d{4})', date_str)
         year = m.group(1) if m else 'Unknown'
 
-        # find links with or without the “published on” prefix
+        # filtering out empty case decisions
         links_with_date = re.findall(
             r"Decision text: EN published on \d{2}\.\d{2}\.\d{4} - "
             r"(https://ec\.europa\.eu/competition/[^ \n]*\.pdf)",
@@ -108,7 +107,7 @@ def main():
             area = get_policy_area(link)
             all_links.append((case_number, year, area, link))
 
-    # 7) Write out the results
+    # summary of links
     with open(args.output, 'w') as fo:
         for case, year, area, link in all_links:
             fo.write(f"Case Number: {case}\n")

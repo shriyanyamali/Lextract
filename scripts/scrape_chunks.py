@@ -106,6 +106,7 @@ def main():
         print(f"No files matched size={args.size} in {args.indir}")
         return
 
+    # process matching files and save relevant information
     for input_path in all_files:
         fname = os.path.basename(input_path)
         match = re.search(r"pdf_texts_(\d+)_batch_(\d+)\.txt$", fname)

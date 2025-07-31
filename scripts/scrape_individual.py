@@ -111,7 +111,7 @@ def generate_content(model, input_text):
     ])
     return response
 
-
+# find input files with extracted sections
 def main():
     parser = argparse.ArgumentParser(
         description="Batch-extract each market definition as JSON from section files using Gemini"
@@ -143,6 +143,7 @@ def main():
         print(f"No section files found in {args.indir} matching pattern")
         return
 
+    # extract definitions with Gemini and save as JSON with metadata
     for path in files:
         fname = os.path.basename(path)
 

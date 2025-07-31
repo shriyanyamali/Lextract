@@ -22,7 +22,7 @@
 # ------------------------------------------------------------------------------------------
 
 import json
-input_file = r'' # Path to the JSON file containing case data
+input_file = r'' # specify the path to your file
 
 def count_unique_cases(json_path):
     with open(json_path, 'r', encoding='utf-8') as f:
