@@ -27,7 +27,7 @@ Lextract is a Python pipeline that automatically locates, downloads, and extract
 
 Competition authorities routinely delineate the relevant market as a first step in merger and antitrust assessments. Scholars analyze this language to track precedent, analyze trends in the scope of definitions, and identify the evolution of market definitions [@vr2019]. Despite its significance, only one commercial product addressing this need exists: LexisNexis’s [Caselex Market Definitions Module](https://www.caselex.eu/services/service) which suffers from being proprietary, immutable, and inaccessible to many academics.
 
-The Commission has published over 6,000 merger and antitrust decisions [@bldr2024; @ecdgc2025] and continues to add 280 more annually [@apdtsf2021], each formatted idiosyncratically and lengthy, with inconsistent placement of definitions and headings that vary in language. As a result, deterministic approaches such as regex are brittle and ineffective, while manual extraction is slow and irreproducible at scale. This pipeline rectifies this issue by providing a simple, open source way to extract market definitions that does not require manual guidance nor rely upon inaccurate pattern-matching techniques.
+The Commission has published over 6,000 merger and antitrust decisions [@bldr2024; @ecdgc2025] and continues to add 280 more annually [@apdtsf2021], each structured and formatted idiosyncratically, with inconsistent placement of definitions and headings that vary in language. As a result, deterministic approaches such as regex are brittle and ineffective [@wpbcjajstk2020], while manual extraction is slow and irreproducible at scale. This pipeline rectifies this issue by providing a simple, open source way to extract market definitions that does not require manual guidance nor rely upon inaccurate pattern-matching techniques.
 
 # General workflow
 
@@ -56,7 +56,7 @@ Lastly, while this pipeline makes use of Google Gemini, it is model-agnostic and
 | Local L (eg. DeepSeek 67B)  | Moderate | Medium         | Slow     | Low     |
 | Local S (eg. LLaMA 3-8B)    | Low      | Low            | Moderate | Low     |
 
-Table I compares the performance of different LLMs used to Extract Definitions. “L” = Large models (>30B parameters); “S” = Small models (<30B parameters).
+Table I compares the performance of different LLMs used to Extract Relevant Market Definitions. “L” = Large models (>30B parameters); “S” = Small models (<30B parameters).
 
 # Acknowledgements
 
