@@ -1,5 +1,5 @@
 ---
-title: 'Lextract: An Python pipeline for the automated extraction of European Commission market definitions'
+title: 'Lextract: A Python Pipeline for the Automated Extraction of European Commission Market Definitions'
 tags:
   - Python
   - relevant market definition
@@ -60,6 +60,6 @@ Table I compares the performance of different LLMs used to Extract Definitions. 
 
 # Acknowledgements
 
-I thank Professor Thibault Schrepel for his advisement and guidance throughout the project.
+I am grateful to Professor Thibault Schrepel for his invaluable advisement and guidance throughout the course of this project. This research received no specific grant from any funding agency, university, or commercial or not-for-profit sectors.
 
 # References
