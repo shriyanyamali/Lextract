@@ -37,7 +37,7 @@ The second section is responsible for the semantic extraction of market definiti
 
 The third and final section improves the presentation of the data: 5. Each separate JSON file is cleaned to remove extraneous characters and then aggregated into a single file, which can then be used for research and analysis. By structuring the workflow this way, each processed case is consistently analyzed, reducing variability and improving accuracy. Lextract’s code also maintains a high level of accuracy, substantiated by a comprehensive test suite with 94% code coverage.
 
-![Workflow Diagram of Pipeline](images/Lextract_Workflow_Diagram.png){ width=30% }
+![Workflow Diagram of Pipeline](images/Lextract_Workflow_Diagram.png){ width=45% }
 
 # Research applications
 
