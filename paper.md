@@ -49,6 +49,8 @@ It should be noted that this system, as with all systems, is not perfect and con
 
 Lastly, while this pipeline makes use of Google Gemini, it is model-agnostic and, if properly refactored, could utilize any LLM, including commercially hosted models like OpenAI’s or locally deployed ones such as LLaMA, Mistral, or DeepSeek. However, accuracy and consistency will vary significantly depending on model size and capabilities. Generally, smaller models, especially local ones without a sufficient context length or reasoning ability, will tend to hallucinate outputs, misidentify sections, or produce partial definitions.
 
+<!-- TODO: Add source for LLM paragraph -->
+
 | Model Type                   | Accuracy | Context Length | Speed    | Cost     | Scalability |
 | ---------------------------- | -------- | -------------- | -------- | -------- | ----------- |
 | Hosted Large (GPT-o3)        | High     | Very High      | Moderate | High     | Moderate    |
