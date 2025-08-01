@@ -51,16 +51,20 @@ Lastly, while this pipeline makes use of Google Gemini, it is model-agnostic and
 
 <!-- TODO: Add source for LLM paragraph -->
 
-| Model Type                   | Accuracy | Context Length | Speed    | Cost     | Scalability |
-| ---------------------------- | -------- | -------------- | -------- | -------- | ----------- |
-| Hosted Large (GPT-o3)        | High     | Very High      | Moderate | High     | Moderate    |
-| Hosted Small (Gemini Flash)  | Moderate | High           | Fast     | Moderate | High        |
-| Local Large (DeepSeek 67B)   | Moderate | Medium         | Slow     | Low      | Low         |
-| Local Small (LLaMA 3-8B)     | Low      | Low            | Moderate | Low      | Low         |
+: Comparison of LLMs Used to Extract Definitions  
+[]{#llmcomparison}
+
+| Model Type                         | Accuracy | Context Length | Speed    | Cost     | Scalability |
+|-----------------------------------|----------|----------------|----------|----------|-------------|
+| $\mathrm{Hosted\text{\ }L}$ (GPT\text{-}4o) | High     | Very High      | Moderate | High     | Moderate    |
+| $\mathrm{Hosted\text{\ }S}$ (Flash)  | Moderate | High           | Fast     | Moderate | High        |
+| $\mathrm{Local\text{\ }L}$ (DeepSeek 67B) | Moderate | Medium    | Slow     | Low      | Low         |
+| $\mathrm{Local\text{\ }S}$ (LLaMA\text{\ }3\text{-}8B) | Low | Low        | Moderate | Low      | Low         |
+
+[^llmtypes]: “L” stands for *Large* models (>30B parameters); “S” stands for *Small* models (<30B parameters). 
 
 # Acknowledgements
 
 I thank Professor Thibault Schrepel for his advisement and guidance throughout the project.
 
 # References
-
