@@ -2,6 +2,7 @@
 ![License](https://img.shields.io/badge/License-AGPL%203.0-green.svg)
 [![Test Coverage](https://codecov.io/gh/shriyanyamali/Lextract/branch/main/graph/badge.svg)](https://codecov.io/gh/shriyanyamali/Lextract)
 ![Tests Status](https://img.shields.io/github/actions/workflow/status/shriyanyamali/shriyanyamali.github.io/ci.yml?branch=main&label=tests)
+[![Paper Compile Status](https://github.com/shriyanyamali/Lextract/actions/workflows/compile-paper.yml/badge.svg)](https://github.com/shriyanyamali/Lextract/actions/workflows/compile-paper.yml)
 ![Last Commit](https://img.shields.io/github/last-commit/shriyanyamali/Lextract)
 
 # Lextract
