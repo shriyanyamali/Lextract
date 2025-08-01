@@ -13,10 +13,10 @@ authors:
     equal-contrib: true
     affiliation: "1"
 affiliations:
- - name: Newark Charter High School, United States <!-- TODO: Change affiliation -->
+ - name: Newark Charter High School, United States # TODO: Change affiliation
    index: 1
-   ror: 00hx57361 <!-- TODO: Add correct ror if applicable -->
-date: 31 July 2025 <!-- TODO: Update Date -->
+   ror: 00hx57361 # TODO: Add correct ror if applicable
+date: 31 July 2025 # TODO: Update Date
 bibliography: paper.bib
 ---
 
@@ -36,7 +36,7 @@ The general workflow for extracting market definitions is split into 3 sections,
 
 The second section is responsible for the semantic extraction of market definitions: 3. Google Gemini is used to identify and extract only the section of the text corpus that contains the market definition section. 4. Afterwards, the process becomes more granular, with Gemini again being used, only this time to identify and isolate each individual market definition within those sections. Each definition is then tagged with a topic and saved in a structured JSON file, where each object contains all elements of the aforementioned metadata, a topic, and the market definition. 
 
-The third and final section improves the presentation of the data: 5. Each separate JSON file is cleaned to remove extraneous characters and then aggregated into a single file, which can then be used for research and analysis. By structuring the workflow this way, each processed case is consistently analyzed, reducing variability and improving accuracy.
+The third and final section improves the presentation of the data: 5. Each separate JSON file is cleaned to remove extraneous characters and then aggregated into a single file, which can then be used for research and analysis. By structuring the workflow this way, each processed case is consistently analyzed, reducing variability and improving accuracy. Lextract’s code also maintains a high level of accuracy, substantiated by a comprehensive test suite with 94% code coverage.
 
 ![Workflow Diagram of Pipeline](images/Lextract_Workflow_Diagram.png){ width=80% }
 
