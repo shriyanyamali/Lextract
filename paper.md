@@ -35,7 +35,7 @@ The general workflow for extracting market definitions is split into three secti
 
 The second section is responsible for the semantic extraction of market definitions: 3. Google Gemini is used to identify and extract only the section of the text corpus that contains the market definition section. 4. Afterwards, the process becomes more granular, with Gemini again being used, only this time to identify and isolate each individual market definition within those sections. Each definition is then tagged with a topic and saved in a structured JSON file, where each object contains all elements of the aforementioned metadata, a topic, and the market definition. 
 
-The third and final section improves the presentation of the data: 5. Each separate JSON file is cleaned to remove extraneous characters and then aggregated into a single file, which can then be used for research and analysis. By structuring the workflow this way, each processed case is consistently analyzed, reducing variability and improving accuracy. Lextract’s code also maintains a high level of accuracy, substantiated by a comprehensive test suite with 94% code coverage.
+The third and final section improves the presentation of the data: 5. Each separate JSON file is cleaned to remove extraneous characters and then aggregated into a single file, which can then be used for research and analysis. By structuring the workflow this way, each processed case is consistently analyzed, reducing variability and improving accuracy. Lextract’s code also maintains a high level of accuracy, substantiated its comprehensive test suite with 94% code coverage.
 
 ![Workflow Diagram of Pipeline](images/Lextract_Workflow_Diagram.png){ width=45% }
 
@@ -49,12 +49,12 @@ It should be noted that this system, as with all systems, is not perfect and con
 
 Lastly, while this pipeline makes use of Google Gemini, it is model-agnostic and, if properly refactored, could utilize any LLM, including commercially hosted models like OpenAI’s or locally deployed ones such as LLaMA, Mistral, or DeepSeek. However, accuracy and consistency will vary significantly depending on model size and capabilities. Generally, smaller models, especially local ones without a sufficient context length or reasoning ability, will tend to hallucinate outputs, misidentify sections, or produce partial definitions [@sclywdbb2025].
 
-| Model Type               | Accuracy | Context Length | Speed    | Cost     |
-|--------------------------|----------|----------------|----------|----------|
-| Hosted L (GPT-4o)        | High     | Very High      | Moderate | High     |
-| Hosted S (Flash)         | Moderate | High           | Fast     | Moderate |
-| Local L (DeepSeek 67B)   | Moderate | Medium         | Slow     | Low      |
-| Local S (LLaMA 3-8B)     | Low      | Low            | Moderate | Low      |
+| Model Type                  | Accuracy | Context Length | Speed    | Cost    |
+|-----------------------------|----------|----------------|----------|---------|
+| Hosted L (eg. GPT-4o)       | High     | Very High      | Moderate | High    |
+| Hosted S (eg. Gemini Flash) | Moderate | High           | Fast     | Moderate|
+| Local L (eg. DeepSeek 67B)  | Moderate | Medium         | Slow     | Low     |
+| Local S (eg. LLaMA 3-8B)    | Low      | Low            | Moderate | Low     |
 
 Table I compares the performance of different LLMs used to Extract Definitions. “L” = Large models (>30B parameters); “S” = Small models (<30B parameters).
 
