@@ -51,16 +51,17 @@ Lastly, while this pipeline makes use of Google Gemini, it is model-agnostic and
 
 <!-- TODO: Add source for LLM paragraph -->
 
-| Model Type                   | Accuracy | Context Length | Speed    | Cost     | Scalability |
-| ---------------------------- | -------- | -------------- | -------- | -------- | ----------- |
-| Hosted Large (GPT-o3)        | High     | Very High      | Moderate | High     | Moderate    |
-| Hosted Small (Gemini Flash)  | Moderate | High           | Fast     | Moderate | High        |
-| Local Large (DeepSeek 67B)   | Moderate | Medium         | Slow     | Low      | Low         |
-| Local Small (LLaMA 3-8B)     | Low      | Low            | Moderate | Low      | Low         |
+| Model Type               | Accuracy | Context Length | Speed    | Cost     | Scalability |
+|--------------------------|----------|----------------|----------|----------|-------------|
+| Hosted L (GPT-4o)        | High     | Very High      | Moderate | High     | Moderate    |
+| Hosted S (Flash)         | Moderate | High           | Fast     | Moderate | High        |
+| Local L (DeepSeek 67B)   | Moderate | Medium         | Slow     | Low      | Low         |
+| Local S (LLaMA 3-8B)     | Low      | Low            | Moderate | Low      | Low         |
+
+Table I compares the performance of different LLMs used to Extract Definitions. “L” = Large models (typically >30B parameters); “S” = Small models (typically <30B parameters).
 
 # Acknowledgements
 
 I thank Professor Thibault Schrepel for his advisement and guidance throughout the project.
 
 # References
-
