@@ -1,4 +1,4 @@
-name: Draft PDF
+name: Compile Paper
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - paper.md
       - paper.bib
       - images/Lextract_Workflow_Diagram.png
-      - .github/workflows/draft-pdf.yml
+      - .github/workflows/compile-pdf.yml
 
 jobs:
   paper:
