@@ -21,16 +21,13 @@ bibliography: paper.bib
 
 # Summary
 
-Lextract is a Python pipeline that automatically locates, downloads, and extracts relevant market definitions from the European Commission’s merger and antitrust decision PDFs. Relevant market definitions establish the specific scope of competition legislation and identify the specific set of products in an area [@tp2017], making them indispensable for economists, lawyers, and regulators when determining the effects of mergers and evaluating anticompetitive behavior [@ptm2020]. This pipeline has been designed for researchers and competition law experts who require a quick and scalable way to extract relevant market definitions from many cases at once. Considering that market definitions are highly sensitive and, to some extent, arbitrary, Lextract has been designed and implemented to extract definitions as accurately as possible, as a slight change in the language of a definition can drastically change its meaning. 
-
-<!-- TODO: Remove? -->
-<!-- The process is split into five main steps: (1) fetch links, (2) exclude irrelevant decisions PDFs and scrape the text of the rest, (3) extract the market definitions section, (4) extract individual market definitions, and (5) clean and combine JSON files. This modular design allows for the scalable, reproducible extraction of market definitions with vast applications. -->
+Lextract is a Python pipeline that automatically locates, downloads, and extracts relevant market definitions from the European Commission’s merger and antitrust decision PDFs. Relevant market definitions establish the specific scope of competition legislation and identify the specific set of products in an area [@tp2017], making them indispensable for economists, lawyers, and regulators when determining the effects of mergers and evaluating anticompetitive behavior [@ptm2020]. However, manually retrieving these definitions from the European Commission's verbose decision PDFs is extremely time consuming and error-prone. Hence, this pipeline has been designed for researchers and competition law experts who require a quick and scalable way to extract relevant market definitions from many cases at once. Additionally, considering that market definitions are highly sensitive and, to some extent, arbitrary, Lextract has been designed and implemented to extract definitions as accurately as possible, since a slight change in the language of a definition can drastically change its meaning. This standard of accuracy is accomplished by using strict natural language processing and rule-based pattern recognition to identify market definitions while excluding all irrelevant information. By automating this process, Lextract enables merger and antitrust research at scale and contributes to more efficient competition policy analysis.
 
 # Statement of need
 
 Competition authorities routinely delineate the relevant market as a first step in merger and antitrust assessments. Scholars analyze this language to track precedent, analyze trends in the scope of definitions, and identify the evolution of market definitions [@vr2019]. Despite its significance, only one commercial product addressing this need exists: LexisNexis’s [Caselex Market Definitions Module](https://www.caselex.eu/services/service) which suffers from being proprietary, immutable, and inaccessible to many academics.
 
-The Commission has published over 6,000 merger and antitrust decisions [@bldr2024; @ecdgc2025] and continues to add 280 more annually [@apdtsf2021], each structured and formatted idiosyncratically, with inconsistent placement of definitions and headings that vary in language. As a result, deterministic approaches such as regex are brittle and ineffective [@wpbcjajstk2020], while manual extraction is slow and irreproducible at scale. This pipeline rectifies this issue by providing a simple, open source way to extract market definitions that does not require manual guidance nor rely upon inaccurate pattern-matching techniques.
+The Commission has published over 6,000 merger and antitrust decisions [@bldr2024; @ecdgc2025] and continues to add 280 more annually [@apdtsf2021], each structured and formatted idiosyncratically, with inconsistent placement of definitions and headings that vary in language. As a result, deterministic approaches such as regex are brittle and ineffective [@wpbcjajstk2020] for extracting market definitions, while manual extraction is slow and irreproducible at scale. This pipeline rectifies this issue by providing a simple, open source way to extract market definitions that does not require manual guidance nor rely upon inaccurate pattern-matching techniques.
 
 # General workflow
 
@@ -63,6 +60,6 @@ Table I compares the performance of different LLMs used to Extract Relevant Mark
 
 # Acknowledgements
 
-I am grateful to Professor Thibault Schrepel for his invaluable advisement and guidance throughout the course of this project. This research received no specific grant from any funding agency, university, or commercial or not-for-profit sector.
+I am grateful to Professor Thibault Schrepel for his invaluable advisement and guidance throughout the course of this project. This research receive no funding from any government agency, university, company, or non-profit organization.
 
 # References
