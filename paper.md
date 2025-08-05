@@ -24,7 +24,7 @@ bibliography: paper.bib
 Lextract is a Python pipeline that automatically locates, downloads, and extracts relevant market definitions from the European Commission’s merger and antitrust decision PDFs. Relevant market definitions establish the specific scope of competition legislation and identify the specific set of products in an area [@tp2017], making them indispensable for economists, lawyers, and regulators when determining the effects of mergers and evaluating anticompetitive behavior [@ptm2020]. This pipeline has been designed for researchers and competition law experts who require a quick and scalable way to extract relevant market definitions from many cases at once. Considering that market definitions are highly sensitive and, to some extent, arbitrary, Lextract has been designed and implemented to extract definitions as accurately as possible, as a slight change in the language of a definition can drastically change its meaning. 
 
 <!-- TODO: Remove? -->
-The process is split into five main steps: (1) fetch links, (2) exclude irrelevant decisions PDFs and scrape the text of the rest, (3) extract the market definitions section, (4) extract individual market definitions, and (5) clean and combine JSON files. This modular design allows for the scalable, reproducible extraction of market definitions with vast applications.
+<!-- The process is split into five main steps: (1) fetch links, (2) exclude irrelevant decisions PDFs and scrape the text of the rest, (3) extract the market definitions section, (4) extract individual market definitions, and (5) clean and combine JSON files. This modular design allows for the scalable, reproducible extraction of market definitions with vast applications. -->
 
 # Statement of need
 
