@@ -62,4 +62,8 @@ Table I compares the performance of different LLMs used to Extract Relevant Mark
 
 I am grateful to Professor Thibault Schrepel for his invaluable advisement and guidance throughout the course of this project. This research receive no funding from any government agency, university, company, or non-profit organization.
 
+# Conflict of Interest
+
+The author declares no conflict of interest.
+
 # References
