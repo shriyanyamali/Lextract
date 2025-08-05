@@ -164,7 +164,7 @@ This code was used in order to create the database for [JurisMercatus](https://j
 
 The code in this repository is licensed under the AGPL-3.0 License.
 
-View the full license at [www.gnu.org/licenses/agpl-3.0](https://www.gnu.org/licenses/agpl-3.0).
+View the [full license](https://raw.githubusercontent.com/shriyanyamali/Lextract/main/LICENSE).
 
 ## Attribution
 
