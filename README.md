@@ -16,9 +16,6 @@
   - [<u>Testing</u>](#testing)
 - [<u>Example Outputs</u>](#example-outputs)
 - [<u>Usage Example</u>](#usage-example)
-- [<u>File Descriptions</u>](#pipeline-scripts)
-  - [<u>Pipeline Scripts</u>](#pipeline-scripts)
-  - [<u>Utility Scripts</u>](#utility-scripts)
 - [<u>License</u>](#license)
 - [<u>Attribution</u>](#attribution)
 - [<u>Contact</u>](#contact)
@@ -162,55 +159,6 @@ After the script finishes running, your database.json file should have objects t
 ## Usage Example
 
 This code was used in order to create the database for [JurisMercatus](https://jurismercatus.vercel.app/). JurisMercatus is a market definition database aggregated from the European Commission's merger and antitrust case decisions. It brings all the definitions together natural language searches.
-
-## File Descriptions
-
-### Pipeline Scripts
-
-These scripts are part of the pipeline and are executed alongside `run_pipeline.py`. The scripts run in the following order:
-
-1. **scrape-links.py**
-
-   - Extracts PDF links, case numbers, years, and policy areas from an Excel file.
-   - Outputs to `extracted_links.txt`.
-   - Excel must have correctly named columns (correct by default).
-
-2. **scrape-pdf-text.py**
-
-   - Downloads PDFs from links.
-   - Filters out irrelevant cases.
-   - Saves one PDF per text file.
-   - Files >80,000 chars: `pdf_texts_80_batch_{n}.txt`.
-   - Files ≤79,999 chars: `pdf_texts_79_batch_{n}.txt`.
-
-3. **scrape-chunks.py**
-
-   - Uses Gemini AI to extract "Market Definition" sections.
-   - Saves as `extract-sections_79/80_batch_{n}.txt`.
-   - Includes metadata at top.
-
-4. **scrape-individual.py**
-
-   - Uses Gemini AI to extract individual market definitions.
-   - Saves as `extract-definitions_79/80_batch_{n}.json`.
-   - Includes metadata with each object.
-
-5. **clean-json.py**
-
-   - Removes markdown fences ('''json or \`\`\`) from JSON files.
-   - Edits in-place, creates no new files.
-
-6. **json-merge.py**
-
-   - Merges all JSON batch files into one.
-   - Output is `output.json` in `data/` directory.
-
-### Utility Scripts
-
-These scripts are not part of the pipeline and can be manually executed.
-
-- **unique_cases_counter.py**
-- **word_counter.py**
 
 ## License
 
