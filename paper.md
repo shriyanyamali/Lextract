@@ -37,7 +37,7 @@ The second section is responsible for the semantic extraction of market definiti
 
 The third and final section improves the presentation of the data: 5. Each separate JSON file is cleaned to remove extraneous characters and then aggregated into a single file, which can then be used for research and analysis. By structuring the workflow this way, each processed case is consistently analyzed, reducing variability and improving accuracy [@pmohlcacmm2025]. It also allows Lextract’s code to maintain a high level of accuracy, substantiated by its comprehensive test suite with 94% code coverage.
 
-![Workflow Diagram of Pipeline](images/Lextract_Workflow_Diagram.png){ width=45% }
+![Workflow Diagram of Pipeline](images/Lextract_Workflow_Diagram.png){ width=43% }
 
 # Research applications
 
@@ -56,7 +56,7 @@ Lastly, while this pipeline makes use of Google Gemini, it is model-agnostic and
 | Local L (eg. DeepSeek 67B)  | Moderate | Medium         | Slow     | Low     |
 | Local S (eg. LLaMA 3-8B)    | Low      | Low            | Moderate | Low     |
 
-Table I compares the performance of different LLMs used to Extract Relevant Market Definitions. “L” = Large models (>30B parameters); “S” = Small models (<30B parameters).
+Table I compares the relative capabilities (accuracy, context length, speed, cost) of different LLMs when applied to the task of extract relevant market definitions. “L” = Large models (>30B parameters); “S” = Small models (<30B parameters).
 
 # Acknowledgements
 
