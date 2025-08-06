@@ -158,7 +158,7 @@ After the script finishes running, your database.json file should have objects t
 
 ## Usage Example
 
-This code was used in order to create the database for [JurisMercatus](https://jurismercatus.vercel.app/). JurisMercatus is a market definition database aggregated from the European Commission's merger and antitrust case decisions. It brings all the definitions together natural language searches.
+This code was used in order to create the database for [JurisMercatus](https://jurismercatus.vercel.app/). JurisMercatus is a market definition database aggregated from the European Commission's merger and antitrust case decisions. It brings all the definitions together and allows for natural language searches.
 
 ## License
 
@@ -184,3 +184,4 @@ https://github.com/shriyanyamali/Lextract
 Email: [yamalishriyan@gmail.com](mailto:yamalishriyan@gmail.com)
 
 Copyright © 2025 Shriyan Yamali. All rights reserved.
+
