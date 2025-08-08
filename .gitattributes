@@ -1,0 +1,8 @@
+.github/          export-ignore
+tests/            export-ignore
+images/           export-ignore
+coverage.xml      export-ignore
+.coverage         export-ignore
+paper.md          export-ignore
+paper.bib         export-ignore
+PROJECT_TREE.md   export-ignore
