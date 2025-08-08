@@ -5,4 +5,5 @@ coverage.xml      export-ignore
 .coverage         export-ignore
 paper.md          export-ignore
 paper.bib         export-ignore
+paper.pdf         export-ignore
 PROJECT_TREE.md   export-ignore
