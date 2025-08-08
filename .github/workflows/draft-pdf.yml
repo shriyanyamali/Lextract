@@ -8,13 +8,19 @@ on:
       - images/Lextract_Workflow_Diagram.png
       - .github/workflows/draft-pdf.yml
 
+permissions:
+  contents: write
+
 jobs:
   paper:
     runs-on: ubuntu-latest
     name: Paper Draft
     steps:
-      - name: Checkout
+      - name: Checkout branch (not detached)
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0 
 
       - name: Build draft PDF
         uses: openjournals/openjournals-draft-action@master
@@ -33,3 +39,6 @@ jobs:
         with:
           message: "(auto) Paper PDF Draft"
           add: "paper.pdf"
+          # optional, but keeps authorship tidy:
+          author_name: shriyanyamali
+          author_email: shriyanyamali@users.noreply.github.com
