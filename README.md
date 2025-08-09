@@ -44,9 +44,9 @@ Example use cases include:
 
 - [Git](https://git-scm.com/downloads)
 - [Python](https://www.python.org/downloads/)
-- [Gemini API Key](https://ai.google.dev/)
+- [Gemini API Key](https://aistudio.google.com/apikey)
 
-The Gemini key is for `scrape-chunks.py` and `scrape-individual.py`. You can get one for free [here](https://ai.google.dev/). The code defaults to the Gemini 2.0 Flash model for its higher free-tier limits. While Pro models (e.g., 1.5 or 2.5 Pro) offer better accuracy, they have lower rate limits so are less practical to use with a free key.
+The Gemini key is for `scrape-chunks.py` and `scrape-individual.py`. You can get one for free [here](https://aistudio.google.com/apikey). The code defaults to the Gemini 2.0 Flash model for its higher free-tier limits. While Pro models (e.g., 1.5 or 2.5 Pro) offer better accuracy, they have lower rate limits so are less practical to use with a free key.
 
 Gemini 2.0 Flash should be suitable for analyzing 50-100 cases/day depending on the length of the case decisions. See model options [here](https://ai.google.dev/gemini-api/docs/models) and rate limits [here](https://ai.google.dev/gemini-api/docs/rate-limits).
 
@@ -184,4 +184,3 @@ https://github.com/shriyanyamali/Lextract
 Email: [yamalishriyan@gmail.com](mailto:yamalishriyan@gmail.com)
 
 Copyright © 2025 Shriyan Yamali. All rights reserved.
-
