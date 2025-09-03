@@ -41,7 +41,7 @@ The third and final section improves the presentation of the data: 5. Each separ
 
 # Research applications
 
-Lextract powers the database of [JurisMercatus](https://jurismercatus.vercel.app/), an open source search interface that allows users to search for market definitions, leveraging the power of semantic search. The metadata provided by Lextract enables filtering by year, policy area, and case number. Further, this resource has the capability to support greater academic research and improve the accessibility of market definitions.
+Lextract powers the database of [JurisMercatus](https://jurismercatus.shriyanyamali.com/), an open source search interface that allows users to search for market definitions, leveraging the power of semantic search. The metadata provided by Lextract enables filtering by year, policy area, and case number. Further, this resource has the capability to support greater academic research and improve the accessibility of market definitions.
 
 # Limitations
 
