@@ -151,18 +151,9 @@ The code in this repository is licensed under the AGPL-3.0 License.
 
 View the [full license](https://raw.githubusercontent.com/shriyanyamali/Lextract/main/LICENSE).
 
-## Attribution
+## Acknowledgements
 
-When using the code from this repo (i.e. shriyanyamali/Lextract) you must provide proper attribution.
-
-Specifically, in any work, including but not limited to public, published, commercialized, or derived work that uses or builds upon this repository's code, you must cite the original repository by including the following citation:
-
-```
-This project uses code from the Lextract repository Copyright (c) 2025 Shriyan Yamali,
-licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
-
-https://github.com/shriyanyamali/Lextract
-```
+Lextract was built by Shriyan Yamali under the advisement of Professor Thibault Schrepel. This project received no funding from any government agency, university, company, or non-profit organization.
 
 ## Contact
 
