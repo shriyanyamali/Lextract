@@ -5,21 +5,6 @@
 
 # Lextract
 
-## Table of Contents
-
-- [<u>Purpose</u>](#purpose)
-- [<u>Research Applications</u>](#research-applications)
-- [<u>Instructions</u>](#instructions)
-  - [<u>Prerequisites</u>](#prerequisites)
-  - [<u>Installation</u>](#installation)
-  - [<u>Setup</u>](#setup)
-  - [<u>Testing</u>](#testing)
-- [<u>Example Outputs</u>](#example-outputs)
-- [<u>Usage Example</u>](#usage-example)
-- [<u>License</u>](#license)
-- [<u>Attribution</u>](#attribution)
-- [<u>Contact</u>](#contact)
-
 ## Purpose
 
 This repository extracts relevant market definitions from European Commission's competition case decision PDFs, which are available through their [online case search database](https://competition-cases.ec.europa.eu/search), using an automated pipeline. Market definitions help identify the specific market in which a merger is assessed. A market definition is a tool that defines the boundaries of competition between undertakings.
