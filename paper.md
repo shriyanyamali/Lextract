@@ -24,7 +24,7 @@ Lextract is a Python pipeline that automatically extracts relevant market defini
 
 # Statement of need
 
-Competition authorities routinely delineate the relevant market as a first step in merger and antitrust assessments. The definition of the relevant market establishes the market position of firms operating within it, helping regulators and courts control mergers and evaluate potential abuses of dominant positions; this makes the definition of the relevant market a predominant step in competition law analysis. For instance, in the 2025 case United States v. Google LLC, the outcome of the decision was impacted by how the relevant market was defined and whether or not Google and its services were found to hold a dominant position within it [usvg2025].
+Competition authorities routinely delineate the relevant market as a first step in merger and antitrust assessments. The definition of the relevant market establishes the market position of firms operating within it, helping regulators and courts control mergers and evaluate potential abuses of dominant positions; this makes the definition of the relevant market a predominant step in competition law analysis. For instance, in the 2025 case United States v. Google LLC, the outcome of the decision was impacted by how the relevant market was defined and whether or not Google and its services were found to hold a dominant position within it [@usvg2025].
 
 Despite its significance, only one commercial product addressing this need exists: LexisNexis’s [Caselex Market Definitions Module](https://www.caselex.eu/services/service) which suffers from being proprietary, immutable, and inaccessible to many academics.
 
