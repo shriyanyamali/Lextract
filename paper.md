@@ -12,10 +12,9 @@ authors:
     orcid: 0009-0002-4861-7264
     affiliation: "1"
 affiliations:
- - name: Newark Charter High School, United States # TODO: Change affiliation
+ - name: Independent Researcher
    index: 1
-   # ror: 00hx57361 TODO: Add correct ror if applicable
-date: 31 July 2025 # TODO: Update Date
+date: 3 October 2025 # TODO: Update Date
 bibliography: paper.bib
 ---
 
@@ -60,7 +59,7 @@ Table I compares the relative capabilities (accuracy, context length, speed, cos
 
 # Acknowledgements
 
-I am grateful to Professor Thibault Schrepel for his invaluable advisement and guidance throughout the course of this project. This research received no funding from any government agency, university, company, or non-profit organization.
+I am grateful to Professor Thibault Schrepel of Stanford Law School for his invaluable advisement and guidance throughout the course of this project. This research received no funding from any government agency, university, company, or non-profit organization.
 
 # Conflict of Interest
 
