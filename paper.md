@@ -1,5 +1,5 @@
 ---
-title: 'Lextract: A Python Pipeline for the Automated Extraction of European Commission Market Definitions'
+title: 'Lextract: A Python Pipeline for the Automated Extraction of Market Definitions'
 tags:
   - Python
   - relevant market definition
@@ -14,7 +14,7 @@ authors:
 affiliations:
  - name: Independent Researcher, United States
    index: 1
-date: 3 October 2025 # TODO: Update Date
+date: 7 October 2025
 bibliography: paper.bib
 ---
 
@@ -24,7 +24,7 @@ Lextract is a Python pipeline that automatically extracts relevant market defini
 
 # Statement of need
 
-Competition authorities routinely delineate relevant markets as a first step in merger and antitrust assessments. The definition of the relevant market establishes the market position of firms operating within it, helping regulators and courts control mergers and evaluate potential abuses of dominant positions; this makes defining the relevant market a predominant step in competition law analysis. For instance, in the 2025 case United States v. Google LLC, the outcome of the decision was impacted by how the relevant market was defined and whether or not Google and its services were found to hold a dominant position within that market [@usvg2025].
+Competition authorities routinely delineate relevant markets as a first step in merger and antitrust assessments. The definition of the relevant market establishes the market position of firms operating within it, therein making its establishment necessary for regulators and courts to control mergers and evaluate potential abuses of dominant positions; this makes defining the relevant market a predominant step in competition law analysis. For instance, in the 2025 case United States v. Google LLC, the outcome of the decision was impacted by how the relevant market was defined and whether or not Google and its services were found to hold a dominant position within that market [@usvg2025].
 
 Despite its significance, only one commercial product addressing the need to quickly access relevant market definitions exists: LexisNexis’s [Caselex Market Definitions Module](https://www.caselex.eu/services/service) which suffers from being proprietary, immutable, and inaccessible to many academics.
 
@@ -46,7 +46,7 @@ Lextract powers the database of [JurisMercatus](https://jurismercatus.shriyanyam
 
 # Limitations
 
-It should be noted that this system, as with all systems, is not perfect and contains inaccuracies. First, with regards to step three, as a result of the previously mentioned fact that the heading used to identify the market definition section is inconsistently phrased, what constitutes a market definition heuristically and arbitrarily defined, potentially leading to inaccuracies, especially when the language of decision texts deviates significantly from the expected pattern. Secondly, the quality and reliability of the extraction are limited to that of the input. In other words, should the input consist of missing pages or unconventional language, the model may be confused, leading to partial, hallucinated, or inaccurate results [@vsfjdgxszgwb2024]. Additionally, though it is understood that decisions are adjudicated in many different languages, with the European Commission using multiple itself, to maintain accuracy, the pipeline excludes all decisions that are not provided in English, thereby limiting its application to other languages without at least a moderate amount of modification.
+It should be noted that this system, as with all systems, is not perfect and contains inaccuracies. First, with regards to step three, as a result of the previously mentioned fact that the heading used to identify the market definition section is inconsistently phrased, what constitutes a market definition heuristically and arbitrarily defined, potentially leading to inaccuracies, especially when the language of decision texts deviates significantly from the expected pattern. Secondly, the quality and reliability of the extraction are limited to that of the input. In other words, should the input consist of missing pages or unconventional language, the model may be confused and output partial, hallucinated, or inaccurate results [@vsfjdgxszgwb2024]. Additionally, though it is understood that decisions are adjudicated in many different languages, with the European Commission using multiple itself, to maintain accuracy, the pipeline excludes all decisions that are not provided in English, thereby limiting its application to other languages without at least a moderate amount of modification.
 
 Lastly, while this pipeline makes use of Google Gemini, it is model-agnostic and, if properly refactored, could utilize any LLM. This includes commercially hosted models like OpenAI’s or locally deployed ones such as LLaMA, Mistral, or DeepSeek. However, accuracy and consistency will vary significantly depending on model size and capabilities. Generally, smaller models, especially local ones without a sufficient context length or reasoning ability, will tend to hallucinate outputs, misidentify sections, or produce partial definitions [@sclywdbb2025].
 
