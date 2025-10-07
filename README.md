@@ -111,8 +111,6 @@ Make:
 ```bash
 make test       # Run all tests
 make coverage   # Run tests with coverage report
-make format     # Auto-format code
-make lint       # Lint code
 make clean      # Remove __pycache__ and test artifacts
 ```
 
