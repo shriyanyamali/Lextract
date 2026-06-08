@@ -1,7 +1,7 @@
 ![Maintained](https://img.shields.io/badge/Maintained-yes-green.svg)
 ![License](https://img.shields.io/badge/License-AGPL%203.0-green.svg)
 [![Test Coverage](https://codecov.io/gh/shriyanyamali/Lextract/branch/main/graph/badge.svg)](https://codecov.io/gh/shriyanyamali/Lextract)
-![Tests Status](https://img.shields.io/github/actions/workflow/status/shriyanyamali/shriyanyamali.github.io/ci.yml?branch=main&label=tests)
+![Tests Status](https://img.shields.io/github/actions/workflow/status/shriyanyamali/lextract/ci.yml?branch=main&label=tests)
 
 # Lextract
 
