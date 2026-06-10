@@ -46,7 +46,7 @@ To assess the quality of Lextract's output, a pattern-based validity evaluation 
  
 The JurisMercatus database, which contained 4,105 definitions extracted using Lextract from over 600 EC decisions, was used to test the pipeline's efficacy. The pipeline achieved a validity rate of 76.6%, with 3,143 definitions passing all three checks. The primary failure mode was the absence of a structural marker, accounting for 777 of the 962 invalid definitions; a further 275 definitions fell outside the expected length range, and only 29 failed on phrasing alone. As shown in Figure 2, the validity rate is broadly consistent across years, ranging from 68% in 2017 to 86% in 2019, with a modest decline in 2024 (62%) that likely reflects a higher proportion of simplified procedure decisions in the most recent cases processed. These results indicate that Lextract reliably produces structurally well-formed market definitions.
  
-![Validity Rates of the Pipeline](images/Lextract_Evaluate_Diagram.png){ width=90% }
+![Validity Rates of the Pipeline](images/Lextract_Evaluate_Diagram.png){ width=100% }
 
 # Research applications
 
