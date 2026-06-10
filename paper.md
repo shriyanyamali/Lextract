@@ -46,7 +46,7 @@ To assess the quality of Lextract's output, a pattern-based validity evaluation 
  
 Applied to the full output of 4,105 definitions extracted from 600 EC decisions, the pipeline achieved a validity rate of 76.6%, with 3,143 definitions passing all three checks. The primary failure mode was the absence of a structural marker, accounting for 777 of the 962 invalid definitions; a further 275 definitions fell outside the expected length range, and only 29 failed on legal phrase presence alone. As shown in Figure 2, the validity rate is broadly consistent across years, ranging from 68% in 2017 to 86% in 2019, with a modest decline in 2024 (62%) that likely reflects a higher proportion of simplified procedure decisions in the most recent cases processed. These results indicate that Lextract reliably produces structurally well-formed market definitions and that its primary limitation — the 23.4% of definitions that fail validation — is concentrated in cases where the Commission's decision language deviates from the standard phraseology the pipeline is calibrated to recognize.
  
-![Extraction validity rate by year across 4,105 definitions extracted from 600 EC decisions. Overall validity rate was found to be 76.6\%.](images/Lextract_Validity_By_Year.png){ width=90% }
+![Extraction validity rate by year across 4,105 definitions extracted from 600 cases. Overall validity rate was found to be 76.6\%.](images/Lextract_Evaluate_Diagram.png){ width=90% }
 
 # Research applications
 
