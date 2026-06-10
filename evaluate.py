@@ -21,67 +21,13 @@
 #
 # ------------------------------------------------------------------------------------------
 
-"""
-evaluate.py — Pattern-based validity assessment of Lextract extracted definitions.
-
-Rather than comparing extracted definitions to a fixed lookup table, this script
-learns what a valid market definition looks like from a set of manually verified
-reference definitions (evaluation/reference.json), then scores every definition
-in the pipeline's full output (data/output.json) against those learned patterns.
-
-This approach answers the question: of the thousands of definitions Lextract
-extracts, what proportion exhibit the structural and linguistic characteristics
-of genuine EC market definitions?
-
-Validity is assessed across four independent signals derived from the reference set:
-
-  1. LENGTH — word count falls within the range observed in reference definitions
-               (with a tolerance margin applied to both ends).
-
-  2. VOCABULARY — the definition shares sufficient domain vocabulary with the
-                  reference corpus, measured by Jaccard similarity against the
-                  union of all reference tokens.
-
-  3. LEGAL PHRASES — the definition contains at least one phrase that appears
-                     frequently in reference definitions (e.g. "relevant market",
-                     "left open", "EEA-wide", "Commission considers").
-
-  4. STRUCTURAL MARKER — the definition contains language typical of EC market
-                         definition conclusions (scope statements, findings, etc.).
-
-A definition is considered valid if it passes all four checks. Each check threshold
-is derived empirically from the reference set rather than hard-coded, making the
-validator self-calibrating.
-
-Reference format (evaluation/reference.json):
-    [
-        {
-            "case_number": "M.9466",
-            "topic": "...",
-            "text": "Full verified definition text..."
-        },
-        ...
-    ]
-
-Usage:
-    python evaluate.py
-    python evaluate.py --reference evaluation/reference.json --predicted data/output.json
-    python evaluate.py --output data/evaluation_report.json
-"""
-
 import argparse
 import json
 import os
 import re
 from collections import Counter
 
-
-# ---------------------------------------------------------------------------
-# Text utilities
-# ---------------------------------------------------------------------------
-
 def tokenize(text):
-    """Lowercase word tokens, punctuation stripped."""
     return re.findall(r"\b[a-z0-9]+\b", text.lower())
 
 
@@ -100,22 +46,7 @@ def jaccard(set_a, set_b):
         return 0.0
     return len(set_a & set_b) / len(set_a | set_b)
 
-
-# ---------------------------------------------------------------------------
-# Pattern learning from reference definitions
-# ---------------------------------------------------------------------------
-
 def learn_patterns(reference_definitions):
-    """
-    Derive validity thresholds and vocabulary from the reference set.
-
-    Returns a patterns dict containing:
-        min_words        : lower bound on valid definition length
-        max_words        : upper bound on valid definition length
-        reference_vocab  : union of all tokens across reference definitions
-        legal_phrases    : phrases appearing in >= MIN_PHRASE_FREQ% of references
-        vocab_threshold  : minimum Jaccard similarity to reference vocab
-    """
     texts = [d.get("text", "") for d in reference_definitions]
     lengths = [word_count(t) for t in texts]
 
@@ -131,7 +62,7 @@ def learn_patterns(reference_definitions):
 
     # Legal phrase extraction: find multi-word phrases (2–5 tokens) that
     # appear in at least MIN_PHRASE_FREQ fraction of reference definitions.
-    MIN_PHRASE_FREQ = 0.15   # phrase must appear in >=15% of references
+    MIN_PHRASE_FREQ = 0.15 
     MIN_PHRASE_LEN  = 2
     MAX_PHRASE_LEN  = 5
 
@@ -169,21 +100,7 @@ def learn_patterns(reference_definitions):
         "ref_mean_length": round(sum(lengths) / len(lengths), 1),
     }
 
-
-# ---------------------------------------------------------------------------
-# Validity scoring
-# ---------------------------------------------------------------------------
-
 def score_definition(text, patterns):
-    """
-    Score a single definition against the learned patterns.
-
-    Returns a dict with:
-        valid            : bool — passes all four checks
-        checks           : dict of individual check results
-        vocab_similarity : float — Jaccard vs reference vocab
-        word_count       : int
-    """
     tokens = token_set(text)
     wc     = word_count(text)
     text_l = text.lower()
@@ -191,15 +108,15 @@ def score_definition(text, patterns):
     # Check 1: length within learned bounds
     length_ok = patterns["min_words"] <= wc <= patterns["max_words"]
 
-    # Check 2: vocabulary overlap removed — reference set covers a narrow
+    # Check 2: vocabulary overlap removed 
     # slice of industries; penalizing domain diversity produces false negatives.
     vocab_sim = jaccard(tokens, patterns["reference_vocab"])
     vocab_ok  = True   # retained for reporting only, not used in validity gate
 
-    # Check 3: contains at least one learned legal phrase
+    # Check 3: contains at least one learned phrase
     phrase_ok = any(phrase in text_l for phrase in patterns["legal_phrases"])
 
-    # Check 4: structural marker — conclusion/scope language typical of EC decisions
+    # Check 4: structural marker
     structural_markers = [
         "relevant market", "product market", "geographic market",
         "market definition", "left open", "eea-wide", "eea wide",
@@ -223,21 +140,12 @@ def score_definition(text, patterns):
         },
     }
 
-
-# ---------------------------------------------------------------------------
-# Full dataset evaluation
-# ---------------------------------------------------------------------------
-
 def evaluate(reference_data, predicted_data):
-    """
-    Learn patterns from reference_data, then score every definition
-    in predicted_data. Returns a full results dict.
-    """
     patterns = learn_patterns(reference_data)
 
     results      = []
     valid_count  = 0
-    fail_counts  = Counter()   # which checks are failing most
+    fail_counts  = Counter() 
 
     for item in predicted_data:
         text   = item.get("text", "")
@@ -293,11 +201,6 @@ def evaluate(reference_data, predicted_data):
         "per_definition":       results,
     }
 
-
-# ---------------------------------------------------------------------------
-# Reporting
-# ---------------------------------------------------------------------------
-
 def print_report(results):
     p = results["patterns"]
     print(f"\n{'=' * 57}")
@@ -328,11 +231,6 @@ def print_report(results):
     print(f"  {'-' * 45}")
     for year, v in results["validity_by_year"].items():
         print(f"  {year:<8} {v['valid']:>6} {v['total']:>6} {v['pct']:>6.1f}%")
-
-
-# ---------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------
 
 def main():
     p = argparse.ArgumentParser(
@@ -367,7 +265,6 @@ def main():
     print_report(results)
 
     os.makedirs(os.path.dirname(args.output) or ".", exist_ok=True)
-    # Don't write per_definition to the summary report — too large
     summary = {k: v for k, v in results.items() if k != "per_definition"}
     with open(args.output, "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=4)

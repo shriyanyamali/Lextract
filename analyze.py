@@ -38,7 +38,6 @@ def load_data(path):
 
 
 def definitions_per_year(data):
-    """Count how many definitions were extracted per year."""
     counts = Counter()
     for item in data:
         year = item.get("year", "Unknown")
@@ -47,7 +46,6 @@ def definitions_per_year(data):
 
 
 def definitions_by_policy_area(data):
-    """Count definitions by policy area (Merger, Antitrust & Cartels, etc.)."""
     counts = Counter()
     for item in data:
         area = item.get("policy_area", "Unknown")
@@ -56,10 +54,6 @@ def definitions_by_policy_area(data):
 
 
 def top_sectors(data, n=20):
-    """
-    Return the top N most frequent market sectors.
-    Sectors are derived from the 'topic' field of each definition.
-    """
     counts = Counter()
     for item in data:
         topic = item.get("topic", "").strip()
@@ -69,10 +63,6 @@ def top_sectors(data, n=20):
 
 
 def avg_definition_length_per_year(data):
-    """
-    Compute the average definition length in words per year.
-    Returns a dict mapping year -> average word count (rounded to 1 decimal place).
-    """
     word_counts = defaultdict(list)
     for item in data:
         year = item.get("year", "Unknown")
@@ -85,12 +75,10 @@ def avg_definition_length_per_year(data):
 
 
 def unique_cases(data):
-    """Return the number of unique case numbers in the dataset."""
     return len({item.get("case_number") for item in data if item.get("case_number")})
 
 
 def summary_statistics(data):
-    """Compute high-level summary statistics."""
     all_lengths = [len(item.get("text", "").split()) for item in data]
     total = len(data)
     return {
@@ -103,7 +91,6 @@ def summary_statistics(data):
 
 
 def print_section(title, data_dict, value_label="Count"):
-    """Pretty-print a dictionary as a two-column table."""
     print(f"\n{'=' * 55}")
     print(f"  {title}")
     print(f"{'=' * 55}")
