@@ -11,3 +11,5 @@ Please ensure your pull request(s) adheres to the following guidelines:
    variables, useful file locations, and major file changes.
 3. Make an individual pull request for each change.
 4. Make sure descriptions are detailed and explain all changes.
+
+> Note: We have a code of conduct, please follow it in all your interactions with the project.
