@@ -11,6 +11,8 @@
 ├── Makefile
 ├── requirements.txt
 ├── run_pipeline.py
+├── analyze.py
+├── evaluate.py
 ├── .github/
 │   └── workflows/
 │       ├── ci.yml
