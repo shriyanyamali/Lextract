@@ -31,6 +31,9 @@
 │   ├── excluded_cases.txt*
 │   ├── included_cases.txt*
 │   ├── output.json*
+│   ├── analysis.json*
+│   ├── evaluation_report.json*
+│   ├── output.json*
 │   ├── extracted_batches/
 │   │   ├── pdf_texts_79_batch_{n}.txt***
 │   │   └── pdf_texts_80_batch_{n}.txt***

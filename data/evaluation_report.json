@@ -1,0 +1,70 @@
+{
+    "patterns": {
+        "min_words": 26,
+        "max_words": 668,
+        "vocab_threshold": 0.0315,
+        "legal_phrases_learned": 121,
+        "ref_mean_length": 150.2
+    },
+    "total_definitions": 4105,
+    "valid_definitions": 3143,
+    "invalid_definitions": 962,
+    "validity_rate_pct": 76.6,
+    "top_failure_reasons": {
+        "structural_marker_present": 777,
+        "length_in_range": 275,
+        "legal_phrase_present": 29
+    },
+    "validity_by_year": {
+        "2016": {
+            "valid": 3,
+            "total": 9,
+            "pct": 33.3
+        },
+        "2017": {
+            "valid": 45,
+            "total": 66,
+            "pct": 68.2
+        },
+        "2018": {
+            "valid": 467,
+            "total": 621,
+            "pct": 75.2
+        },
+        "2019": {
+            "valid": 421,
+            "total": 492,
+            "pct": 85.6
+        },
+        "2020": {
+            "valid": 551,
+            "total": 699,
+            "pct": 78.8
+        },
+        "2021": {
+            "valid": 477,
+            "total": 594,
+            "pct": 80.3
+        },
+        "2022": {
+            "valid": 509,
+            "total": 691,
+            "pct": 73.7
+        },
+        "2023": {
+            "valid": 472,
+            "total": 618,
+            "pct": 76.4
+        },
+        "2024": {
+            "valid": 184,
+            "total": 297,
+            "pct": 62.0
+        },
+        "2025": {
+            "valid": 14,
+            "total": 18,
+            "pct": 77.8
+        }
+    }
+}
