@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "lextract"
+version = "1.0.0"
+description = "Automated extraction of market definitions from European Commission competition case decision PDFs"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Shriyan Yamali", email = "yamalishriyan@gmail.com" }
+]
+keywords = [
+    "competition law",
+    "antitrust",
+    "merger",
+    "market definition",
+    "European Commission",
+    "NLP",
+    "legal informatics",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Legal Industry",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Text Processing :: Linguistic",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "PyPDF2>=3.0",
+    "google-generativeai>=0.8",
+    "requests>=2.31",
+    "openpyxl>=3.1",
+]
+
+[project.optional-dependencies]
+parquet = [
+    "pyarrow>=14.0",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "pyarrow>=14.0",
+]
+
+[project.urls]
+Homepage       = "https://github.com/shriyanyamali/Lextract"
+Repository     = "https://github.com/shriyanyamali/Lextract"
+"Bug Tracker"  = "https://github.com/shriyanyamali/Lextract/issues"
+
+[project.scripts]
+lextract       = "run_pipeline:main"
+lextract-analyze  = "analyze:main"
+lextract-evaluate = "evaluate:main"
+lextract-export   = "export:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scripts*", "utils*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts   = "-q"
