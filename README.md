@@ -211,4 +211,4 @@ Lextract was built by Shriyan Yamali under the advisement of Professor Thibault 
 
 Email: [yamalishriyan@gmail.com](mailto:yamalishriyan@gmail.com)
 
-Copyright © 2025 Shriyan Yamali. All rights reserved.
+Copyright © 2026 Shriyan Yamali. All rights reserved.
