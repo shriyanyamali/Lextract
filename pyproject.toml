@@ -4,7 +4,7 @@ build-backend = "setuptools.backends.legacy:build"
 
 [project]
 name = "lextract"
-version = "1.0.0"
+version = "1.0.0rc2"
 description = "Automated extraction of market definitions from European Commission competition case decision PDFs"
 readme = "README.md"
 license = { file = "LICENSE" }
