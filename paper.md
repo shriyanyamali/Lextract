@@ -36,7 +36,7 @@ Competition authorities routinely delineate relevant markets as a first step in 
 | Reproducible              | Yes                       | No                                          |
 | Human editorial review    | Yes (done by user)        | Yes                                         |
 
-Table 2: Comparison of Lextract and the Caselex Market Definitions Module
+Table I: Comparison of Lextract and the Caselex Market Definitions Module
 
 Despite its significance, only one commercial product addressing the need to quickly access relevant market definitions exists: LexisNexis’s [Caselex Market Definitions Module](https://www.caselex.eu/services/service). As shown in Table 1, Caselex differs fundamentally from Lextract across many aspects pertinent to academic research. While Caselex offers broad multilingual coverage across 63 competition authorities and benefits from human editorial review, it suffers from being proprietary, immutable, and inaccessible to many academics. Its contents are fixed and cannot be updated, extended, or reproduced by users. These constraints make it poorly suited to empirical research, where reproducibility, programmatic access, and the ability to extend or adapt a dataset are essential [cjzkdnhoagrbrsvss2024]. Lextract addresses each of these limitations directly; it is open source, outputs structured JSON, is fully reproducible, and can be adapted to process new decisions or retargeted to different LLM backends without restriction.
 
@@ -77,7 +77,7 @@ Lastly, while this pipeline makes use of Google Gemini, it is model-agnostic and
 | Local L (eg. DeepSeek 67B)  | Moderate | Medium         | Slow     | Low     |
 | Local S (eg. LLaMA 3-8B)    | Low      | Low            | Moderate | Low     |
 
-Table I: Comparison of the relative capabilities (accuracy, context length, speed, cost) of different LLMs when applied to the task of extract relevant market definitions. “L” = Large models (>30B parameters); “S” = Small models (<30B parameters).
+Table II: Comparison of the relative capabilities (accuracy, context length, speed, cost) of different LLMs when applied to the task of extract relevant market definitions. “L” = Large models (>30B parameters); “S” = Small models (<30B parameters).
 
 # Acknowledgements
 
