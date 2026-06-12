@@ -92,6 +92,60 @@ pip install -r requirements.txt
    python run_pipeline.py
    ```
 
+### Additional Tools
+
+After the main pipeline creates `data/output.json`, Lextract includes three companion scripts for exporting, analyzing, and evaluating the extracted market definitions. If you installed the project with `pip install -e .`, you can use the CLI commands. You can also run the Python files directly.
+
+#### Exporting Results
+
+Use `export.py` to convert `data/output.json` into other formats for spreadsheets, NLP workflows, local databases, and citation managers.
+
+```bash
+# CLI command, if installed with pyproject.toml
+lextract-export --format all --input data/output.json --output exports
+
+# Direct Python command
+python export.py --format all --input data/output.json --output exports
+```
+
+Supported formats are `csv`, `jsonl`, `parquet`, `sqlite`, `bibtex`, `ris`, and `all`. For example:
+
+```bash
+python export.py --format csv --input data/output.json --output exports
+python export.py --format sqlite --input data/output.json --output exports
+python export.py --format bibtex --input data/output.json --output exports
+```
+
+Parquet export requires the optional Parquet dependencies:
+
+```bash
+pip install -e ".[parquet]"
+```
+
+#### Analyzing Results
+
+Use `analyze.py` to generate summary statistics from the merged output file, including total definitions, unique cases, definitions by year, definitions by policy area, top market sectors, and average definition length by year.
+
+```bash
+# CLI command, if installed with pyproject.toml
+lextract-analyze --input data/output.json --output data/analysis.json
+
+# Direct Python command
+python analyze.py --input data/output.json --output data/analysis.json
+```
+
+#### Evaluating Results
+
+Use `evaluate.py` to score extracted definitions against manually verified reference definitions in `evaluation/reference.json`. The script learns length, phrase, and structural patterns from the reference set and writes a validity report to `data/evaluation_report.json`.
+
+```bash
+# CLI command, if installed with pyproject.toml
+lextract-evaluate --reference evaluation/reference.json --predicted data/output.json --output data/evaluation_report.json
+
+# Direct Python command
+python evaluate.py --reference evaluation/reference.json --predicted data/output.json --output data/evaluation_report.json
+```
+
 ### Testing
 
 Run all tests:
