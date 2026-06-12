@@ -14,7 +14,7 @@ authors:
 affiliations:
  - name: Independent Researcher, United States
    index: 1
-date: 7 October 2025
+date: 11 July 2026
 bibliography: paper.bib
 ---
 
@@ -26,7 +26,19 @@ Lextract is a Python pipeline that automatically extracts relevant market defini
 
 Competition authorities routinely delineate relevant markets as a first step in merger and antitrust assessments. The definition of the relevant market establishes the market position of firms operating within it, therein making its establishment necessary for regulators and courts to control mergers and evaluate potential abuses of dominant positions; this makes defining the relevant market a predominant step in competition law analysis. For instance, in the 2025 case United States v. Google LLC, the outcome of the decision was impacted by how the relevant market was defined and whether or not Google and its services were found to hold a dominant position within that market [@usvg2025].
 
-Despite its significance, only one commercial product addressing the need to quickly access relevant market definitions exists: LexisNexis’s [Caselex Market Definitions Module](https://www.caselex.eu/services/service) which suffers from being proprietary, immutable, and inaccessible to many academics.
+Despite its significance, only one commercial product addressing the need to quickly access relevant market definitions exists: LexisNexis’s [Caselex Market Definitions Module](https://www.caselex.eu/services/service). As shown in Table 1, Caselex differs fundamentally from Lextract across many aspects pertinent to academic research. While Caselex offers broad multilingual coverage across 63 competition authorities and benefits from human editorial review, it suffers from being proprietary, immutable, and inaccessible to many academics. Its contents are fixed and cannot be updated, extended, or reproduced by users. These constraints make it poorly suited to empirical research, where reproducibility, programmatic access, and the ability to extend or adapt a dataset are essential [cjzkdnhoagrbrsvss2024]. Lextract addresses each of these limitations directly; it is open source, outputs structured JSON, is fully reproducible, and can be adapted to process new decisions or retargeted to different LLM backends without restriction.
+
+| Feature                   | Lextract                  | Caselex (LexisNexis)                        |
+|---------------------------|---------------------------|---------------------------------------------|
+| Cost                      | Free                      | Paid subscription                           |
+| Access                    | Open source               | Proprietary                                 |
+| Updateable by user        | Yes                       | No                                          |
+| Output format             | Structured JSON           | Web interface only                          |
+| Programmatic access       | Yes                       | No                                          |
+| Reproducible              | Yes                       | No                                          |
+| Human editorial review    | Yes (done by user)        | Yes                                         |
+
+Table 2: Comparison of Lextract and the Caselex Market Definitions Module
 
 Furthermore, the Commission has published over 6,000 merger and antitrust decisions [@bldr2024] and continues to add 280 more annually [@apdtsf2021], each structured and formatted idiosyncratically, with inconsistent placement of definitions and headings that vary in language. As a result, deterministic approaches such as regex are brittle and ineffective [@wpbcjajstk2020] for extracting market definitions, while manual extraction is slow and irreproducible at scale. This pipeline rectifies this issue by providing a simple, open source way to extract market definitions that does not require manual guidance nor rely upon inaccurate pattern-matching techniques.
 
@@ -65,7 +77,7 @@ Lastly, while this pipeline makes use of Google Gemini, it is model-agnostic and
 | Local L (eg. DeepSeek 67B)  | Moderate | Medium         | Slow     | Low     |
 | Local S (eg. LLaMA 3-8B)    | Low      | Low            | Moderate | Low     |
 
-Table I compares the relative capabilities (accuracy, context length, speed, cost) of different LLMs when applied to the task of extract relevant market definitions. “L” = Large models (>30B parameters); “S” = Small models (<30B parameters).
+Table I: Comparison of the relative capabilities (accuracy, context length, speed, cost) of different LLMs when applied to the task of extract relevant market definitions. “L” = Large models (>30B parameters); “S” = Small models (<30B parameters).
 
 # Acknowledgements
 
