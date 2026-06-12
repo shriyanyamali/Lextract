@@ -24,6 +24,7 @@
 import csv
 import json
 import os
+import re
 import sqlite3
 import sys
 import pytest
@@ -247,6 +248,3 @@ def test_main_single_format(tmp_path):
 
     assert (output_dir / "output.csv").exists()
     assert not (output_dir / "output.jsonl").exists()
-
-
-import re
