@@ -1,5 +1,5 @@
 ---
-title: 'Lextract: A Python Pipeline for the Automated Extraction of Market Definitions'
+title: "Lextract: A Python Pipeline for the Automated Extraction of Market Definitions"
 tags:
   - Python
   - relevant market definition
@@ -12,9 +12,9 @@ authors:
     orcid: 0009-0002-4861-7264
     affiliation: "1"
 affiliations:
- - name: Independent Researcher, United States
-   index: 1
-date: 11 July 2026
+  - name: Independent Researcher, United States
+    index: 1
+date: 15 July 2026
 bibliography: paper.bib
 ---
 
@@ -26,45 +26,45 @@ Lextract is a Python pipeline that automatically extracts relevant market defini
 
 Competition authorities routinely delineate relevant markets as a first step in merger and antitrust assessments. The definition of the relevant market establishes the market position of firms operating within it, therein making its establishment necessary for regulators and courts to control mergers and evaluate potential abuses of dominant positions; this makes defining the relevant market a predominant step in competition law analysis. For instance, in the 2025 case United States v. Google LLC, the outcome of the decision was impacted by how the relevant market was defined and whether or not Google and its services were found to hold a dominant position within that market [@usvg2025].
 
-| Feature                   | Lextract                  | Caselex (LexisNexis)                        |
-|---------------------------|---------------------------|---------------------------------------------|
-| Cost                      | Free                      | Paid subscription                           |
-| Access                    | Open source               | Proprietary                                 |
-| Updateable by user        | Yes                       | No                                          |
-| Output format             | Structured JSON           | Web interface only                          |
-| Programmatic access       | Yes                       | No                                          |
-| Reproducible              | Yes                       | No                                          |
-| Human editorial review    | Yes (done by user)        | Yes                                         |
+Furthermore, the Commission has published over 6,000 merger and antitrust decisions [@bldr2024] and continues to add 280 more annually [@apdtsf2021], each structured and formatted idiosyncratically, with inconsistent placement of definitions and headings that vary in language. As a result, deterministic approaches such as regex are brittle and ineffective [@wpbcjajstk2020] for extracting market definitions, while manual extraction is slow and irreproducible at scale. This pipeline rectifies this issue by providing a simple, open source way to extract market definitions that does not require manual guidance nor rely upon inaccurate pattern-matching techniques.
 
-Table I: Comparison of Lextract and the Caselex Market Definitions Module
+# State of the field
 
 Despite its significance, only one commercial product addressing the need to quickly access relevant market definitions exists: LexisNexis’s [Caselex Market Definitions Module](https://www.caselex.eu/services/service). As shown in Table 1, Caselex differs fundamentally from Lextract across many aspects pertinent to academic research. While Caselex offers broad multilingual coverage across 63 competition authorities and benefits from human editorial review, it suffers from being proprietary, immutable, and inaccessible to many academics. Its contents are fixed and cannot be updated, extended, or reproduced by users. These constraints make it poorly suited to empirical research, where reproducibility, programmatic access, and the ability to extend or adapt a dataset are essential [cjzkdnhoagrbrsvss2024]. Lextract addresses each of these limitations directly; it is open source, outputs structured JSON, is fully reproducible, and can be adapted to process new decisions or retargeted to different LLM backends without restriction.
 
-Furthermore, the Commission has published over 6,000 merger and antitrust decisions [@bldr2024] and continues to add 280 more annually [@apdtsf2021], each structured and formatted idiosyncratically, with inconsistent placement of definitions and headings that vary in language. As a result, deterministic approaches such as regex are brittle and ineffective [@wpbcjajstk2020] for extracting market definitions, while manual extraction is slow and irreproducible at scale. This pipeline rectifies this issue by providing a simple, open source way to extract market definitions that does not require manual guidance nor rely upon inaccurate pattern-matching techniques.
+| Feature                | Lextract           | Caselex (LexisNexis) |
+| ---------------------- | ------------------ | -------------------- |
+| Cost                   | Free               | Paid subscription    |
+| Access                 | Open source        | Proprietary          |
+| Updateable by user     | Yes                | No                   |
+| Output format          | Structured JSON    | Web interface only   |
+| Programmatic access    | Yes                | No                   |
+| Reproducible           | Yes                | No                   |
+| Human editorial review | Yes (done by user) | Yes                  |
 
-# General workflow
+Table I: Comparison of Lextract and the Caselex Market Definitions Module
 
-The general workflow for extracting market definitions is split into three sections and five steps. The first section involves the scraping of data, which makes use of regex: 1. A script processes an Excel file downloaded from the [Commission's case search portal](https://competition-cases.ec.europa.eu/) and extracts the links of decision documents and corresponding metadata (i.e., case number, year, policy area), saved in a plain text file. 2. Another script processes this file, and, using the decision document links, scrapes the decision text and converts it into a text corpus with the metadata, repeating this step for each link, while also sorting the corpus based on its length, with a breakpoint at 80,000 characters. It is during this process that decision documents without market definitions, identified by certain phrases or a page length less than three, are excluded. 
+# Software design
 
-The second section is responsible for the semantic extraction of market definitions: 3. Google Gemini is used to identify and extract only the section of the text corpus that contains the market definition section. 4. Afterwards, the process becomes more granular, with Gemini again being used, only this time to identify and isolate each individual market definition within those sections. Each definition is then tagged with a topic and saved in a structured JSON file, where each object contains all elements of the aforementioned metadata, a topic, and the market definition. 
+The general workflow for extracting market definitions is split into three sections and five steps. The first section involves the scraping of data, which makes use of regex: 1. A script processes an Excel file downloaded from the [Commission's case search portal](https://competition-cases.ec.europa.eu/) and extracts the links of decision documents and corresponding metadata (i.e., case number, year, policy area), saved in a plain text file. 2. Another script processes this file, and, using the decision document links, scrapes the decision text and converts it into a text corpus with the metadata, repeating this step for each link, while also sorting the corpus based on its length, with a breakpoint at 80,000 characters. It is during this process that decision documents without market definitions, identified by certain phrases or a page length less than three, are excluded.
+
+The second section is responsible for the semantic extraction of market definitions: 3. Google Gemini is used to identify and extract only the section of the text corpus that contains the market definition section. 4. Afterwards, the process becomes more granular, with Gemini again being used, only this time to identify and isolate each individual market definition within those sections. Each definition is then tagged with a topic and saved in a structured JSON file, where each object contains all elements of the aforementioned metadata, a topic, and the market definition.
 
 The third and final section improves the presentation of the data: 5. Each separate JSON file is cleaned to remove extraneous characters and then aggregated into a single file, which can then be used for research and analysis. By structuring the workflow this way, each processed case is consistently analyzed, reducing variability and improving accuracy [@pmohlcacmm2025]. It also allows Lextract’s code to maintain a high level of accuracy, substantiated by its comprehensive test suite with 94% code coverage.
 
 ![Workflow Diagram of the Pipeline](images/Lextract_Workflow_Diagram.png){ width=43% }
 
 # Evaluation
- 
+
 To assess the quality of Lextract's output, a pattern-based validity evaluation was conducted via a companion script included in the repository. Fifty market definitions were manually verified from source PDFs and compiled into a reference set, against whose structural and linguistic patterns every definition in the full output is scored. A definition is considered valid if it satisfies three independent checks: its length falls within the range observed in the reference set, it contains at least one legal phrase appearing in 15% or more of reference definitions, and it contains at least one structural marker typical of EC scope determinations (e.g., relevant market, left open, Commission considers, for the purposes of this decision). Vocabulary overlap was deliberately excluded, as the reference set covers only a narrow slice of industries while the full dataset spans dozens of sectors.
 
 The JurisMercatus database, containing 4,105 definitions extracted from over 600 EC decisions, was used to test the pipeline's efficacy. The pipeline achieved a validity rate of 76.6%, with the primary failure mode being the absence of a structural marker, accounting for 777 of the 962 invalid definitions. As shown in Figure 2, validity is broadly consistent across years, ranging from 68% to 86%, with a modest decline in 2024 that likely reflects a higher proportion of simplified procedure decisions. These results indicate that Lextract reliably produces structurally well-formed market definitions.
- 
+
 ![Validity Rates of the Pipeline](images/Lextract_Evaluate_Diagram.png){ width=100% }
 
-# Research applications
+# Research impact statement
 
-Lextract powers the database of [JurisMercatus](https://jurismercatus.shriyanyamali.com/), an open source search interface that allows users to semantically search for market definitions. The metadata provided by Lextract enables filtering by year, policy area, and case number. Further, this resource has the capability to support greater academic research and improve the accessibility of market definitions.
-
-To be more specific, the pipeline was applied to 600 EC merger and antitrust decisions spanning 2016 to 2025, producing a structured dataset of 4,105 market definitions, with a mean definition length of 90.3 words. The distribution reveals meaningful variation across the decade, with output peaking in 2018–2020 before tapering as the sample of processed decisions narrows toward the present. An analysis of average definition length over time shows an increase from 67 words per definition in 2016 to a peak of 164 words in 2025, suggesting that market definition reasoning in EC decisions has grown more elaborate over the period. The most frequently defined market sectors include geographic market scope, pharmaceutical products, electricity generation and wholesale supply, and asset management, reflecting the industries most actively subject to merger review. These statistics were produced using the analyze script included in the repository that computes summary statistics, temporal trends, and sector frequency distributions from any Lextract output file, enabling research downstream without additional preprocessing. To further support integration into diverse research workflows, Lextract also includes an export script, which converts the output into six formats: CSV (for Excel, Stata, and R users), JSONL (for NLP pipelines), Parquet (for large-scale empirical work with pandas or DuckDB), SQLite (for local SQL queries without a server), BibTeX, and RIS (for citation managers such as Zotero, Mendeley, and EndNote).
+Lextract powers the database of [JurisMercatus](https://jurismercatus.shriyanyamali.com/), an open source search interface that allows users to semantically search for market definitions. JurisMercatus has been used by members of the antitrust community, including researchers, practitioners, and students, to locate and compare market definitions more efficiently than would be possible through manual review. The data was then applied to support ongoing studies.
 
 # Limitations
 
@@ -72,14 +72,18 @@ It should be noted that this system, as with all systems, is not perfect and con
 
 Lastly, while this pipeline makes use of Google Gemini, it is model-agnostic and, if properly refactored, could utilize any LLM. This includes commercially hosted models like OpenAI’s or locally deployed ones such as LLaMA, Mistral, or DeepSeek. However, accuracy and consistency will vary significantly depending on model size and capabilities. Generally, smaller models, especially local ones without a sufficient context length or reasoning ability, will tend to hallucinate outputs, misidentify sections, or produce partial definitions [@ktanovssze2025].
 
-| Model Type                  | Accuracy | Context Length | Speed    | Cost    |
-|-----------------------------|----------|----------------|----------|---------|
-| Hosted L (eg. GPT-4o)       | High     | Very High      | Moderate | High    |
-| Hosted S (eg. Gemini Flash) | Moderate | High           | Fast     | Moderate|
-| Local L (eg. DeepSeek 67B)  | Moderate | Medium         | Slow     | Low     |
-| Local S (eg. LLaMA 3-8B)    | Low      | Low            | Moderate | Low     |
+| Model Type                  | Accuracy | Context Length | Speed    | Cost     |
+| --------------------------- | -------- | -------------- | -------- | -------- |
+| Hosted L (eg. GPT-4o)       | High     | Very High      | Moderate | High     |
+| Hosted S (eg. Gemini Flash) | Moderate | High           | Fast     | Moderate |
+| Local L (eg. DeepSeek 67B)  | Moderate | Medium         | Slow     | Low      |
+| Local S (eg. LLaMA 3-8B)    | Low      | Low            | Moderate | Low      |
 
-Table II: Comparison of the relative capabilities (accuracy, context length, speed, cost) of different LLMs when applied to the task of extract relevant market definitions. “L” = Large models (>30B parameters); “S” = Small models (<30B parameters).
+Table II: Comparison of the relative capabilities (accuracy, context length, speed, cost) of different LLMs when extracting relevant market definitions. “L” = Large models (>30B parameters); “S” = Small models (<30B parameters).
+
+# AI usage disclosure
+
+Lextract uses Google Gemini 2.0 Flash at runtime to identify market-definition sections and extract individual definitions from decision text. Generative AI tools were used to assist with the development of this project to the extent of code refactoring and manuscript proofreading. The author reviewed, edited, and validated all AI-assisted outputs, made the substantive design decisions, and remains responsible for the accuracy and originality of the software and paper.
 
 # Acknowledgements
 
