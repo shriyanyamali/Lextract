@@ -1,3 +1,4 @@
+[![DOI](https://img.shields.io/badge/DOI-10.2139%2Fssrn.5576990-0077B5)](https://doi.org/10.2139/ssrn.5576990)
 ![Maintained](https://img.shields.io/badge/Maintained-yes-green.svg)
 ![License](https://img.shields.io/badge/License-AGPL%203.0-green.svg)
 [![Test Coverage](https://codecov.io/gh/shriyanyamali/Lextract/branch/main/graph/badge.svg)](https://codecov.io/gh/shriyanyamali/Lextract)
