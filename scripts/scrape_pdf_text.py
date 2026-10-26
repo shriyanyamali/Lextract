@@ -23,11 +23,23 @@
 
 import argparse
 import os
+import re
 import requests
 from PyPDF2 import PdfReader
 from io import BytesIO
 
-# Exclude PDFs with these phrases
+# Exclude short-form decisions (simplified-procedure clearances) that contain no
+# market analysis. Each phrase is a sentence that appears in the standard closing
+# recital of such decisions ("For the reasons set out in the Notice on a simplified
+# procedure, the European Commission has decided not to oppose the notified operation
+# and to declare it compatible with the internal market and with the EEA Agreement.
+# This decision is adopted in application of Article 6(1)(b) of the Merger Regulation
+# and Article 57 of the EEA Agreement."). Matching is done on whitespace- and
+# punctuation-insensitive text because PyPDF2 inserts spaces and line breaks inside
+# words ("simpli fied", "Merger  Regulation"), which made exact matching miss most
+# short-form decisions in the first release (see docs/EVALUATION.md).
+MAX_SHORT_FORM_PAGES = 3
+
 EXCLUSION_PHRASES = [
     "For the reasons set out in the Notice on a simplified",
     "European Commission has decided not to oppose the notified operation",
@@ -35,6 +47,17 @@ EXCLUSION_PHRASES = [
     "This decision is adopted in application of Article 6(1)(b)",
     "Merger Regulation and Article 57 of the EEA Agreement"
 ]
+
+def _letters(text):
+    """Lower-case letters and digits only, so that PDF-extraction artefacts cannot break matching."""
+    return re.sub(r"[^a-z0-9]", "", text.lower())
+
+
+def is_short_form(text):
+    """True if the text contains any exclusion phrase, ignoring whitespace and punctuation."""
+    flat = _letters(text)
+    return any(_letters(phrase) in flat for phrase in EXCLUSION_PHRASES)
+
 
 def get_pdf_text(url):
     """
@@ -48,12 +71,10 @@ def get_pdf_text(url):
             return None, f"HTTP {resp.status_code}"
         reader = PdfReader(BytesIO(resp.content))
         full_text = "".join(p.extract_text() or "" for p in reader.pages)
-        # if exactly 3 pages, check for any exclusion phrase
-        if len(reader.pages) == 3:
-            low = full_text.lower()
-            for phrase in EXCLUSION_PHRASES:
-                if phrase.lower() in low:
-                    return None, "Excluded by criteria"
+        # short documents: check for any exclusion phrase (whitespace-insensitive)
+        if len(reader.pages) <= MAX_SHORT_FORM_PAGES:
+            if is_short_form(full_text):
+                return None, "Excluded by criteria"
         return full_text, None
     except Exception as e:
         return None, f"Error: {e}"

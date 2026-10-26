@@ -139,3 +139,38 @@ def test_exclusion_phrase_causes_exclusion(tmp_path, fake_pdf, capsys):
     assert "Excluded by criteria" in excluded_path.read_text()
     assert included_path.read_text().strip() == ""
     assert not batch_dir.exists() or not any(batch_dir.iterdir())
+
+def test_is_short_form_ignores_pdf_whitespace_artefacts():
+    # PyPDF2 splits words and inserts line breaks inside the standard recital
+    text = ("For the reasons set out in the Notice on a si mplified procedure, the European \n"
+            "Commission has decided not to oppose the notified operation and to declare it \n"
+            "compatible with the internal market and with the EEA Agreement.")
+    assert scrape_pdf_text.is_short_form(text)
+    assert not scrape_pdf_text.is_short_form("4. MARKET DEFINITION (12) The Commission considers that ...")
+
+
+def test_two_page_short_form_decision_is_excluded(tmp_path, fake_pdf, capsys):
+    input_file = tmp_path / "extracted_links.txt"
+    input_file.write_text(
+        "Case Number: M.9417\nYear: 2020\nPolicy Area: merger\n"
+        "Link: https://ec.europa.eu/competition/mergers/two-pages.pdf\n\n"
+    )
+
+    class Page:
+        def extract_text(self):
+            return "This decision is \nadopted in application of Article 6(1)(b) of the Merger  Regulati on"
+
+    class Reader:
+        def __init__(self, stream):
+            self.pages = [Page(), Page()]  # two pages: the old rule (== 3 pages) let these through
+
+    with mock.patch("requests.get") as mock_get, \
+         mock.patch("scripts.scrape_pdf_text.PdfReader", Reader):
+        mock_resp = mock.Mock()
+        mock_resp.status_code = 200
+        mock_resp.content = fake_pdf
+        mock_get.return_value = mock_resp
+        sys.argv = ["scrape_pdf_text.py", "-i", str(input_file), "--datadir", str(tmp_path)]
+        scrape_pdf_text.main()
+
+    assert "[excluded] Case M.9417" in capsys.readouterr().out
