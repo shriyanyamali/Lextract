@@ -1,0 +1,6199 @@
+{
+ "method": "Chunk-coverage check: letters-only normalisation; fraction of 40-letter windows (stride 20) of the extracted text found in the PyPDF2 text of the source PDF. Bands: verbatim >=0.95, near_verbatim 0.80-0.95, partial 0.50-0.80, absent <0.50.",
+ "fetched_on": "2026-10-17",
+ "random_sample": {
+  "design": "40 decision documents drawn uniformly at random (seeded) from the 704 distinct decision URLs in output.json; all records with those URLs were checked.",
+  "decisions": [
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m4494_20070220_20212_en.pdf",
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m8435_1127_4.pdf",
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m8480_8885_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m8658_2751_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m8658_2752_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m8738_1421_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m8888_83_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m8905_97_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m8915_1501_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m8943_61_4.pdf",
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m9130_308_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m9167_68_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m9285_69_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m9357_220_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m9417_66_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m9418_206_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases/decisions/m9504_41_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202034/m9884_127_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202043/m9716_497_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202215/M_10603_8263642_133_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202229/M_9076_8414684_5964_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202240/M_10864_8525013_82_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202252/M_10709_8824932_247_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202252/M_10944_8828569_146_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202304/M_10522_8907401_425_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202309/M_10616_9013762_331_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202309/M_10993_9010830_180_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202318/M_10712_9165642_349_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202325/M_9779_7559737_2816_5.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202330/M_10862_9306719_361_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202346/M_11150_9631700_260_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202403/M_10815_9840550_1726_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202412/M_11360_9969512_509_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202420/M_11382_10048550_1930_3.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202435/M_6447_10209990_9149_5.pdf",
+   "https://ec.europa.eu/competition/mergers/cases1/202447/M_3770_6098232_373_6.pdf"
+  ],
+  "records": [
+   {
+    "case_number": "M.9716",
+    "year": "2020",
+    "topic": "Semiconductors",
+    "word_count": 32,
+    "pages": 42,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202043/m9716_497_3.pdf"
+   },
+   {
+    "case_number": "M.9716",
+    "year": "2020",
+    "topic": "Commercial and consumer optical semiconductors and communications IR optical semiconductors",
+    "word_count": 103,
+    "pages": 42,
+    "coverage": 0.935,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202043/m9716_497_3.pdf"
+   },
+   {
+    "case_number": "M.9716",
+    "year": "2020",
+    "topic": "LEDs, laser diodes, couplers, light sensors and image sensors",
+    "word_count": 59,
+    "pages": 42,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202043/m9716_497_3.pdf"
+   },
+   {
+    "case_number": "M.9716",
+    "year": "2020",
+    "topic": "LEDs, laser diodes, couplers, light sensors and image sensors",
+    "word_count": 57,
+    "pages": 42,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202043/m9716_497_3.pdf"
+   },
+   {
+    "case_number": "M.9716",
+    "year": "2020",
+    "topic": "LEDs, laser diodes, couplers, light sensors and image sensors",
+    "word_count": 84,
+    "pages": 42,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202043/m9716_497_3.pdf"
+   },
+   {
+    "case_number": "M.9716",
+    "year": "2020",
+    "topic": "light sensors",
+    "word_count": 168,
+    "pages": 42,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202043/m9716_497_3.pdf"
+   },
+   {
+    "case_number": "M.9716",
+    "year": "2020",
+    "topic": "biosensors for consumer electronics",
+    "word_count": 119,
+    "pages": 42,
+    "coverage": 0.935,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202043/m9716_497_3.pdf"
+   },
+   {
+    "case_number": "M.9716",
+    "year": "2020",
+    "topic": "mobile 3D flood illuminators",
+    "word_count": 89,
+    "pages": 42,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202043/m9716_497_3.pdf"
+   },
+   {
+    "case_number": "M.9716",
+    "year": "2020",
+    "topic": "Laser diodes",
+    "word_count": 201,
+    "pages": 42,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202043/m9716_497_3.pdf"
+   },
+   {
+    "case_number": "M.9716",
+    "year": "2020",
+    "topic": "Assembly and packaging services for sensor solutions for mobile phones",
+    "word_count": 106,
+    "pages": 42,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202043/m9716_497_3.pdf"
+   },
+   {
+    "case_number": "M.9716",
+    "year": "2020",
+    "topic": "LEDs",
+    "word_count": 59,
+    "pages": 42,
+    "coverage": 0.846,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202043/m9716_497_3.pdf"
+   },
+   {
+    "case_number": "M.9716",
+    "year": "2020",
+    "topic": "LEDs",
+    "word_count": 34,
+    "pages": 42,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202043/m9716_497_3.pdf"
+   },
+   {
+    "case_number": "M.9716",
+    "year": "2020",
+    "topic": "Various product markets",
+    "word_count": 120,
+    "pages": 42,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202043/m9716_497_3.pdf"
+   },
+   {
+    "case_number": "M.9716",
+    "year": "2020",
+    "topic": "Assembly and packaging services for sensor solutions",
+    "word_count": 40,
+    "pages": 42,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202043/m9716_497_3.pdf"
+   },
+   {
+    "case_number": "M.4494",
+    "year": "2019",
+    "topic": "Steel products",
+    "word_count": 94,
+    "pages": 66,
+    "coverage": 0.905,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m4494_20070220_20212_en.pdf"
+   },
+   {
+    "case_number": "M.4494",
+    "year": "2019",
+    "topic": "Steel products (Geographic)",
+    "word_count": 82,
+    "pages": 66,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m4494_20070220_20212_en.pdf"
+   },
+   {
+    "case_number": "M.4494",
+    "year": "2019",
+    "topic": "Vanadium feedstock",
+    "word_count": 65,
+    "pages": 66,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m4494_20070220_20212_en.pdf"
+   },
+   {
+    "case_number": "M.4494",
+    "year": "2019",
+    "topic": "High-purity vanadium oxides",
+    "word_count": 56,
+    "pages": 66,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m4494_20070220_20212_en.pdf"
+   },
+   {
+    "case_number": "M.4494",
+    "year": "2019",
+    "topic": "Standard vanadium oxides",
+    "word_count": 89,
+    "pages": 66,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m4494_20070220_20212_en.pdf"
+   },
+   {
+    "case_number": "M.4494",
+    "year": "2019",
+    "topic": "Finished vanadium products for steel applications",
+    "word_count": 69,
+    "pages": 66,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m4494_20070220_20212_en.pdf"
+   },
+   {
+    "case_number": "M.4494",
+    "year": "2019",
+    "topic": "Vanadium chemicals",
+    "word_count": 61,
+    "pages": 66,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m4494_20070220_20212_en.pdf"
+   },
+   {
+    "case_number": "M.4494",
+    "year": "2019",
+    "topic": "Specialty Vanadium Alloys",
+    "word_count": 23,
+    "pages": 66,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m4494_20070220_20212_en.pdf"
+   },
+   {
+    "case_number": "M.4494",
+    "year": "2019",
+    "topic": "Vanadium feedstock geographic market",
+    "word_count": 69,
+    "pages": 66,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m4494_20070220_20212_en.pdf"
+   },
+   {
+    "case_number": "M.4494",
+    "year": "2019",
+    "topic": "Ferrovanadium geographic market",
+    "word_count": 51,
+    "pages": 66,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m4494_20070220_20212_en.pdf"
+   },
+   {
+    "case_number": "M.10603",
+    "year": "2022",
+    "topic": "Sodium Carbonate",
+    "word_count": 47,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202215/M_10603_8263642_133_3.pdf"
+   },
+   {
+    "case_number": "M.10603",
+    "year": "2022",
+    "topic": "Vanadium Oxide",
+    "word_count": 51,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202215/M_10603_8263642_133_3.pdf"
+   },
+   {
+    "case_number": "M.10603",
+    "year": "2022",
+    "topic": "Wollastonite",
+    "word_count": 30,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202215/M_10603_8263642_133_3.pdf"
+   },
+   {
+    "case_number": "M.10603",
+    "year": "2022",
+    "topic": "Zircon oxide, potassium carbonate, cerium oxide, molybdenum oxide",
+    "word_count": 32,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202215/M_10603_8263642_133_3.pdf"
+   },
+   {
+    "case_number": "M.10603",
+    "year": "2022",
+    "topic": "Metal and mineral commodities",
+    "word_count": 54,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202215/M_10603_8263642_133_3.pdf"
+   },
+   {
+    "case_number": "M.10603",
+    "year": "2022",
+    "topic": "Ceramic tile intermediates",
+    "word_count": 74,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202215/M_10603_8263642_133_3.pdf"
+   },
+   {
+    "case_number": "M.9130",
+    "year": "2019",
+    "topic": "Structuring, Issuance, and Market Making of ETSIPs",
+    "word_count": 133,
+    "pages": 17,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9130_308_3.pdf"
+   },
+   {
+    "case_number": "M.9130",
+    "year": "2019",
+    "topic": "Structuring, Issuance, and Market Making of ETSIPs",
+    "word_count": 52,
+    "pages": 17,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9130_308_3.pdf"
+   },
+   {
+    "case_number": "M.9130",
+    "year": "2019",
+    "topic": "Distribution of investment products (including ETSIPs)",
+    "word_count": 117,
+    "pages": 17,
+    "coverage": 0.875,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9130_308_3.pdf"
+   },
+   {
+    "case_number": "M.9130",
+    "year": "2019",
+    "topic": "Distribution of investment products (including ETSIPs)",
+    "word_count": 51,
+    "pages": 17,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9130_308_3.pdf"
+   },
+   {
+    "case_number": "M.3770",
+    "year": "2024",
+    "topic": "ZHR-STO Route",
+    "word_count": 11,
+    "pages": 23,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202447/M_3770_6098232_373_6.pdf"
+   },
+   {
+    "case_number": "M.3770",
+    "year": "2024",
+    "topic": "ZHR-STO Route",
+    "word_count": 12,
+    "pages": 23,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202447/M_3770_6098232_373_6.pdf"
+   },
+   {
+    "case_number": "M.3770",
+    "year": "2024",
+    "topic": "ZHR-WAW Route",
+    "word_count": 8,
+    "pages": 23,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202447/M_3770_6098232_373_6.pdf"
+   },
+   {
+    "case_number": "M.8915",
+    "year": "2019",
+    "topic": "Conventional and Heavy-Duty Sheets and Cases",
+    "word_count": 84,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8915_1501_3.pdf"
+   },
+   {
+    "case_number": "M.10864",
+    "year": "2022",
+    "topic": "Flat Glass Market",
+    "word_count": 22,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202240/M_10864_8525013_82_3.pdf"
+   },
+   {
+    "case_number": "M.10993",
+    "year": "2023",
+    "topic": "Product and geographic market definition",
+    "word_count": 39,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202309/M_10993_9010830_180_3.pdf"
+   },
+   {
+    "case_number": "M.10993",
+    "year": "2023",
+    "topic": "Activities of the JV",
+    "word_count": 36,
+    "pages": 3,
+    "coverage": 0.556,
+    "band": "partial",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202309/M_10993_9010830_180_3.pdf"
+   },
+   {
+    "case_number": "M.10993",
+    "year": "2023",
+    "topic": "Relevant product markets in the telecommunications sector",
+    "word_count": 75,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202309/M_10993_9010830_180_3.pdf"
+   },
+   {
+    "case_number": "M.10993",
+    "year": "2023",
+    "topic": "Wholesale fixed telecommunications services",
+    "word_count": 72,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202309/M_10993_9010830_180_3.pdf"
+   },
+   {
+    "case_number": "M.10993",
+    "year": "2023",
+    "topic": "Geographic market definition",
+    "word_count": 67,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202309/M_10993_9010830_180_3.pdf"
+   },
+   {
+    "case_number": "M.10712",
+    "year": "2022",
+    "topic": "PCW Blankets",
+    "word_count": 16,
+    "pages": 26,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202318/M_10712_9165642_349_3.pdf"
+   },
+   {
+    "case_number": "M.10712",
+    "year": "2022",
+    "topic": "PCW Blankets (Whether PCW belongs to the same product market with other types of insulating materials)",
+    "word_count": 100,
+    "pages": 26,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202318/M_10712_9165642_349_3.pdf"
+   },
+   {
+    "case_number": "M.10712",
+    "year": "2022",
+    "topic": "PCW Blankets (Geographic)",
+    "word_count": 28,
+    "pages": 26,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202318/M_10712_9165642_349_3.pdf"
+   },
+   {
+    "case_number": "M.10712",
+    "year": "2022",
+    "topic": "Insulation components for automotive catalytic converters and exhaust systems",
+    "word_count": 32,
+    "pages": 26,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202318/M_10712_9165642_349_3.pdf"
+   },
+   {
+    "case_number": "M.10712",
+    "year": "2022",
+    "topic": "Dry-laid PCW supporting mats (Whether supporting mats made of alternative materials to PCW should be considered to belong to the same market)",
+    "word_count": 105,
+    "pages": 26,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202318/M_10712_9165642_349_3.pdf"
+   },
+   {
+    "case_number": "M.10712",
+    "year": "2022",
+    "topic": "Dry-laid PCW supporting mats (Geographic)",
+    "word_count": 30,
+    "pages": 26,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202318/M_10712_9165642_349_3.pdf"
+   },
+   {
+    "case_number": "M.10712",
+    "year": "2022",
+    "topic": "Automobile exhaust systems",
+    "word_count": 123,
+    "pages": 26,
+    "coverage": 0.871,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202318/M_10712_9165642_349_3.pdf"
+   },
+   {
+    "case_number": "M.10712",
+    "year": "2022",
+    "topic": "Automobile exhaust systems (Geographic)",
+    "word_count": 99,
+    "pages": 26,
+    "coverage": 0.913,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202318/M_10712_9165642_349_3.pdf"
+   },
+   {
+    "case_number": "M.10616",
+    "year": "2022",
+    "topic": "Self-propelled trains",
+    "word_count": 80,
+    "pages": 12,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202309/M_10616_9013762_331_3.pdf"
+   },
+   {
+    "case_number": "M.10616",
+    "year": "2022",
+    "topic": "Regional bi-mode trains",
+    "word_count": 67,
+    "pages": 12,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202309/M_10616_9013762_331_3.pdf"
+   },
+   {
+    "case_number": "M.10616",
+    "year": "2022",
+    "topic": "Geographic market definition",
+    "word_count": 27,
+    "pages": 12,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202309/M_10616_9013762_331_3.pdf"
+   },
+   {
+    "case_number": "M.9285",
+    "year": "2019",
+    "topic": "Upstream market for the provision of development services for logistics properties and downstream market for the letting of logistics properties",
+    "word_count": 37,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9285_69_3.pdf"
+   },
+   {
+    "case_number": "M.9285",
+    "year": "2019",
+    "topic": "Market for letting of logistics properties",
+    "word_count": 42,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9285_69_3.pdf"
+   },
+   {
+    "case_number": "M.9285",
+    "year": "2019",
+    "topic": "Product and geographic market",
+    "word_count": 43,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9285_69_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "Retail mobile telecommunications services",
+    "word_count": 47,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "Overall retail mobile telecommunications services",
+    "word_count": 116,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "Market for overall retail mobile telecommunications services",
+    "word_count": 70,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "Market for overall retail mobile telecommunications services",
+    "word_count": 62,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "Market for the provision of retail mobile telecommunications services",
+    "word_count": 63,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "Market for wholesale access and call origination on public mobile networks",
+    "word_count": 127,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "Single wholesale market including both access and call origination services on public mobile networks",
+    "word_count": 53,
+    "pages": 50,
+    "coverage": 0.923,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "Overall market for wholesale access and call origination on public mobile networks",
+    "word_count": 61,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "Market for wholesale access and call origination on public mobile networks",
+    "word_count": 66,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "Relevant geographic market for the wholesale access and call origination services on public mobile networks",
+    "word_count": 50,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "Fixed internet access services at the retail level",
+    "word_count": 25,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "The provision of fixed internet services to large business and government customers",
+    "word_count": 85,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "The retail fixed internet access market",
+    "word_count": 58,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "The market for the retail supply of fixed internet access services",
+    "word_count": 84,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "The m arket is sub -national and Virgin Media\u2019s footprint is a separate market",
+    "word_count": 67,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "Multiple play",
+    "word_count": 91,
+    "pages": 50,
+    "coverage": 0.909,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "One or more multiple play markets",
+    "word_count": 82,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "Market for FMC bundles",
+    "word_count": 25,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "Leased line",
+    "word_count": 117,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.9871",
+    "year": "2020",
+    "topic": "Fibre, microwave and copper leased lines form separate markets",
+    "word_count": 44,
+    "pages": 50,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202115/m9871_543_3.pdf"
+   },
+   {
+    "case_number": "M.8658",
+    "year": "2018",
+    "topic": "Aircraft Oxygen Systems",
+    "word_count": 61,
+    "pages": 6,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8658_2752_3.pdf"
+   },
+   {
+    "case_number": "M.9076",
+    "year": "2021",
+    "topic": "Aluminium Auto Body Sheet Market",
+    "word_count": 26,
+    "pages": 52,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202229/M_9076_8414684_5964_3.pdf"
+   },
+   {
+    "case_number": "M.9076",
+    "year": "2021",
+    "topic": "EEA market for the production and supply of Aluminium Auto Body Sheet",
+    "word_count": 61,
+    "pages": 52,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202229/M_9076_8414684_5964_3.pdf"
+   },
+   {
+    "case_number": "M.10944",
+    "year": "2022",
+    "topic": "Digital Mapping Data",
+    "word_count": 32,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202252/M_10944_8828569_146_3.pdf"
+   },
+   {
+    "case_number": "M.10944",
+    "year": "2022",
+    "topic": "Navigation and Location Solutions",
+    "word_count": 32,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202252/M_10944_8828569_146_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "Seat Components",
+    "word_count": 29,
+    "pages": 41,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "Seat Thermal Solutions",
+    "word_count": 57,
+    "pages": 41,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "Seat Thermal Solutions Segmentation",
+    "word_count": 415,
+    "pages": 41,
+    "coverage": 0.981,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "Seat Thermal Solutions Market Scope",
+    "word_count": 119,
+    "pages": 41,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "Seat Sensors Market",
+    "word_count": 57,
+    "pages": 41,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "Seat Sensors: Segmentation and Characteristics",
+    "word_count": 392,
+    "pages": 41,
+    "coverage": 0.979,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "Pressure Sensors Used in Car Seats Market Scope",
+    "word_count": 91,
+    "pages": 41,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "JIT Assembly of Complete Car Seats Market",
+    "word_count": 54,
+    "pages": 41,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "JIT Assembly of Complete Car Seats Characteristics",
+    "word_count": 233,
+    "pages": 41,
+    "coverage": 0.964,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "JIT Assembly of Complete Car Seats Market Scope",
+    "word_count": 60,
+    "pages": 41,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "Seat Thermal Solutions Geographic Market",
+    "word_count": 33,
+    "pages": 41,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "Seat Thermal Solutions Geographic Scope",
+    "word_count": 71,
+    "pages": 41,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "Seat Thermal Solutions Geographic Market Scope",
+    "word_count": 89,
+    "pages": 41,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "Seat Sensors Geographic Market",
+    "word_count": 35,
+    "pages": 41,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "Seat Sensors Geographic Scope",
+    "word_count": 24,
+    "pages": 41,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "Seat Sensors Geographic Market Scope",
+    "word_count": 79,
+    "pages": 41,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "JIT Assembly of Complete Car Seats Geographic Market",
+    "word_count": 37,
+    "pages": 41,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "JIT Assembly of Complete Car Seats Geographic Scope",
+    "word_count": 31,
+    "pages": 41,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.10738",
+    "year": "2023",
+    "topic": "JIT Assembly of Complete Car Seats Geographic Market Scope",
+    "word_count": 81,
+    "pages": 41,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202329/M_10738_9302304_1005_3.pdf"
+   },
+   {
+    "case_number": "M.8905",
+    "year": "2018",
+    "topic": "Non-life insurance products",
+    "word_count": 76,
+    "pages": 7,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8905_97_3.pdf"
+   },
+   {
+    "case_number": "M.8905",
+    "year": "2018",
+    "topic": "Underwriting of legal protection insurance",
+    "word_count": 106,
+    "pages": 7,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8905_97_3.pdf"
+   },
+   {
+    "case_number": "M.8905",
+    "year": "2018",
+    "topic": "Legal assistance insurances",
+    "word_count": 27,
+    "pages": 7,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8905_97_3.pdf"
+   },
+   {
+    "case_number": "M.8905",
+    "year": "2018",
+    "topic": "Protection letters",
+    "word_count": 65,
+    "pages": 7,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8905_97_3.pdf"
+   },
+   {
+    "case_number": "M.8905",
+    "year": "2018",
+    "topic": "Non-life insurance products, underwriting of legal protection insurance, legal assistance insurances, and protection letters",
+    "word_count": 33,
+    "pages": 7,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8905_97_3.pdf"
+   },
+   {
+    "case_number": "M.8905",
+    "year": "2018",
+    "topic": "Assistance services",
+    "word_count": 62,
+    "pages": 7,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8905_97_3.pdf"
+   },
+   {
+    "case_number": "M.8905",
+    "year": "2018",
+    "topic": "Assistance services",
+    "word_count": 125,
+    "pages": 7,
+    "coverage": 0.939,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8905_97_3.pdf"
+   },
+   {
+    "case_number": "M.8905",
+    "year": "2018",
+    "topic": "Assistance services",
+    "word_count": 33,
+    "pages": 7,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8905_97_3.pdf"
+   },
+   {
+    "case_number": "M.8905",
+    "year": "2018",
+    "topic": "Reinsurance",
+    "word_count": 49,
+    "pages": 7,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8905_97_3.pdf"
+   },
+   {
+    "case_number": "M.8905",
+    "year": "2018",
+    "topic": "Reinsurance",
+    "word_count": 32,
+    "pages": 7,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8905_97_3.pdf"
+   },
+   {
+    "case_number": "M.9417",
+    "year": "2020",
+    "topic": "Manufacturing of premium cars and brand experience centres",
+    "word_count": 69,
+    "pages": 2,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9417_66_3.pdf"
+   },
+   {
+    "case_number": "M.8480",
+    "year": "2020",
+    "topic": "Helium Sourcing",
+    "word_count": 27,
+    "pages": 9,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8480_8885_3.pdf"
+   },
+   {
+    "case_number": "M.11382",
+    "year": "2024",
+    "topic": "GNSS receivers for agricultural applications",
+    "word_count": 59,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202420/M_11382_10048550_1930_3.pdf"
+   },
+   {
+    "case_number": "M.11382",
+    "year": "2024",
+    "topic": "Terminals for precision agriculture applications",
+    "word_count": 59,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202420/M_11382_10048550_1930_3.pdf"
+   },
+   {
+    "case_number": "M.11382",
+    "year": "2024",
+    "topic": "Steering devices",
+    "word_count": 17,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202420/M_11382_10048550_1930_3.pdf"
+   },
+   {
+    "case_number": "M.11382",
+    "year": "2024",
+    "topic": "Application controls",
+    "word_count": 17,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202420/M_11382_10048550_1930_3.pdf"
+   },
+   {
+    "case_number": "M.11382",
+    "year": "2024",
+    "topic": "Modems",
+    "word_count": 16,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202420/M_11382_10048550_1930_3.pdf"
+   },
+   {
+    "case_number": "M.11382",
+    "year": "2024",
+    "topic": "Electronic control units",
+    "word_count": 27,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202420/M_11382_10048550_1930_3.pdf"
+   },
+   {
+    "case_number": "M.11382",
+    "year": "2024",
+    "topic": "Bundles of precision agriculture products",
+    "word_count": 22,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202420/M_11382_10048550_1930_3.pdf"
+   },
+   {
+    "case_number": "M.11382",
+    "year": "2024",
+    "topic": "Factory and aftermarket channels",
+    "word_count": 20,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202420/M_11382_10048550_1930_3.pdf"
+   },
+   {
+    "case_number": "M.11382",
+    "year": "2024",
+    "topic": "Precision agriculture products",
+    "word_count": 22,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202420/M_11382_10048550_1930_3.pdf"
+   },
+   {
+    "case_number": "M.11382",
+    "year": "2024",
+    "topic": "Agriculture machinery",
+    "word_count": 54,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202420/M_11382_10048550_1930_3.pdf"
+   },
+   {
+    "case_number": "M.11382",
+    "year": "2024",
+    "topic": "Agricultural machinery at the retail level",
+    "word_count": 25,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202420/M_11382_10048550_1930_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Life Insurance Products",
+    "word_count": 76,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Non-Life Insurance Products",
+    "word_count": 125,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Geographic Market Definition",
+    "word_count": 47,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Life and Non-Life Insurance Markets",
+    "word_count": 55,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Voluntary Retirement Saving Products",
+    "word_count": 170,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Geographic Scope of Pension Products",
+    "word_count": 32,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "DDS Pension Fund Products",
+    "word_count": 78,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Distribution of Pension Products",
+    "word_count": 71,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Market Definition for the Distribution of Voluntary Retirement Saving Products",
+    "word_count": 179,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Asset Management",
+    "word_count": 147,
+    "pages": 30,
+    "coverage": 0.951,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Mutual Funds",
+    "word_count": 47,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Geographic Market Definition of Asset Management",
+    "word_count": 63,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Asset Management Services",
+    "word_count": 46,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Retail Banking Products",
+    "word_count": 52,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Retail Banking",
+    "word_count": 22,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Retail Banking Markets",
+    "word_count": 50,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Custody Services",
+    "word_count": 123,
+    "pages": 30,
+    "coverage": 0.941,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Geographic Market for Custody Services",
+    "word_count": 64,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9796",
+    "year": "2020",
+    "topic": "Custody and Depositary Services",
+    "word_count": 33,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202041/m9796_445_3.pdf"
+   },
+   {
+    "case_number": "M.9884",
+    "year": "2020",
+    "topic": "FPM Software Solutions",
+    "word_count": 37,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202034/m9884_127_3.pdf"
+   },
+   {
+    "case_number": "M.9884",
+    "year": "2020",
+    "topic": "EPM Software Solutions",
+    "word_count": 39,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202034/m9884_127_3.pdf"
+   },
+   {
+    "case_number": "M.9884",
+    "year": "2020",
+    "topic": "Product Market Definition",
+    "word_count": 59,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202034/m9884_127_3.pdf"
+   },
+   {
+    "case_number": "M.9884",
+    "year": "2020",
+    "topic": "Geographic Market Definition",
+    "word_count": 59,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202034/m9884_127_3.pdf"
+   },
+   {
+    "case_number": "M.11150",
+    "year": "2023",
+    "topic": "Bioplastics",
+    "word_count": 265,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202346/M_11150_9631700_260_3.pdf"
+   },
+   {
+    "case_number": "M.9167",
+    "year": "2019",
+    "topic": "Hotel accommodation services",
+    "word_count": 123,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9167_68_3.pdf"
+   },
+   {
+    "case_number": "M.9167",
+    "year": "2019",
+    "topic": "Hotel accommodation services (precise product and geographic market definition)",
+    "word_count": 46,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9167_68_3.pdf"
+   },
+   {
+    "case_number": "M.9779",
+    "year": "2022",
+    "topic": "High-speed Rolling Stock",
+    "word_count": 681,
+    "pages": 379,
+    "coverage": 0.983,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202325/M_9779_7559737_2816_5.pdf"
+   },
+   {
+    "case_number": "M.9779",
+    "year": "2022",
+    "topic": "High-speed Rolling Stock",
+    "word_count": 188,
+    "pages": 379,
+    "coverage": 0.959,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202325/M_9779_7559737_2816_5.pdf"
+   },
+   {
+    "case_number": "M.9779",
+    "year": "2022",
+    "topic": "High-speed Rolling Stock",
+    "word_count": 821,
+    "pages": 379,
+    "coverage": 0.981,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202325/M_9779_7559737_2816_5.pdf"
+   },
+   {
+    "case_number": "M.9779",
+    "year": "2022",
+    "topic": "High-speed Rolling Stock",
+    "word_count": 137,
+    "pages": 379,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202325/M_9779_7559737_2816_5.pdf"
+   },
+   {
+    "case_number": "M.9779",
+    "year": "2022",
+    "topic": "Mainline Rolling Stock",
+    "word_count": 162,
+    "pages": 379,
+    "coverage": 0.951,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202325/M_9779_7559737_2816_5.pdf"
+   },
+   {
+    "case_number": "M.9779",
+    "year": "2022",
+    "topic": "Mainline Rolling Stock",
+    "word_count": 743,
+    "pages": 379,
+    "coverage": 0.981,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202325/M_9779_7559737_2816_5.pdf"
+   },
+   {
+    "case_number": "M.9779",
+    "year": "2022",
+    "topic": "Mainline Rolling Stock",
+    "word_count": 154,
+    "pages": 379,
+    "coverage": 0.951,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202325/M_9779_7559737_2816_5.pdf"
+   },
+   {
+    "case_number": "M.9779",
+    "year": "2022",
+    "topic": "Mainline Rolling Stock",
+    "word_count": 291,
+    "pages": 379,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202325/M_9779_7559737_2816_5.pdf"
+   },
+   {
+    "case_number": "M.10522",
+    "year": "2022",
+    "topic": "Container terminal services - Product market",
+    "word_count": 23,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202304/M_10522_8907401_425_3.pdf"
+   },
+   {
+    "case_number": "M.10522",
+    "year": "2022",
+    "topic": "Container terminal services - Ancillary services",
+    "word_count": 19,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202304/M_10522_8907401_425_3.pdf"
+   },
+   {
+    "case_number": "M.10522",
+    "year": "2022",
+    "topic": "Container terminal services - Distinction between hinterland and transhipment traffic",
+    "word_count": 55,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202304/M_10522_8907401_425_3.pdf"
+   },
+   {
+    "case_number": "M.10522",
+    "year": "2022",
+    "topic": "Container terminal services in deep-sea ports - Geographic market",
+    "word_count": 102,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202304/M_10522_8907401_425_3.pdf"
+   },
+   {
+    "case_number": "M.10522",
+    "year": "2022",
+    "topic": "Container terminal services - Hinterland traffic",
+    "word_count": 55,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202304/M_10522_8907401_425_3.pdf"
+   },
+   {
+    "case_number": "M.10522",
+    "year": "2022",
+    "topic": "Deep-sea container liner shipping services - Product market",
+    "word_count": 20,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202304/M_10522_8907401_425_3.pdf"
+   },
+   {
+    "case_number": "M.10522",
+    "year": "2022",
+    "topic": "Deep-sea container liner shipping services - Transport of refrigerated goods",
+    "word_count": 80,
+    "pages": 30,
+    "coverage": 0.9,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202304/M_10522_8907401_425_3.pdf"
+   },
+   {
+    "case_number": "M.10522",
+    "year": "2022",
+    "topic": "Deep-sea container liner shipping services - Geographic market",
+    "word_count": 75,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202304/M_10522_8907401_425_3.pdf"
+   },
+   {
+    "case_number": "M.10522",
+    "year": "2022",
+    "topic": "Short-sea container liner shipping services - Product market",
+    "word_count": 27,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202304/M_10522_8907401_425_3.pdf"
+   },
+   {
+    "case_number": "M.10522",
+    "year": "2022",
+    "topic": "Short-sea container liner shipping services - Type of cargo transported",
+    "word_count": 69,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202304/M_10522_8907401_425_3.pdf"
+   },
+   {
+    "case_number": "M.10522",
+    "year": "2022",
+    "topic": "Short-sea container liner shipping services - Refrigerated and non-refrigerated services",
+    "word_count": 20,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202304/M_10522_8907401_425_3.pdf"
+   },
+   {
+    "case_number": "M.10522",
+    "year": "2022",
+    "topic": "Short-sea container liner shipping services - Geographic market",
+    "word_count": 54,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202304/M_10522_8907401_425_3.pdf"
+   },
+   {
+    "case_number": "M.10522",
+    "year": "2022",
+    "topic": "Inland transportation",
+    "word_count": 36,
+    "pages": 30,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202304/M_10522_8907401_425_3.pdf"
+   },
+   {
+    "case_number": "M.8435",
+    "year": "2017",
+    "topic": "Divestment Business",
+    "word_count": 103,
+    "pages": 6,
+    "coverage": 0.923,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8435_1127_4.pdf"
+   },
+   {
+    "case_number": "M.8435",
+    "year": "2017",
+    "topic": "Divestment Business",
+    "word_count": 129,
+    "pages": 6,
+    "coverage": 0.939,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8435_1127_4.pdf"
+   },
+   {
+    "case_number": "M.9504",
+    "year": "2019",
+    "topic": "Wholesale distribution of building materials, sanitary, heating and plumbing materials, and DIY products",
+    "word_count": 41,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9504_41_3.pdf"
+   },
+   {
+    "case_number": "M.9504",
+    "year": "2019",
+    "topic": "Geographic scope of the wholesale distribution of building materials, sanitary, heating and plumbing materials, and DIY products",
+    "word_count": 34,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9504_41_3.pdf"
+   },
+   {
+    "case_number": "M.9504",
+    "year": "2019",
+    "topic": "Exact product and geographic market definition of the wholesale distribution of building materials, sanitary, heating and plumbing materials, and DIY products",
+    "word_count": 37,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9504_41_3.pdf"
+   },
+   {
+    "case_number": "M.8943",
+    "year": "2018",
+    "topic": "Fire Suppression Systems market definition",
+    "word_count": 33,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8943_61_4.pdf"
+   },
+   {
+    "case_number": "M.8943",
+    "year": "2018",
+    "topic": "Fire Suppression Systems market definition",
+    "word_count": 39,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8943_61_4.pdf"
+   },
+   {
+    "case_number": "M.8943",
+    "year": "2018",
+    "topic": "Portable fire extinguishers market definition",
+    "word_count": 28,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8943_61_4.pdf"
+   },
+   {
+    "case_number": "M.8943",
+    "year": "2018",
+    "topic": "Portable fire extinguishers market definition",
+    "word_count": 39,
+    "pages": 3,
+    "coverage": 0.0,
+    "band": "absent",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8943_61_4.pdf"
+   },
+   {
+    "case_number": "M.6447",
+    "year": "2024",
+    "topic": "Slots for Relevant City Pairs",
+    "word_count": 206,
+    "pages": 23,
+    "coverage": 0.902,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202435/M_6447_10209990_9149_5.pdf"
+   },
+   {
+    "case_number": "M.6447",
+    "year": "2024",
+    "topic": "Increased Slot Frequencies",
+    "word_count": 82,
+    "pages": 23,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202435/M_6447_10209990_9149_5.pdf"
+   },
+   {
+    "case_number": "M.6447",
+    "year": "2024",
+    "topic": "Slot Allocation Changes Post-Flybe",
+    "word_count": 184,
+    "pages": 23,
+    "coverage": 0.927,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202435/M_6447_10209990_9149_5.pdf"
+   },
+   {
+    "case_number": "M.8888",
+    "year": "2018",
+    "topic": "Debt collection services",
+    "word_count": 76,
+    "pages": 8,
+    "coverage": 0.895,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8888_83_3.pdf"
+   },
+   {
+    "case_number": "M.8888",
+    "year": "2018",
+    "topic": "NPLs management services",
+    "word_count": 42,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8888_83_3.pdf"
+   },
+   {
+    "case_number": "M.8888",
+    "year": "2018",
+    "topic": "Segmentation of the debt collection market",
+    "word_count": 87,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8888_83_3.pdf"
+   },
+   {
+    "case_number": "M.8888",
+    "year": "2018",
+    "topic": "Distinction between non secured and secured loans",
+    "word_count": 127,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8888_83_3.pdf"
+   },
+   {
+    "case_number": "M.8888",
+    "year": "2018",
+    "topic": "In-house debt collection vs outsourced debt collection",
+    "word_count": 33,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8888_83_3.pdf"
+   },
+   {
+    "case_number": "M.8888",
+    "year": "2018",
+    "topic": "Banking services",
+    "word_count": 46,
+    "pages": 8,
+    "coverage": 0.833,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8888_83_3.pdf"
+   },
+   {
+    "case_number": "M.8888",
+    "year": "2018",
+    "topic": "Retail banking",
+    "word_count": 32,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8888_83_3.pdf"
+   },
+   {
+    "case_number": "M.8888",
+    "year": "2018",
+    "topic": "Corporate banking",
+    "word_count": 59,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8888_83_3.pdf"
+   },
+   {
+    "case_number": "M.8738",
+    "year": "2019",
+    "topic": "Electric Pool Cleaners Market",
+    "word_count": 69,
+    "pages": 7,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8738_1421_3.pdf"
+   },
+   {
+    "case_number": "M.10815",
+    "year": "2023",
+    "topic": "Digital Identification Services for Targeted Advertising and/or Site Optimisation",
+    "word_count": 117,
+    "pages": 51,
+    "coverage": 0.966,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202403/M_10815_9840550_1726_3.pdf"
+   },
+   {
+    "case_number": "M.10815",
+    "year": "2023",
+    "topic": "Digital Identification Services for Targeted Advertising and/or Site Optimisation",
+    "word_count": 149,
+    "pages": 51,
+    "coverage": 0.95,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202403/M_10815_9840550_1726_3.pdf"
+   },
+   {
+    "case_number": "M.10815",
+    "year": "2023",
+    "topic": "Digital Identification Services for Targeted Advertising and/or Site Optimisation",
+    "word_count": 36,
+    "pages": 51,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202403/M_10815_9840550_1726_3.pdf"
+   },
+   {
+    "case_number": "M.10815",
+    "year": "2023",
+    "topic": "The geographic scope of a market for the supply of digital identification services",
+    "word_count": 78,
+    "pages": 51,
+    "coverage": 0.895,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202403/M_10815_9840550_1726_3.pdf"
+   },
+   {
+    "case_number": "M.10815",
+    "year": "2023",
+    "topic": "The geographic scope of the market for non-search (display) advertising intermediation services",
+    "word_count": 36,
+    "pages": 51,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202403/M_10815_9840550_1726_3.pdf"
+   },
+   {
+    "case_number": "M.10815",
+    "year": "2023",
+    "topic": "The geographic market for market for the supply of digital identification services",
+    "word_count": 71,
+    "pages": 51,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202403/M_10815_9840550_1726_3.pdf"
+   },
+   {
+    "case_number": "M.9418",
+    "year": "2019",
+    "topic": "In-flight catering",
+    "word_count": 241,
+    "pages": 17,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9418_206_3.pdf"
+   },
+   {
+    "case_number": "M.9418",
+    "year": "2019",
+    "topic": "In-flight catering geographic region",
+    "word_count": 198,
+    "pages": 17,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9418_206_3.pdf"
+   },
+   {
+    "case_number": "M.9418",
+    "year": "2019",
+    "topic": "Retail on-board services",
+    "word_count": 269,
+    "pages": 17,
+    "coverage": 0.971,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9418_206_3.pdf"
+   },
+   {
+    "case_number": "M.9418",
+    "year": "2019",
+    "topic": "Retail on-board geographic region",
+    "word_count": 129,
+    "pages": 17,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9418_206_3.pdf"
+   },
+   {
+    "case_number": "M.9418",
+    "year": "2019",
+    "topic": "Passenger air transport services",
+    "word_count": 205,
+    "pages": 17,
+    "coverage": 0.982,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9418_206_3.pdf"
+   },
+   {
+    "case_number": "M.9418",
+    "year": "2019",
+    "topic": "Passenger air transport services geographic region",
+    "word_count": 210,
+    "pages": 17,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9418_206_3.pdf"
+   },
+   {
+    "case_number": "M.11360",
+    "year": "2024",
+    "topic": "LPG Segments",
+    "word_count": 39,
+    "pages": 12,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202412/M_11360_9969512_509_3.pdf"
+   },
+   {
+    "case_number": "M.11360",
+    "year": "2024",
+    "topic": "Non-retail supply of LPG in bulk",
+    "word_count": 116,
+    "pages": 12,
+    "coverage": 0.931,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202412/M_11360_9969512_509_3.pdf"
+   },
+   {
+    "case_number": "M.11360",
+    "year": "2024",
+    "topic": "Non-retail supply of LPG in the small bulk segment",
+    "word_count": 90,
+    "pages": 12,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202412/M_11360_9969512_509_3.pdf"
+   },
+   {
+    "case_number": "M.9357",
+    "year": "2019",
+    "topic": "Merchant Acquiring Services",
+    "word_count": 44,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9357_220_3.pdf"
+   },
+   {
+    "case_number": "M.9357",
+    "year": "2019",
+    "topic": "Merchant Acquiring Services",
+    "word_count": 37,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9357_220_3.pdf"
+   },
+   {
+    "case_number": "M.9357",
+    "year": "2019",
+    "topic": "Merchant Acquiring Services",
+    "word_count": 57,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9357_220_3.pdf"
+   },
+   {
+    "case_number": "M.9357",
+    "year": "2019",
+    "topic": "POS Terminals",
+    "word_count": 26,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9357_220_3.pdf"
+   },
+   {
+    "case_number": "M.9357",
+    "year": "2019",
+    "topic": "POS Terminals",
+    "word_count": 36,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9357_220_3.pdf"
+   },
+   {
+    "case_number": "M.9357",
+    "year": "2019",
+    "topic": "POS Terminals",
+    "word_count": 56,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9357_220_3.pdf"
+   },
+   {
+    "case_number": "M.9357",
+    "year": "2019",
+    "topic": "Independent Service Organisation Services",
+    "word_count": 44,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9357_220_3.pdf"
+   },
+   {
+    "case_number": "M.9357",
+    "year": "2019",
+    "topic": "Independent Service Organisation Services",
+    "word_count": 53,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9357_220_3.pdf"
+   },
+   {
+    "case_number": "M.9357",
+    "year": "2019",
+    "topic": "Payment Terminal Testing Solutions",
+    "word_count": 56,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9357_220_3.pdf"
+   },
+   {
+    "case_number": "M.9357",
+    "year": "2019",
+    "topic": "Payment Terminal Testing Solutions",
+    "word_count": 52,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m9357_220_3.pdf"
+   },
+   {
+    "case_number": "M.10862",
+    "year": "2022",
+    "topic": "Caustic Soda (CS) Product Market: Distinction Between Solid and Liquid CS",
+    "word_count": 94,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202330/M_10862_9306719_361_3.pdf"
+   },
+   {
+    "case_number": "M.10862",
+    "year": "2022",
+    "topic": "Caustic Soda (CS) Product Market: Direct Supply vs. Trading",
+    "word_count": 196,
+    "pages": 20,
+    "coverage": 0.961,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202330/M_10862_9306719_361_3.pdf"
+   },
+   {
+    "case_number": "M.10862",
+    "year": "2022",
+    "topic": "Caustic Soda (CS) Product Market: Direct Supply vs. Trading (Conclusion)",
+    "word_count": 56,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202330/M_10862_9306719_361_3.pdf"
+   },
+   {
+    "case_number": "M.10862",
+    "year": "2022",
+    "topic": "Caustic Soda (CS) Geographic Market: Overall Supply",
+    "word_count": 53,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202330/M_10862_9306719_361_3.pdf"
+   },
+   {
+    "case_number": "M.10862",
+    "year": "2022",
+    "topic": "Caustic Soda (CS) Geographic Market: Trading",
+    "word_count": 184,
+    "pages": 20,
+    "coverage": 0.957,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202330/M_10862_9306719_361_3.pdf"
+   },
+   {
+    "case_number": "M.10862",
+    "year": "2022",
+    "topic": "Ethylene Dichloride (EDC) Product Market: Supply of EDC",
+    "word_count": 64,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202330/M_10862_9306719_361_3.pdf"
+   },
+   {
+    "case_number": "M.10862",
+    "year": "2022",
+    "topic": "Ethylene Dichloride (EDC) Product Market: Direct Supply vs. Trading",
+    "word_count": 129,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202330/M_10862_9306719_361_3.pdf"
+   },
+   {
+    "case_number": "M.10862",
+    "year": "2022",
+    "topic": "Ethylene Dichloride (EDC) Product Market: Direct Supply vs. Trading (Conclusion)",
+    "word_count": 67,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202330/M_10862_9306719_361_3.pdf"
+   },
+   {
+    "case_number": "M.10862",
+    "year": "2022",
+    "topic": "Ethylene Dichloride (EDC) Geographic Market: Overall Supply",
+    "word_count": 47,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202330/M_10862_9306719_361_3.pdf"
+   },
+   {
+    "case_number": "M.10862",
+    "year": "2022",
+    "topic": "Ethylene Dichloride (EDC) Geographic Market: Trading",
+    "word_count": 84,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202330/M_10862_9306719_361_3.pdf"
+   },
+   {
+    "case_number": "M.10709",
+    "year": "2022",
+    "topic": "Enterprise application software (\u201cEAS\u201d) and its segment ERP software , as well as potential ERP sub-segments (HCM software and FMS)",
+    "word_count": 146,
+    "pages": 13,
+    "coverage": 0.952,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202252/M_10709_8824932_247_3.pdf"
+   },
+   {
+    "case_number": "M.10709",
+    "year": "2022",
+    "topic": "HCM software, FMS software and EPM software (sub-segments of ERP software)",
+    "word_count": 41,
+    "pages": 13,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202252/M_10709_8824932_247_3.pdf"
+   },
+   {
+    "case_number": "M.10709",
+    "year": "2022",
+    "topic": "HCM, FMS and EPM software, and whether each of these ERP sub-segments can be divided between high- function and mid- market solutions",
+    "word_count": 119,
+    "pages": 13,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202252/M_10709_8824932_247_3.pdf"
+   },
+   {
+    "case_number": "M.10709",
+    "year": "2022",
+    "topic": "EAS and its segments",
+    "word_count": 80,
+    "pages": 13,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202252/M_10709_8824932_247_3.pdf"
+   },
+   {
+    "case_number": "M.10709",
+    "year": "2022",
+    "topic": "EAS, ERP software and its sub-segments (HCM, FMS and EPM software )",
+    "word_count": 78,
+    "pages": 13,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202252/M_10709_8824932_247_3.pdf"
+   },
+   {
+    "case_number": "M.10709",
+    "year": "2022",
+    "topic": "EAS and its segments , or national, EEA or worldwide for ERP software and its sub-segments",
+    "word_count": 132,
+    "pages": 13,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202252/M_10709_8824932_247_3.pdf"
+   },
+   {
+    "case_number": "M.8658",
+    "year": "2018",
+    "topic": "Trimmable Horizontal Stabiliser Actuators (THSAs)",
+    "word_count": 113,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8658_2751_3.pdf"
+   },
+   {
+    "case_number": "M.8658",
+    "year": "2018",
+    "topic": "Pilot control sticks",
+    "word_count": 102,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8658_2751_3.pdf"
+   },
+   {
+    "case_number": "M.8658",
+    "year": "2018",
+    "topic": "RBPS",
+    "word_count": 86,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8658_2751_3.pdf"
+   },
+   {
+    "case_number": "M.8658",
+    "year": "2018",
+    "topic": "TQAs",
+    "word_count": 98,
+    "pages": 8,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8658_2751_3.pdf"
+   },
+   {
+    "case_number": "M.8658",
+    "year": "2018",
+    "topic": "Small Sub-components",
+    "word_count": 116,
+    "pages": 8,
+    "coverage": 0.931,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8658_2751_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Discrete content sets, desktop services, and non-real time data feeds",
+    "word_count": 152,
+    "pages": 20,
+    "coverage": 0.95,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Desktop services",
+    "word_count": 87,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Non-real time datafeeds",
+    "word_count": 120,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Discrete content sets, desktop services, and non-real time data feeds",
+    "word_count": 36,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Desktop services",
+    "word_count": 50,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Non-real time datafeeds",
+    "word_count": 44,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Discrete content sets",
+    "word_count": 37,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Discrete content sets, desktop services, and non-real time data feeds",
+    "word_count": 34,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Consolidated Real Time Datafeeds",
+    "word_count": 39,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Consolidated Real Time Datafeeds",
+    "word_count": 33,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Consolidated Real Time Datafeeds",
+    "word_count": 28,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Market Data Platform Services",
+    "word_count": 74,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Market Data Platform Services",
+    "word_count": 50,
+    "pages": 20,
+    "coverage": 0.818,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Market Data Platform Services",
+    "word_count": 46,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Life Insurance",
+    "word_count": 125,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Life Insurance",
+    "word_count": 39,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Life Insurance",
+    "word_count": 33,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Bulk Annuity Insurance Transactions",
+    "word_count": 69,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Bulk Annuity Insurance Transactions",
+    "word_count": 42,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Bulk Annuity Insurance Transactions",
+    "word_count": 32,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Asset management",
+    "word_count": 175,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Asset management",
+    "word_count": 43,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Asset management",
+    "word_count": 33,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Investment banking",
+    "word_count": 122,
+    "pages": 20,
+    "coverage": 0.935,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Investment banking",
+    "word_count": 52,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Investment banking",
+    "word_count": 33,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Financial market services",
+    "word_count": 105,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Financial market services",
+    "word_count": 47,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Financial market services",
+    "word_count": 32,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Private equity investment",
+    "word_count": 108,
+    "pages": 20,
+    "coverage": 0.923,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Private equity investment",
+    "word_count": 50,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Private equity investment",
+    "word_count": 32,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Mortgages",
+    "word_count": 50,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Mortgages",
+    "word_count": 49,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   },
+   {
+    "case_number": "M.8837",
+    "year": "2018",
+    "topic": "Mortgages",
+    "word_count": 33,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases/decisions/m8837_310_3.pdf"
+   }
+  ],
+  "summary": {
+   "n_decisions": 40,
+   "n_records": 274,
+   "bands": {
+    "verbatim": 225,
+    "near_verbatim": 24,
+    "absent": 24,
+    "partial": 1
+   },
+   "exact_match_records": 207,
+   "short_form_decisions_le3_pages": 9,
+   "records_from_short_form_decisions": 25
+  }
+ },
+ "reference_set": {
+  "design": "All retrievable source documents of the 50 reference definitions (2 URLs for case M.11241 now redirect and could not be checked).",
+  "records": [
+   {
+    "case_number": "M.9324",
+    "year": "2019",
+    "topic": "Wholesale distribution of IT products",
+    "word_count": 61,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202048/m9324_479_3.pdf"
+   },
+   {
+    "case_number": "M.9324",
+    "year": "2019",
+    "topic": "Wholesale of telecommunication products",
+    "word_count": 47,
+    "pages": 16,
+    "coverage": 0.833,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202048/m9324_479_3.pdf"
+   },
+   {
+    "case_number": "M.9324",
+    "year": "2019",
+    "topic": "Wholesale distribution of consumer electronics",
+    "word_count": 22,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202048/m9324_479_3.pdf"
+   },
+   {
+    "case_number": "M.9324",
+    "year": "2019",
+    "topic": "Wholesale distribution printing consumables",
+    "word_count": 55,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202048/m9324_479_3.pdf"
+   },
+   {
+    "case_number": "M.9324",
+    "year": "2019",
+    "topic": "Retail market for electronic equipment",
+    "word_count": 54,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202048/m9324_479_3.pdf"
+   },
+   {
+    "case_number": "M.9324",
+    "year": "2019",
+    "topic": "Wholesale distribution of ICT products (IT products and telecommunication equipment), CE and printing consumables - Geographic",
+    "word_count": 50,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202048/m9324_479_3.pdf"
+   },
+   {
+    "case_number": "M.9324",
+    "year": "2019",
+    "topic": "Retail sales of electronic devices/equipment - Geographic",
+    "word_count": 33,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202048/m9324_479_3.pdf"
+   },
+   {
+    "case_number": "M.10745",
+    "year": "2022",
+    "topic": "Wholesale distribution of new PCs and LCVs",
+    "word_count": 133,
+    "pages": 12,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202233/M_10745_8445862_174_3.pdf"
+   },
+   {
+    "case_number": "M.10745",
+    "year": "2022",
+    "topic": "Wholesale distribution of new PCs and LCVs",
+    "word_count": 71,
+    "pages": 12,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202233/M_10745_8445862_174_3.pdf"
+   },
+   {
+    "case_number": "M.10745",
+    "year": "2022",
+    "topic": "Geographic market for wholesale distribution of new PCs and LCVs",
+    "word_count": 187,
+    "pages": 12,
+    "coverage": 0.98,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202233/M_10745_8445862_174_3.pdf"
+   },
+   {
+    "case_number": "M.10745",
+    "year": "2022",
+    "topic": "Geographic market for wholesale distribution of new PCs and LCVs",
+    "word_count": 53,
+    "pages": 12,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202233/M_10745_8445862_174_3.pdf"
+   },
+   {
+    "case_number": "M.10745",
+    "year": "2022",
+    "topic": "Retail distribution of PCs and LCVs",
+    "word_count": 83,
+    "pages": 12,
+    "coverage": 0.905,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202233/M_10745_8445862_174_3.pdf"
+   },
+   {
+    "case_number": "M.10745",
+    "year": "2022",
+    "topic": "Geographic market for retail distribution of new PCs and LCVs",
+    "word_count": 112,
+    "pages": 12,
+    "coverage": 0.871,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202233/M_10745_8445862_174_3.pdf"
+   },
+   {
+    "case_number": "M.10745",
+    "year": "2022",
+    "topic": "Geographic market for retail distribution of new PCs and LCVs",
+    "word_count": 45,
+    "pages": 12,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202233/M_10745_8445862_174_3.pdf"
+   },
+   {
+    "case_number": "M.11234",
+    "year": "2024",
+    "topic": "Non-life insurance product market definition",
+    "word_count": 105,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202428/M_11234_10146564_942_3.pdf"
+   },
+   {
+    "case_number": "M.11234",
+    "year": "2024",
+    "topic": "Non-life insurance product market assessment",
+    "word_count": 84,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202428/M_11234_10146564_942_3.pdf"
+   },
+   {
+    "case_number": "M.11234",
+    "year": "2024",
+    "topic": "Non-life insurance product market conclusion",
+    "word_count": 56,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202428/M_11234_10146564_942_3.pdf"
+   },
+   {
+    "case_number": "M.11234",
+    "year": "2024",
+    "topic": "Non-life insurance geographic market definition",
+    "word_count": 50,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202428/M_11234_10146564_942_3.pdf"
+   },
+   {
+    "case_number": "M.11234",
+    "year": "2024",
+    "topic": "Non-life insurance geographic market assessment",
+    "word_count": 46,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202428/M_11234_10146564_942_3.pdf"
+   },
+   {
+    "case_number": "M.11234",
+    "year": "2024",
+    "topic": "Non-life insurance geographic market conclusion",
+    "word_count": 54,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202428/M_11234_10146564_942_3.pdf"
+   },
+   {
+    "case_number": "M.11234",
+    "year": "2024",
+    "topic": "Personal injury claims management services product market definition",
+    "word_count": 148,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202428/M_11234_10146564_942_3.pdf"
+   },
+   {
+    "case_number": "M.11234",
+    "year": "2024",
+    "topic": "Personal injury claims management services product market assessment",
+    "word_count": 39,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202428/M_11234_10146564_942_3.pdf"
+   },
+   {
+    "case_number": "M.11234",
+    "year": "2024",
+    "topic": "Personal injury claims management services product market conclusion",
+    "word_count": 60,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202428/M_11234_10146564_942_3.pdf"
+   },
+   {
+    "case_number": "M.11234",
+    "year": "2024",
+    "topic": "Personal injury claims management services geographic market definition",
+    "word_count": 74,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202428/M_11234_10146564_942_3.pdf"
+   },
+   {
+    "case_number": "M.11234",
+    "year": "2024",
+    "topic": "Personal injury claims management services geographic market conclusion",
+    "word_count": 90,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202428/M_11234_10146564_942_3.pdf"
+   },
+   {
+    "case_number": "M.11410",
+    "year": "2024",
+    "topic": "Wholesale Distribution of New MT",
+    "word_count": 120,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202435/M_11410_10212189_719_3.pdf"
+   },
+   {
+    "case_number": "M.11410",
+    "year": "2024",
+    "topic": "Retail Distribution of New MT",
+    "word_count": 145,
+    "pages": 16,
+    "coverage": 0.943,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202435/M_11410_10212189_719_3.pdf"
+   },
+   {
+    "case_number": "M.11410",
+    "year": "2024",
+    "topic": "Geographic Market Definition for Wholesale Distribution of New MT",
+    "word_count": 75,
+    "pages": 16,
+    "coverage": 0.889,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202435/M_11410_10212189_719_3.pdf"
+   },
+   {
+    "case_number": "M.11410",
+    "year": "2024",
+    "topic": "Geographic Market Definition for Retail Distribution of New MT",
+    "word_count": 103,
+    "pages": 16,
+    "coverage": 0.92,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202435/M_11410_10212189_719_3.pdf"
+   },
+   {
+    "case_number": "M.11116",
+    "year": "2023",
+    "topic": "Retail distribution of new PCs and/or LCVs",
+    "word_count": 111,
+    "pages": 9,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202343/M_11116_9595744_320_3.pdf"
+   },
+   {
+    "case_number": "M.11116",
+    "year": "2023",
+    "topic": "Geographic market for the retail distribution of PCs and/or LCVs",
+    "word_count": 236,
+    "pages": 9,
+    "coverage": 0.968,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202343/M_11116_9595744_320_3.pdf"
+   },
+   {
+    "case_number": "M.11106",
+    "year": "2023",
+    "topic": "Supply of FCSs",
+    "word_count": 379,
+    "pages": 17,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202338/M_11106_9541251_521_3.pdf"
+   },
+   {
+    "case_number": "M.11106",
+    "year": "2023",
+    "topic": "Geographic market for FCSs",
+    "word_count": 192,
+    "pages": 17,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202338/M_11106_9541251_521_3.pdf"
+   },
+   {
+    "case_number": "M.11106",
+    "year": "2023",
+    "topic": "Supply of FCPUs",
+    "word_count": 251,
+    "pages": 17,
+    "coverage": 0.983,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202338/M_11106_9541251_521_3.pdf"
+   },
+   {
+    "case_number": "M.11106",
+    "year": "2023",
+    "topic": "Geographic market for FCPUs",
+    "word_count": 140,
+    "pages": 17,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202338/M_11106_9541251_521_3.pdf"
+   },
+   {
+    "case_number": "M.11106",
+    "year": "2023",
+    "topic": "PCs",
+    "word_count": 528,
+    "pages": 17,
+    "coverage": 0.993,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202338/M_11106_9541251_521_3.pdf"
+   },
+   {
+    "case_number": "M.11106",
+    "year": "2023",
+    "topic": "LCVs",
+    "word_count": 353,
+    "pages": 17,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202338/M_11106_9541251_521_3.pdf"
+   },
+   {
+    "case_number": "M.11106",
+    "year": "2023",
+    "topic": "Geographic market for PCs and LCVs",
+    "word_count": 192,
+    "pages": 17,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202338/M_11106_9541251_521_3.pdf"
+   },
+   {
+    "case_number": "M.11288",
+    "year": "2024",
+    "topic": "Luxury Products",
+    "word_count": 42,
+    "pages": 21,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202424/M_11288_10094466_1549_3.pdf"
+   },
+   {
+    "case_number": "M.11288",
+    "year": "2024",
+    "topic": "Segmentation of Luxury Goods",
+    "word_count": 117,
+    "pages": 21,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202424/M_11288_10094466_1549_3.pdf"
+   },
+   {
+    "case_number": "M.11288",
+    "year": "2024",
+    "topic": "Luxury Goods Categories",
+    "word_count": 93,
+    "pages": 21,
+    "coverage": 0.96,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202424/M_11288_10094466_1549_3.pdf"
+   },
+   {
+    "case_number": "M.11288",
+    "year": "2024",
+    "topic": "Luxury Bags and SLGs",
+    "word_count": 109,
+    "pages": 21,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202424/M_11288_10094466_1549_3.pdf"
+   },
+   {
+    "case_number": "M.11288",
+    "year": "2024",
+    "topic": "Premium or Accessible Luxury vs High-End Luxury",
+    "word_count": 145,
+    "pages": 21,
+    "coverage": 0.842,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202424/M_11288_10094466_1549_3.pdf"
+   },
+   {
+    "case_number": "M.11288",
+    "year": "2024",
+    "topic": "Luxury Goods by Gender",
+    "word_count": 117,
+    "pages": 21,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202424/M_11288_10094466_1549_3.pdf"
+   },
+   {
+    "case_number": "M.11288",
+    "year": "2024",
+    "topic": "Luxury Goods by Sales Channel",
+    "word_count": 120,
+    "pages": 21,
+    "coverage": 0.933,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202424/M_11288_10094466_1549_3.pdf"
+   },
+   {
+    "case_number": "M.11288",
+    "year": "2024",
+    "topic": "Premium Bags and SLGs",
+    "word_count": 111,
+    "pages": 21,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202424/M_11288_10094466_1549_3.pdf"
+   },
+   {
+    "case_number": "M.11288",
+    "year": "2024",
+    "topic": "Geographic scope of the market(s) for luxury goods",
+    "word_count": 53,
+    "pages": 21,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202424/M_11288_10094466_1549_3.pdf"
+   },
+   {
+    "case_number": "M.11288",
+    "year": "2024",
+    "topic": "Geographic Market Definition",
+    "word_count": 80,
+    "pages": 21,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202424/M_11288_10094466_1549_3.pdf"
+   },
+   {
+    "case_number": "M.11198",
+    "year": "2023",
+    "topic": "IT Services",
+    "word_count": 69,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202408/M_11198_9925166_834_3.pdf"
+   },
+   {
+    "case_number": "M.11198",
+    "year": "2023",
+    "topic": "IT Services Segmented by Functionality",
+    "word_count": 43,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202408/M_11198_9925166_834_3.pdf"
+   },
+   {
+    "case_number": "M.11198",
+    "year": "2023",
+    "topic": "BPO Services Segment",
+    "word_count": 82,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202408/M_11198_9925166_834_3.pdf"
+   },
+   {
+    "case_number": "M.11198",
+    "year": "2023",
+    "topic": "IT Services by Industry Sector",
+    "word_count": 87,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202408/M_11198_9925166_834_3.pdf"
+   },
+   {
+    "case_number": "M.11198",
+    "year": "2023",
+    "topic": "Whether to segment IT services by Functionality, Industry Sector, or both",
+    "word_count": 93,
+    "pages": 16,
+    "coverage": 0.905,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202408/M_11198_9925166_834_3.pdf"
+   },
+   {
+    "case_number": "M.11198",
+    "year": "2023",
+    "topic": "Geographic scope of IT services",
+    "word_count": 34,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202408/M_11198_9925166_834_3.pdf"
+   },
+   {
+    "case_number": "M.11198",
+    "year": "2023",
+    "topic": "Geographic scope of IT services",
+    "word_count": 56,
+    "pages": 16,
+    "coverage": 0.923,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202408/M_11198_9925166_834_3.pdf"
+   },
+   {
+    "case_number": "M.11233",
+    "year": "2023",
+    "topic": "Metering services",
+    "word_count": 14,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202415/M_11233_9984771_603_3.pdf"
+   },
+   {
+    "case_number": "M.11233",
+    "year": "2023",
+    "topic": "Sub-segments of the metering services market",
+    "word_count": 69,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202415/M_11233_9984771_603_3.pdf"
+   },
+   {
+    "case_number": "M.11233",
+    "year": "2023",
+    "topic": "Gas and electricity metering services market",
+    "word_count": 53,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202415/M_11233_9984771_603_3.pdf"
+   },
+   {
+    "case_number": "M.11233",
+    "year": "2023",
+    "topic": "Gas and electricity metering services",
+    "word_count": 73,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202415/M_11233_9984771_603_3.pdf"
+   },
+   {
+    "case_number": "M.11233",
+    "year": "2023",
+    "topic": "Dutch market for gas and electricity metering services",
+    "word_count": 30,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202415/M_11233_9984771_603_3.pdf"
+   },
+   {
+    "case_number": "M.11233",
+    "year": "2023",
+    "topic": "Gas and electricity metering services market segmentation",
+    "word_count": 95,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202415/M_11233_9984771_603_3.pdf"
+   },
+   {
+    "case_number": "M.11233",
+    "year": "2023",
+    "topic": "Segmentation on the gas and electricity metering market",
+    "word_count": 45,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202415/M_11233_9984771_603_3.pdf"
+   },
+   {
+    "case_number": "M.11233",
+    "year": "2023",
+    "topic": "Segment for sub-metering services",
+    "word_count": 76,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202415/M_11233_9984771_603_3.pdf"
+   },
+   {
+    "case_number": "M.11233",
+    "year": "2023",
+    "topic": "Heat and water metering services",
+    "word_count": 49,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202415/M_11233_9984771_603_3.pdf"
+   },
+   {
+    "case_number": "M.11233",
+    "year": "2023",
+    "topic": "Gas and electricity metering services market to large customers",
+    "word_count": 50,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202415/M_11233_9984771_603_3.pdf"
+   },
+   {
+    "case_number": "M.11233",
+    "year": "2023",
+    "topic": "Installation and operation of electricity meters and meter reading and associated data processing services",
+    "word_count": 153,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202415/M_11233_9984771_603_3.pdf"
+   },
+   {
+    "case_number": "M.11233",
+    "year": "2023",
+    "topic": "Sub-metering activities",
+    "word_count": 94,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202415/M_11233_9984771_603_3.pdf"
+   },
+   {
+    "case_number": "M.11233",
+    "year": "2023",
+    "topic": "eMPO/nMPO/cMPO",
+    "word_count": 37,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202415/M_11233_9984771_603_3.pdf"
+   },
+   {
+    "case_number": "M.11233",
+    "year": "2023",
+    "topic": "Overall market for electricity and gas metering services to large customers",
+    "word_count": 96,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202415/M_11233_9984771_603_3.pdf"
+   },
+   {
+    "case_number": "M.11233",
+    "year": "2023",
+    "topic": "Gas and electricity metering services market (geographic)",
+    "word_count": 41,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202415/M_11233_9984771_603_3.pdf"
+   },
+   {
+    "case_number": "M.11233",
+    "year": "2023",
+    "topic": "Gas and electricity metering services market (geographic)",
+    "word_count": 16,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202415/M_11233_9984771_603_3.pdf"
+   },
+   {
+    "case_number": "M.11233",
+    "year": "2023",
+    "topic": "Gas and electricity metering services market (geographic)",
+    "word_count": 24,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202415/M_11233_9984771_603_3.pdf"
+   },
+   {
+    "case_number": "M.11128",
+    "year": "2023",
+    "topic": "Public vs. private EV charging stations",
+    "word_count": 52,
+    "pages": 68,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202423/M_11128_10080464_1370_3.pdf"
+   },
+   {
+    "case_number": "M.11128",
+    "year": "2023",
+    "topic": "Segmentation based on charging speed",
+    "word_count": 121,
+    "pages": 68,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202423/M_11128_10080464_1370_3.pdf"
+   },
+   {
+    "case_number": "M.11128",
+    "year": "2023",
+    "topic": "Segmentation based on location",
+    "word_count": 66,
+    "pages": 68,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202423/M_11128_10080464_1370_3.pdf"
+   },
+   {
+    "case_number": "M.11128",
+    "year": "2023",
+    "topic": "On-motorway and off-motorway EV charging stations",
+    "word_count": 86,
+    "pages": 68,
+    "coverage": 0.952,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202423/M_11128_10080464_1370_3.pdf"
+   },
+   {
+    "case_number": "M.11128",
+    "year": "2023",
+    "topic": "On-street and destination charging",
+    "word_count": 93,
+    "pages": 68,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202423/M_11128_10080464_1370_3.pdf"
+   },
+   {
+    "case_number": "M.11128",
+    "year": "2023",
+    "topic": "Whether product market can be left open",
+    "word_count": 36,
+    "pages": 68,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202423/M_11128_10080464_1370_3.pdf"
+   },
+   {
+    "case_number": "M.11128",
+    "year": "2023",
+    "topic": "Delineation of exact charging speeds",
+    "word_count": 108,
+    "pages": 68,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202423/M_11128_10080464_1370_3.pdf"
+   },
+   {
+    "case_number": "M.11128",
+    "year": "2023",
+    "topic": "Segmentation between on- and off-motorway charging stations",
+    "word_count": 89,
+    "pages": 68,
+    "coverage": 0.909,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202423/M_11128_10080464_1370_3.pdf"
+   },
+   {
+    "case_number": "M.11128",
+    "year": "2023",
+    "topic": "Summary of product market definition",
+    "word_count": 110,
+    "pages": 68,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202423/M_11128_10080464_1370_3.pdf"
+   },
+   {
+    "case_number": "M.11086",
+    "year": "2023",
+    "topic": "Product market definition for MDA",
+    "word_count": 97,
+    "pages": 70,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202503/M_11086_10454251_4157_3.pdf"
+   },
+   {
+    "case_number": "M.11086",
+    "year": "2023",
+    "topic": "Whether cooking appliances should be further sub-segmented",
+    "word_count": 81,
+    "pages": 70,
+    "coverage": 0.909,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202503/M_11086_10454251_4157_3.pdf"
+   },
+   {
+    "case_number": "M.11086",
+    "year": "2023",
+    "topic": "Whether built-in and freestanding MDA should be part of the same market",
+    "word_count": 162,
+    "pages": 70,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202503/M_11086_10454251_4157_3.pdf"
+   },
+   {
+    "case_number": "M.11086",
+    "year": "2023",
+    "topic": "Whether built-in and freestanding MDA should be part of the same market",
+    "word_count": 193,
+    "pages": 70,
+    "coverage": 0.981,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202503/M_11086_10454251_4157_3.pdf"
+   },
+   {
+    "case_number": "M.11086",
+    "year": "2023",
+    "topic": "Whether smart/connected and non-connected MDA should be part of the same market",
+    "word_count": 116,
+    "pages": 70,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202503/M_11086_10454251_4157_3.pdf"
+   },
+   {
+    "case_number": "M.11086",
+    "year": "2023",
+    "topic": "Conclusion on Product Market Definition",
+    "word_count": 85,
+    "pages": 70,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202503/M_11086_10454251_4157_3.pdf"
+   },
+   {
+    "case_number": "M.11086",
+    "year": "2023",
+    "topic": "Geographic market definition for MDAs",
+    "word_count": 100,
+    "pages": 70,
+    "coverage": 0.923,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202503/M_11086_10454251_4157_3.pdf"
+   },
+   {
+    "case_number": "M.11086",
+    "year": "2023",
+    "topic": "Commission's Assessment of Geographic Market Definition",
+    "word_count": 158,
+    "pages": 70,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202503/M_11086_10454251_4157_3.pdf"
+   },
+   {
+    "case_number": "M.11086",
+    "year": "2023",
+    "topic": "Commission's Assessment of Geographic Market Definition",
+    "word_count": 212,
+    "pages": 70,
+    "coverage": 0.962,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202503/M_11086_10454251_4157_3.pdf"
+   },
+   {
+    "case_number": "M.11086",
+    "year": "2023",
+    "topic": "Commission's Assessment of Geographic Market Definition",
+    "word_count": 193,
+    "pages": 70,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202503/M_11086_10454251_4157_3.pdf"
+   },
+   {
+    "case_number": "M.11086",
+    "year": "2023",
+    "topic": "Commission's Assessment of Geographic Market Definition",
+    "word_count": 155,
+    "pages": 70,
+    "coverage": 0.95,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202503/M_11086_10454251_4157_3.pdf"
+   },
+   {
+    "case_number": "M.11086",
+    "year": "2023",
+    "topic": "Conclusion on Geographic Market Definition",
+    "word_count": 36,
+    "pages": 70,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202503/M_11086_10454251_4157_3.pdf"
+   },
+   {
+    "case_number": "M.11049",
+    "year": "2023",
+    "topic": "Electrical and Mechanical Engineering Services",
+    "word_count": 178,
+    "pages": 48,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202348/M_11049_9733982_564_3.pdf"
+   },
+   {
+    "case_number": "M.11049",
+    "year": "2023",
+    "topic": "Large and Small Ventilation Projects",
+    "word_count": 23,
+    "pages": 48,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202348/M_11049_9733982_564_3.pdf"
+   },
+   {
+    "case_number": "M.11049",
+    "year": "2023",
+    "topic": "Large and Small Sanitary Installations",
+    "word_count": 23,
+    "pages": 48,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202348/M_11049_9733982_564_3.pdf"
+   },
+   {
+    "case_number": "M.11049",
+    "year": "2023",
+    "topic": "Electrical, ventilation and water and sanitation engineering services",
+    "word_count": 213,
+    "pages": 48,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202348/M_11049_9733982_564_3.pdf"
+   },
+   {
+    "case_number": "M.11049",
+    "year": "2023",
+    "topic": "Geographic markets for electrical, ventilation and water and sanitation engineering services",
+    "word_count": 56,
+    "pages": 48,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202348/M_11049_9733982_564_3.pdf"
+   },
+   {
+    "case_number": "M.11049",
+    "year": "2023",
+    "topic": "Geographic market definitions",
+    "word_count": 154,
+    "pages": 48,
+    "coverage": 0.946,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202348/M_11049_9733982_564_3.pdf"
+   },
+   {
+    "case_number": "M.11098",
+    "year": "2023",
+    "topic": "Distinction between production and distribution of steel products",
+    "word_count": 66,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202341/M_11098_9576401_1031_3.pdf"
+   },
+   {
+    "case_number": "M.11098",
+    "year": "2023",
+    "topic": "Distinction by distribution channels",
+    "word_count": 89,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202341/M_11098_9576401_1031_3.pdf"
+   },
+   {
+    "case_number": "M.11098",
+    "year": "2023",
+    "topic": "Distinction based on shapes and the type of material",
+    "word_count": 110,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202341/M_11098_9576401_1031_3.pdf"
+   },
+   {
+    "case_number": "M.11098",
+    "year": "2023",
+    "topic": "The distribution of flat stainless steel products forms a separate market from the distribution of long stainless steel products",
+    "word_count": 74,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202341/M_11098_9576401_1031_3.pdf"
+   },
+   {
+    "case_number": "M.11098",
+    "year": "2023",
+    "topic": "National vs Regional Scope",
+    "word_count": 161,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202341/M_11098_9576401_1031_3.pdf"
+   },
+   {
+    "case_number": "M.11098",
+    "year": "2023",
+    "topic": "Wholesale distribution of long stainless - steel products in the EEA are national in scope",
+    "word_count": 127,
+    "pages": 14,
+    "coverage": 0.968,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202341/M_11098_9576401_1031_3.pdf"
+   },
+   {
+    "case_number": "M.11098",
+    "year": "2023",
+    "topic": "The precise geographic market definition can be left open",
+    "word_count": 76,
+    "pages": 14,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202341/M_11098_9576401_1031_3.pdf"
+   },
+   {
+    "case_number": "M.11132",
+    "year": "2023",
+    "topic": "Segmentation of IT services by functionality",
+    "word_count": 126,
+    "pages": 15,
+    "coverage": 0.939,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202342/M_11132_9586549_1077_3.pdf"
+   },
+   {
+    "case_number": "M.11132",
+    "year": "2023",
+    "topic": "Segmentation of IT services by industry sector",
+    "word_count": 70,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202342/M_11132_9586549_1077_3.pdf"
+   },
+   {
+    "case_number": "M.11132",
+    "year": "2023",
+    "topic": "CXM BPO services as a separate product market",
+    "word_count": 270,
+    "pages": 15,
+    "coverage": 0.971,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202342/M_11132_9586549_1077_3.pdf"
+   },
+   {
+    "case_number": "M.11132",
+    "year": "2023",
+    "topic": "Segmentation of IT services by customers\u2019 industry sector",
+    "word_count": 101,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202342/M_11132_9586549_1077_3.pdf"
+   },
+   {
+    "case_number": "M.11132",
+    "year": "2023",
+    "topic": "Product Market Conclusion",
+    "word_count": 49,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202342/M_11132_9586549_1077_3.pdf"
+   },
+   {
+    "case_number": "M.11132",
+    "year": "2023",
+    "topic": "Geographic Market",
+    "word_count": 31,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202342/M_11132_9586549_1077_3.pdf"
+   },
+   {
+    "case_number": "M.11132",
+    "year": "2023",
+    "topic": "Geographic Market Conclusion",
+    "word_count": 60,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202342/M_11132_9586549_1077_3.pdf"
+   },
+   {
+    "case_number": "M.11386",
+    "year": "2024",
+    "topic": "Wholesale Broadband Access Services",
+    "word_count": 98,
+    "pages": 47,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202436/M_11386_10222059_1158_3.pdf"
+   },
+   {
+    "case_number": "M.11386",
+    "year": "2024",
+    "topic": "Wholesale Broadband Access Services Segmentation",
+    "word_count": 172,
+    "pages": 47,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202436/M_11386_10222059_1158_3.pdf"
+   },
+   {
+    "case_number": "M.11386",
+    "year": "2024",
+    "topic": "Wholesale Broadband Access Services Segmentation",
+    "word_count": 184,
+    "pages": 47,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202436/M_11386_10222059_1158_3.pdf"
+   },
+   {
+    "case_number": "M.11386",
+    "year": "2024",
+    "topic": "Wholesale Broadband Access Services Market Definition",
+    "word_count": 93,
+    "pages": 47,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202436/M_11386_10222059_1158_3.pdf"
+   },
+   {
+    "case_number": "M.11386",
+    "year": "2024",
+    "topic": "Geographic Market for Wholesale Broadband Access Services",
+    "word_count": 103,
+    "pages": 47,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202436/M_11386_10222059_1158_3.pdf"
+   },
+   {
+    "case_number": "M.11186",
+    "year": "2023",
+    "topic": "Animal pharmaceuticals product market definition",
+    "word_count": 549,
+    "pages": 38,
+    "coverage": 0.987,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202439/M_11186_10264065_1949_3.pdf"
+   },
+   {
+    "case_number": "M.11186",
+    "year": "2023",
+    "topic": "Animal pharmaceuticals geographic market definition",
+    "word_count": 131,
+    "pages": 38,
+    "coverage": 0.892,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202439/M_11186_10264065_1949_3.pdf"
+   },
+   {
+    "case_number": "M.11186",
+    "year": "2023",
+    "topic": "Veterinary clinics product market definition",
+    "word_count": 175,
+    "pages": 38,
+    "coverage": 0.956,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202439/M_11186_10264065_1949_3.pdf"
+   },
+   {
+    "case_number": "M.11186",
+    "year": "2023",
+    "topic": "Veterinary clinics geographic market definition",
+    "word_count": 462,
+    "pages": 38,
+    "coverage": 0.942,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202439/M_11186_10264065_1949_3.pdf"
+   },
+   {
+    "case_number": "M.11138",
+    "year": "2023",
+    "topic": "Bulk Supply of Hydrogen",
+    "word_count": 415,
+    "pages": 31,
+    "coverage": 0.943,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202406/M_11138_9896068_1278_3.pdf"
+   },
+   {
+    "case_number": "M.11138",
+    "year": "2023",
+    "topic": "Bulk Supply of Hydrogen by Production Process",
+    "word_count": 184,
+    "pages": 31,
+    "coverage": 0.92,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202406/M_11138_9896068_1278_3.pdf"
+   },
+   {
+    "case_number": "M.11138",
+    "year": "2023",
+    "topic": "Whether Blue and Green Hydrogen are Part of the Same Product Market",
+    "word_count": 211,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202406/M_11138_9896068_1278_3.pdf"
+   },
+   {
+    "case_number": "M.11138",
+    "year": "2023",
+    "topic": "Whether to Segment the Market for Bulk Supply of Hydrogen Between Different Applications or End Uses",
+    "word_count": 153,
+    "pages": 31,
+    "coverage": 0.946,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202406/M_11138_9896068_1278_3.pdf"
+   },
+   {
+    "case_number": "M.11138",
+    "year": "2023",
+    "topic": "Geographic Market for the Bulk Supply of Hydrogen",
+    "word_count": 133,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202406/M_11138_9896068_1278_3.pdf"
+   },
+   {
+    "case_number": "M.11138",
+    "year": "2023",
+    "topic": "Appropriateness of Departing from Precedent for Bulk Supply of Hydrogen",
+    "word_count": 131,
+    "pages": 31,
+    "coverage": 0.941,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202406/M_11138_9896068_1278_3.pdf"
+   },
+   {
+    "case_number": "M.11138",
+    "year": "2023",
+    "topic": "The Market for the Retail Supply of Motor Fuels",
+    "word_count": 229,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202406/M_11138_9896068_1278_3.pdf"
+   },
+   {
+    "case_number": "M.11138",
+    "year": "2023",
+    "topic": "Whether the Market for Retail Supply of Motor Fuels Should be Further Segmented",
+    "word_count": 37,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202406/M_11138_9896068_1278_3.pdf"
+   },
+   {
+    "case_number": "M.11138",
+    "year": "2023",
+    "topic": "Distinguishing the Retail Supply of Hydrogen from Motor Fuels",
+    "word_count": 83,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202406/M_11138_9896068_1278_3.pdf"
+   },
+   {
+    "case_number": "M.11138",
+    "year": "2023",
+    "topic": "Segmentation by Type of Hydrogen",
+    "word_count": 77,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202406/M_11138_9896068_1278_3.pdf"
+   },
+   {
+    "case_number": "M.11138",
+    "year": "2023",
+    "topic": "Limited Substitutability Between Hydrogen Compressed at 700 and 350 Bar",
+    "word_count": 122,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202406/M_11138_9896068_1278_3.pdf"
+   },
+   {
+    "case_number": "M.11138",
+    "year": "2023",
+    "topic": "Market for Retail Supply of Hydrogen Between B2C and B2B Customers",
+    "word_count": 96,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202406/M_11138_9896068_1278_3.pdf"
+   },
+   {
+    "case_number": "M.11138",
+    "year": "2023",
+    "topic": "Whether HRS for HDV and Light Vehicles Should be Part of a Separate Product Market",
+    "word_count": 181,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202406/M_11138_9896068_1278_3.pdf"
+   },
+   {
+    "case_number": "M.11138",
+    "year": "2023",
+    "topic": "Whether the Market for Retail Supply of Motor Fuels Should be Further Segmented",
+    "word_count": 88,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202406/M_11138_9896068_1278_3.pdf"
+   },
+   {
+    "case_number": "M.11138",
+    "year": "2023",
+    "topic": "Geographic Scope of the Market for Retail Supply of Hydrogen to HDV",
+    "word_count": 404,
+    "pages": 31,
+    "coverage": 0.917,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202406/M_11138_9896068_1278_3.pdf"
+   },
+   {
+    "case_number": "M.11138",
+    "year": "2023",
+    "topic": "The Commission's Conclusions Regarding Market Investigation",
+    "word_count": 216,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202406/M_11138_9896068_1278_3.pdf"
+   },
+   {
+    "case_number": "M.11138",
+    "year": "2023",
+    "topic": "Whether the Market for Retail Supply of Hydrogen for HDV Can Be Left Open",
+    "word_count": 76,
+    "pages": 31,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202406/M_11138_9896068_1278_3.pdf"
+   },
+   {
+    "case_number": "M.10524",
+    "year": "2022",
+    "topic": "Battery cells and modules",
+    "word_count": 47,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202221/M_10524_8319980_178_3.pdf"
+   },
+   {
+    "case_number": "M.10524",
+    "year": "2022",
+    "topic": "Battery modules vs integrated battery pack",
+    "word_count": 37,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202221/M_10524_8319980_178_3.pdf"
+   },
+   {
+    "case_number": "M.10524",
+    "year": "2022",
+    "topic": "Automotive batteries by cell technology",
+    "word_count": 25,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202221/M_10524_8319980_178_3.pdf"
+   },
+   {
+    "case_number": "M.10524",
+    "year": "2022",
+    "topic": "Manufacture and supply of battery cells and modules for automotive applications vs other industrial clients",
+    "word_count": 118,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202221/M_10524_8319980_178_3.pdf"
+   },
+   {
+    "case_number": "M.10524",
+    "year": "2022",
+    "topic": "Segmentation according to different technologies used for the manufacture of cells and modules",
+    "word_count": 136,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202221/M_10524_8319980_178_3.pdf"
+   },
+   {
+    "case_number": "M.10524",
+    "year": "2022",
+    "topic": "Product market definition for cells and modules",
+    "word_count": 99,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202221/M_10524_8319980_178_3.pdf"
+   },
+   {
+    "case_number": "M.10524",
+    "year": "2022",
+    "topic": "Geographic definition for cells and modules",
+    "word_count": 29,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202221/M_10524_8319980_178_3.pdf"
+   },
+   {
+    "case_number": "M.10524",
+    "year": "2022",
+    "topic": "Geographic definition for cells and modules",
+    "word_count": 73,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202221/M_10524_8319980_178_3.pdf"
+   },
+   {
+    "case_number": "M.10524",
+    "year": "2022",
+    "topic": "Passenger Cars Product Market",
+    "word_count": 68,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202221/M_10524_8319980_178_3.pdf"
+   },
+   {
+    "case_number": "M.10524",
+    "year": "2022",
+    "topic": "Segmentation by size and weight",
+    "word_count": 14,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202221/M_10524_8319980_178_3.pdf"
+   },
+   {
+    "case_number": "M.10524",
+    "year": "2022",
+    "topic": "Segmentation by type of propulsion technology",
+    "word_count": 100,
+    "pages": 15,
+    "coverage": 0.92,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202221/M_10524_8319980_178_3.pdf"
+   },
+   {
+    "case_number": "M.10524",
+    "year": "2022",
+    "topic": "PC Market Definition",
+    "word_count": 67,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202221/M_10524_8319980_178_3.pdf"
+   },
+   {
+    "case_number": "M.10524",
+    "year": "2022",
+    "topic": "Light commercial vehicles market definition",
+    "word_count": 113,
+    "pages": 15,
+    "coverage": 0.92,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202221/M_10524_8319980_178_3.pdf"
+   },
+   {
+    "case_number": "M.10524",
+    "year": "2022",
+    "topic": "Light commercial vehicles market definition",
+    "word_count": 59,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202221/M_10524_8319980_178_3.pdf"
+   },
+   {
+    "case_number": "M.10524",
+    "year": "2022",
+    "topic": "Geographic market definition for Passenger cars and light commercial vehicles",
+    "word_count": 23,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202221/M_10524_8319980_178_3.pdf"
+   },
+   {
+    "case_number": "M.10524",
+    "year": "2022",
+    "topic": "Geographic market definition for Passenger cars and light commercial vehicles",
+    "word_count": 68,
+    "pages": 15,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202221/M_10524_8319980_178_3.pdf"
+   },
+   {
+    "case_number": "M.10404",
+    "year": "2022",
+    "topic": "Pharmaceutical Wholesale Distribution by Full-liners",
+    "word_count": 74,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202317/M_10404_9152137_704_3.pdf"
+   },
+   {
+    "case_number": "M.10404",
+    "year": "2022",
+    "topic": "Direct Deliveries by Manufacturers",
+    "word_count": 101,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202317/M_10404_9152137_704_3.pdf"
+   },
+   {
+    "case_number": "M.10404",
+    "year": "2022",
+    "topic": "Segmentation of the Full-Line Pharmaceutical Wholesale Distribution Market Based on Product Type",
+    "word_count": 129,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202317/M_10404_9152137_704_3.pdf"
+   },
+   {
+    "case_number": "M.10404",
+    "year": "2022",
+    "topic": "Segmentation of the Full-Line Pharmaceutical Wholesale Distribution Market by Customer Type",
+    "word_count": 55,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202317/M_10404_9152137_704_3.pdf"
+   },
+   {
+    "case_number": "M.10404",
+    "year": "2022",
+    "topic": "Relevant Product Market - Full-Line Pharmaceutical Wholesale Distribution, excluding Short-Liners",
+    "word_count": 24,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202317/M_10404_9152137_704_3.pdf"
+   },
+   {
+    "case_number": "M.10404",
+    "year": "2022",
+    "topic": "Relevant Product Market - Full-Line Pharmaceutical Wholesale Distribution, excluding Direct Deliveries",
+    "word_count": 20,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202317/M_10404_9152137_704_3.pdf"
+   },
+   {
+    "case_number": "M.10404",
+    "year": "2022",
+    "topic": "Full-line Pharmaceutical Wholesale Distribution, Comprising All Types of Products",
+    "word_count": 52,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202317/M_10404_9152137_704_3.pdf"
+   },
+   {
+    "case_number": "M.10404",
+    "year": "2022",
+    "topic": "French Market for Full-Line Pharmaceutical Wholesale Distribution, without Segmentation by Customer Group",
+    "word_count": 31,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202317/M_10404_9152137_704_3.pdf"
+   },
+   {
+    "case_number": "M.10404",
+    "year": "2022",
+    "topic": "The Appropriate Geographic Market Definition",
+    "word_count": 96,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202317/M_10404_9152137_704_3.pdf"
+   },
+   {
+    "case_number": "M.9546",
+    "year": "2022",
+    "topic": "In-flight catering services",
+    "word_count": 106,
+    "pages": 12,
+    "coverage": 0.966,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202211/M_9546_8213785_1996_3.pdf"
+   },
+   {
+    "case_number": "M.10372",
+    "year": "2021",
+    "topic": "Refined Fuel Products",
+    "word_count": 248,
+    "pages": 11,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202207/M_10372_8170610_169_3.pdf"
+   },
+   {
+    "case_number": "M.10372",
+    "year": "2021",
+    "topic": "Motor Fuel Retail",
+    "word_count": 97,
+    "pages": 11,
+    "coverage": 0.913,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202207/M_10372_8170610_169_3.pdf"
+   },
+   {
+    "case_number": "M.10372",
+    "year": "2021",
+    "topic": "rDME",
+    "word_count": 356,
+    "pages": 11,
+    "coverage": 0.976,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202207/M_10372_8170610_169_3.pdf"
+   },
+   {
+    "case_number": "M.10372",
+    "year": "2021",
+    "topic": "rDME, LPG, and blended LPG",
+    "word_count": 69,
+    "pages": 11,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202207/M_10372_8170610_169_3.pdf"
+   },
+   {
+    "case_number": "M.10372",
+    "year": "2021",
+    "topic": "Exploration and Production of crude oil and natural gas",
+    "word_count": 33,
+    "pages": 11,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202207/M_10372_8170610_169_3.pdf"
+   },
+   {
+    "case_number": "M.10372",
+    "year": "2021",
+    "topic": "Downstream Activities",
+    "word_count": 117,
+    "pages": 11,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202207/M_10372_8170610_169_3.pdf"
+   },
+   {
+    "case_number": "M.10372",
+    "year": "2021",
+    "topic": "Geographic market",
+    "word_count": 43,
+    "pages": 11,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202207/M_10372_8170610_169_3.pdf"
+   },
+   {
+    "case_number": "M.10436",
+    "year": "2021",
+    "topic": "Production and wholesale distribution of wines and spirits - Product Market Definition",
+    "word_count": 308,
+    "pages": 16,
+    "coverage": 0.975,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202240/M_10436_8515998_287_3.pdf"
+   },
+   {
+    "case_number": "M.10436",
+    "year": "2021",
+    "topic": "Production and wholesale distribution of wines and spirits - Whether to Segment Market",
+    "word_count": 82,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202240/M_10436_8515998_287_3.pdf"
+   },
+   {
+    "case_number": "M.10436",
+    "year": "2021",
+    "topic": "Production and wholesale distribution of wines and spirits - Geographic Scope",
+    "word_count": 164,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202240/M_10436_8515998_287_3.pdf"
+   },
+   {
+    "case_number": "M.10436",
+    "year": "2021",
+    "topic": "Retail of wines and spirits - Product Market Definition",
+    "word_count": 257,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202240/M_10436_8515998_287_3.pdf"
+   },
+   {
+    "case_number": "M.10436",
+    "year": "2021",
+    "topic": "Retail of wines and spirits - Segmentation by Sales Channel",
+    "word_count": 83,
+    "pages": 16,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202240/M_10436_8515998_287_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "Life Insurance Product",
+    "word_count": 71,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "Life Insurance Product Segmentation",
+    "word_count": 232,
+    "pages": 28,
+    "coverage": 0.968,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "Health Insurance",
+    "word_count": 67,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "Life Insurance overall",
+    "word_count": 17,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "Life insurance market definition",
+    "word_count": 59,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "Health Insurance Market",
+    "word_count": 103,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "Life and Health Insurance Geographic Scope",
+    "word_count": 73,
+    "pages": 28,
+    "coverage": 0.947,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "Pension Products",
+    "word_count": 85,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "DAF Geographic Scope",
+    "word_count": 64,
+    "pages": 28,
+    "coverage": 0.941,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "Polish Pension System",
+    "word_count": 57,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "Polish Pension System Market Analysis",
+    "word_count": 36,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "Polish OFE Geographic Scope",
+    "word_count": 46,
+    "pages": 28,
+    "coverage": 0.8,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "Reinsurance Market",
+    "word_count": 81,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "Reinsurance Product Market Definition",
+    "word_count": 62,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "Reinsurance Geographic Scope",
+    "word_count": 61,
+    "pages": 28,
+    "coverage": 0.867,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "Insurance Distribution",
+    "word_count": 147,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "Insurance Distribution Market Definition",
+    "word_count": 59,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.10447",
+    "year": "2021",
+    "topic": "Insurance Distribution Geographic Scope",
+    "word_count": 183,
+    "pages": 28,
+    "coverage": 0.959,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202212/M_10447_8224975_239_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Flavour Solutions",
+    "word_count": 89,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Flavours Market Definition",
+    "word_count": 142,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Flavours Product Market Definition",
+    "word_count": 65,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Flavours Geographic Market Definition",
+    "word_count": 62,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Functional Solutions Market Definition",
+    "word_count": 106,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Functional Ingredients:Enzymes",
+    "word_count": 78,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Enzymes Segmentation",
+    "word_count": 34,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Emulsifiers Segmentation",
+    "word_count": 50,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Emulsifiers and Enzymes Geographic Dimension",
+    "word_count": 29,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Functional Solutions Product Market Definition",
+    "word_count": 47,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Functional Solutions Geographic Market Definition",
+    "word_count": 74,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Systems Market Definition",
+    "word_count": 72,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Systems for Food Applications",
+    "word_count": 102,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Systems Geographic Dimension",
+    "word_count": 26,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Systems Product Market Definition",
+    "word_count": 47,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Systems Geographic Market Definition",
+    "word_count": 41,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Colour Ingredients Market Definition",
+    "word_count": 68,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Colour Ingredients Definition",
+    "word_count": 44,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Colour Ingredients Geographic Market",
+    "word_count": 23,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Colour Ingredients Product Market Definition",
+    "word_count": 36,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Colour Ingredients Geographic Market Definition",
+    "word_count": 49,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Cultures Market Definition",
+    "word_count": 64,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Cultures Definition",
+    "word_count": 105,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Cultures Geographic Dimension",
+    "word_count": 25,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Cultures Product Market Definition",
+    "word_count": 52,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Cultures Geographic Market Definition",
+    "word_count": 48,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Casings Market Definition",
+    "word_count": 51,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Casings Definition",
+    "word_count": 59,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Casings Geographic Dimension",
+    "word_count": 23,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Casings Product Market Definition",
+    "word_count": 47,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Casings Geographic Market Definition",
+    "word_count": 48,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Downstream Markets",
+    "word_count": 103,
+    "pages": 22,
+    "coverage": 0.92,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Smoked Herring Market Definition",
+    "word_count": 64,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Secondary Processed Pelagic Herring Products",
+    "word_count": 80,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Secondary Processed Pelagic Herring Products Geographic Dimension",
+    "word_count": 24,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Smoked Herring Product Market Definition",
+    "word_count": 49,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Smoked Herring Geographic Market Definition",
+    "word_count": 42,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Vegetable-Based Bread Toppings Market Definition",
+    "word_count": 71,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Savoury Bread Toppings Market Definition",
+    "word_count": 99,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Vegetable-Based Savoury Bread Toppings Market Definition",
+    "word_count": 23,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Vegetable-Based Bread Toppings Product Market Definition",
+    "word_count": 50,
+    "pages": 22,
+    "coverage": 0.909,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Vegetable-Based Bread Toppings Geographic Market Definition",
+    "word_count": 42,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Plant-Based Milk Market Definition",
+    "word_count": 56,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Plant-Based and Dairy-Based Milk Market Definition",
+    "word_count": 25,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.11050",
+    "year": "2023",
+    "topic": "Beverages Geographic Market Definition",
+    "word_count": 21,
+    "pages": 22,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202349/M_11050_9739077_566_3.pdf"
+   },
+   {
+    "case_number": "M.10817",
+    "year": "2023",
+    "topic": "PA6 BP and PA6 EP markets",
+    "word_count": 29,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202323/M_10817_9216600_996_3.pdf"
+   },
+   {
+    "case_number": "M.10817",
+    "year": "2023",
+    "topic": "PA6 BP and PA6.6 BP markets",
+    "word_count": 119,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202323/M_10817_9216600_996_3.pdf"
+   },
+   {
+    "case_number": "M.10817",
+    "year": "2023",
+    "topic": "PA6 EP and PA6.6 EP markets",
+    "word_count": 166,
+    "pages": 25,
+    "coverage": 0.974,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202323/M_10817_9216600_996_3.pdf"
+   },
+   {
+    "case_number": "M.10817",
+    "year": "2023",
+    "topic": "PA6 BP market",
+    "word_count": 30,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202323/M_10817_9216600_996_3.pdf"
+   },
+   {
+    "case_number": "M.10817",
+    "year": "2023",
+    "topic": "PA6 EP and PA6.6 EP markets",
+    "word_count": 71,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202323/M_10817_9216600_996_3.pdf"
+   },
+   {
+    "case_number": "M.10817",
+    "year": "2023",
+    "topic": "PA6 BP segmentation by end-application",
+    "word_count": 59,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202323/M_10817_9216600_996_3.pdf"
+   },
+   {
+    "case_number": "M.10817",
+    "year": "2023",
+    "topic": "PA6 EP and PA6.6 EP markets",
+    "word_count": 76,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202323/M_10817_9216600_996_3.pdf"
+   },
+   {
+    "case_number": "M.10817",
+    "year": "2023",
+    "topic": "PA6 EP segmentation by end-application",
+    "word_count": 105,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202323/M_10817_9216600_996_3.pdf"
+   },
+   {
+    "case_number": "M.10817",
+    "year": "2023",
+    "topic": "PA6 BP and PA6.6 BP markets",
+    "word_count": 122,
+    "pages": 25,
+    "coverage": 0.926,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202323/M_10817_9216600_996_3.pdf"
+   },
+   {
+    "case_number": "M.10817",
+    "year": "2023",
+    "topic": "PA6 BP market (geographic)",
+    "word_count": 44,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202323/M_10817_9216600_996_3.pdf"
+   },
+   {
+    "case_number": "M.10817",
+    "year": "2023",
+    "topic": "PA6 EP market (geographic)",
+    "word_count": 32,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202323/M_10817_9216600_996_3.pdf"
+   },
+   {
+    "case_number": "M.10817",
+    "year": "2023",
+    "topic": "PA6 BP market (geographic)",
+    "word_count": 73,
+    "pages": 25,
+    "coverage": 0.882,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202323/M_10817_9216600_996_3.pdf"
+   },
+   {
+    "case_number": "M.10817",
+    "year": "2023",
+    "topic": "PA6 EP market (geographic)",
+    "word_count": 80,
+    "pages": 25,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202323/M_10817_9216600_996_3.pdf"
+   },
+   {
+    "case_number": "M.10978",
+    "year": "2023",
+    "topic": "Global custody services product market definition",
+    "word_count": 67,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202351/M_10978_9795535_1043_3.pdf"
+   },
+   {
+    "case_number": "M.10978",
+    "year": "2023",
+    "topic": "Combined market for global custody services and fund administration",
+    "word_count": 124,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202351/M_10978_9795535_1043_3.pdf"
+   },
+   {
+    "case_number": "M.10978",
+    "year": "2023",
+    "topic": "Global custody services geographic market definition",
+    "word_count": 67,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202351/M_10978_9795535_1043_3.pdf"
+   },
+   {
+    "case_number": "M.10978",
+    "year": "2023",
+    "topic": "Local custody product market definition",
+    "word_count": 86,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202351/M_10978_9795535_1043_3.pdf"
+   },
+   {
+    "case_number": "M.10978",
+    "year": "2023",
+    "topic": "Local custody geographic market definition",
+    "word_count": 60,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202351/M_10978_9795535_1043_3.pdf"
+   },
+   {
+    "case_number": "M.10978",
+    "year": "2023",
+    "topic": "Fund administration services product market definition",
+    "word_count": 83,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202351/M_10978_9795535_1043_3.pdf"
+   },
+   {
+    "case_number": "M.10978",
+    "year": "2023",
+    "topic": "Fund administration services geographic market definition",
+    "word_count": 70,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202351/M_10978_9795535_1043_3.pdf"
+   },
+   {
+    "case_number": "M.10978",
+    "year": "2023",
+    "topic": "Asset management product market definition",
+    "word_count": 168,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202351/M_10978_9795535_1043_3.pdf"
+   },
+   {
+    "case_number": "M.10978",
+    "year": "2023",
+    "topic": "Asset management geographic market definition",
+    "word_count": 23,
+    "pages": 28,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202351/M_10978_9795535_1043_3.pdf"
+   },
+   {
+    "case_number": "M.10725",
+    "year": "2022",
+    "topic": "Market for the production and supply of BALD",
+    "word_count": 218,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202242/M_10725_8563957_331_3.pdf"
+   },
+   {
+    "case_number": "M.10725",
+    "year": "2022",
+    "topic": "Market for the production and supply of Benzyl Chloride",
+    "word_count": 263,
+    "pages": 20,
+    "coverage": 0.971,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202242/M_10725_8563957_331_3.pdf"
+   },
+   {
+    "case_number": "M.10725",
+    "year": "2022",
+    "topic": "Market for the production and supply of cationic dyes",
+    "word_count": 106,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202242/M_10725_8563957_331_3.pdf"
+   },
+   {
+    "case_number": "M.10725",
+    "year": "2022",
+    "topic": "Market for the production and supply of OBA",
+    "word_count": 134,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202242/M_10725_8563957_331_3.pdf"
+   },
+   {
+    "case_number": "M.10725",
+    "year": "2022",
+    "topic": "Market for the production and supply of photoresist polymers",
+    "word_count": 120,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202242/M_10725_8563957_331_3.pdf"
+   },
+   {
+    "case_number": "M.10725",
+    "year": "2022",
+    "topic": "Market for the production and supply of dyeing auxiliaries",
+    "word_count": 97,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202242/M_10725_8563957_331_3.pdf"
+   },
+   {
+    "case_number": "M.10725",
+    "year": "2022",
+    "topic": "Market for the manufacturing and supply of API",
+    "word_count": 170,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202242/M_10725_8563957_331_3.pdf"
+   },
+   {
+    "case_number": "M.10725",
+    "year": "2022",
+    "topic": "Market for the supply of CDMO services to pharmaceutical companies at the API level",
+    "word_count": 245,
+    "pages": 20,
+    "coverage": 0.969,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202242/M_10725_8563957_331_3.pdf"
+   },
+   {
+    "case_number": "M.10714",
+    "year": "2022",
+    "topic": "Wholesale distribution of new PCs and LCVs",
+    "word_count": 141,
+    "pages": 13,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202237/M_10714_8488669_160_3.pdf"
+   },
+   {
+    "case_number": "M.10714",
+    "year": "2022",
+    "topic": "Geographic market for the wholesale distribution of new PCs and LCVs",
+    "word_count": 147,
+    "pages": 13,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202237/M_10714_8488669_160_3.pdf"
+   },
+   {
+    "case_number": "M.10714",
+    "year": "2022",
+    "topic": "Retail distribution of PCs and LCVs",
+    "word_count": 106,
+    "pages": 13,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202237/M_10714_8488669_160_3.pdf"
+   },
+   {
+    "case_number": "M.10714",
+    "year": "2022",
+    "topic": "Geographic market for retail distribution",
+    "word_count": 244,
+    "pages": 13,
+    "coverage": 0.969,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202237/M_10714_8488669_160_3.pdf"
+   },
+   {
+    "case_number": "M.10714",
+    "year": "2022",
+    "topic": "Wholesale distribution of OE spare parts for PCs and LCVs",
+    "word_count": 162,
+    "pages": 13,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202237/M_10714_8488669_160_3.pdf"
+   },
+   {
+    "case_number": "M.10714",
+    "year": "2022",
+    "topic": "Geographic scope for wholesale distribution markets",
+    "word_count": 183,
+    "pages": 13,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202237/M_10714_8488669_160_3.pdf"
+   },
+   {
+    "case_number": "M.10714",
+    "year": "2022",
+    "topic": "Distribution of OE spare parts and non-OE spare parts for PCs and LCVs",
+    "word_count": 131,
+    "pages": 13,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202237/M_10714_8488669_160_3.pdf"
+   },
+   {
+    "case_number": "M.10714",
+    "year": "2022",
+    "topic": "Geographic market definition for retail distribution of OE spare parts",
+    "word_count": 193,
+    "pages": 13,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202237/M_10714_8488669_160_3.pdf"
+   },
+   {
+    "case_number": "M.10629",
+    "year": "2022",
+    "topic": "SCD Treatments",
+    "word_count": 135,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202240/M_10629_8518008_643_3.pdf"
+   },
+   {
+    "case_number": "M.10629",
+    "year": "2022",
+    "topic": "Scope of market for SCD treatments",
+    "word_count": 68,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202240/M_10629_8518008_643_3.pdf"
+   },
+   {
+    "case_number": "M.10629",
+    "year": "2022",
+    "topic": "Geographic market definition for pipeline drugs",
+    "word_count": 59,
+    "pages": 20,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202240/M_10629_8518008_643_3.pdf"
+   },
+   {
+    "case_number": "M.10565",
+    "year": "2022",
+    "topic": "Short-term vs Long-term Car Rental Services",
+    "word_count": 192,
+    "pages": 24,
+    "coverage": 0.962,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202229/M_10565_8405226_1032_3.pdf"
+   },
+   {
+    "case_number": "M.10565",
+    "year": "2022",
+    "topic": "Segmentation of Car Rental Services",
+    "word_count": 221,
+    "pages": 24,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202229/M_10565_8405226_1032_3.pdf"
+   },
+   {
+    "case_number": "M.10565",
+    "year": "2022",
+    "topic": "Assessment of the Transaction on Car Rental Services",
+    "word_count": 85,
+    "pages": 24,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202229/M_10565_8405226_1032_3.pdf"
+   },
+   {
+    "case_number": "M.10565",
+    "year": "2022",
+    "topic": "Manufacture and Supply of Passenger Cars and Commercial Vehicles",
+    "word_count": 94,
+    "pages": 24,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202229/M_10565_8405226_1032_3.pdf"
+   },
+   {
+    "case_number": "M.10565",
+    "year": "2022",
+    "topic": "Market for Manufacture and Supply of New Vehicles to Car Rental Companies",
+    "word_count": 571,
+    "pages": 24,
+    "coverage": 0.971,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202229/M_10565_8405226_1032_3.pdf"
+   },
+   {
+    "case_number": "M.10565",
+    "year": "2022",
+    "topic": "Assessment of the Transaction on the Manufacture and Supply of Cars",
+    "word_count": 42,
+    "pages": 24,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202229/M_10565_8405226_1032_3.pdf"
+   },
+   {
+    "case_number": "M.10565",
+    "year": "2022",
+    "topic": "Geographic scope of the Market for Car Rental Services",
+    "word_count": 39,
+    "pages": 24,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202229/M_10565_8405226_1032_3.pdf"
+   },
+   {
+    "case_number": "M.10565",
+    "year": "2022",
+    "topic": "Market for the Supply of Car Rental Services",
+    "word_count": 246,
+    "pages": 24,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202229/M_10565_8405226_1032_3.pdf"
+   },
+   {
+    "case_number": "M.10565",
+    "year": "2022",
+    "topic": "Geographic Market Definition for Car Manufacture and Supply",
+    "word_count": 33,
+    "pages": 24,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202229/M_10565_8405226_1032_3.pdf"
+   },
+   {
+    "case_number": "M.10565",
+    "year": "2022",
+    "topic": "Supply of Cars to Car Rental Companies",
+    "word_count": 390,
+    "pages": 24,
+    "coverage": 0.98,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202229/M_10565_8405226_1032_3.pdf"
+   },
+   {
+    "case_number": "M.10565",
+    "year": "2022",
+    "topic": "Assessment for the Transaction",
+    "word_count": 34,
+    "pages": 24,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202229/M_10565_8405226_1032_3.pdf"
+   },
+   {
+    "case_number": "M.10349",
+    "year": "2022",
+    "topic": "Production and Supply of AV Content",
+    "word_count": 211,
+    "pages": 72,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202250/M_10349_8691929_626_3.pdf"
+   },
+   {
+    "case_number": "M.10349",
+    "year": "2022",
+    "topic": "Production and Supply of AV Content",
+    "word_count": 64,
+    "pages": 72,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202250/M_10349_8691929_626_3.pdf"
+   },
+   {
+    "case_number": "M.10349",
+    "year": "2022",
+    "topic": "Production and Supply of AV Content",
+    "word_count": 140,
+    "pages": 72,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202250/M_10349_8691929_626_3.pdf"
+   },
+   {
+    "case_number": "M.10349",
+    "year": "2022",
+    "topic": "Production and Supply of AV Content",
+    "word_count": 76,
+    "pages": 72,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202250/M_10349_8691929_626_3.pdf"
+   },
+   {
+    "case_number": "M.10349",
+    "year": "2022",
+    "topic": "Wholesale Supply of TV Channels",
+    "word_count": 173,
+    "pages": 72,
+    "coverage": 0.951,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202250/M_10349_8691929_626_3.pdf"
+   },
+   {
+    "case_number": "M.10349",
+    "year": "2022",
+    "topic": "Wholesale Supply of TV Channels",
+    "word_count": 158,
+    "pages": 72,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202250/M_10349_8691929_626_3.pdf"
+   },
+   {
+    "case_number": "M.10349",
+    "year": "2022",
+    "topic": "Wholesale Supply of TV Channels",
+    "word_count": 204,
+    "pages": 72,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202250/M_10349_8691929_626_3.pdf"
+   },
+   {
+    "case_number": "M.10349",
+    "year": "2022",
+    "topic": "Wholesale Supply of TV Channels",
+    "word_count": 144,
+    "pages": 72,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202250/M_10349_8691929_626_3.pdf"
+   },
+   {
+    "case_number": "M.10349",
+    "year": "2022",
+    "topic": "Wholesale Supply of TV Channels",
+    "word_count": 208,
+    "pages": 72,
+    "coverage": 0.962,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202250/M_10349_8691929_626_3.pdf"
+   },
+   {
+    "case_number": "M.10349",
+    "year": "2022",
+    "topic": "Wholesale Supply of TV Channels",
+    "word_count": 61,
+    "pages": 72,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202250/M_10349_8691929_626_3.pdf"
+   },
+   {
+    "case_number": "M.10484",
+    "year": "2022",
+    "topic": "Production and bottling of fruit juices",
+    "word_count": 343,
+    "pages": 35,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202416/M_10484_9994062_433_3.pdf"
+   },
+   {
+    "case_number": "M.10484",
+    "year": "2022",
+    "topic": "Geographic market for the production and bottling of juices",
+    "word_count": 135,
+    "pages": 35,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202416/M_10484_9994062_433_3.pdf"
+   },
+   {
+    "case_number": "M.10484",
+    "year": "2022",
+    "topic": "Sale of fruit juices",
+    "word_count": 238,
+    "pages": 35,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202416/M_10484_9994062_433_3.pdf"
+   },
+   {
+    "case_number": "M.10484",
+    "year": "2022",
+    "topic": "Sale of juices to on-trade channel and off-trade channel",
+    "word_count": 147,
+    "pages": 35,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202416/M_10484_9994062_433_3.pdf"
+   },
+   {
+    "case_number": "M.10484",
+    "year": "2022",
+    "topic": "Geographic market for the sale of juices",
+    "word_count": 111,
+    "pages": 35,
+    "coverage": 0.926,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202416/M_10484_9994062_433_3.pdf"
+   },
+   {
+    "case_number": "M.10438",
+    "year": "2023",
+    "topic": "Retail Supply of Motor Fuel",
+    "word_count": 134,
+    "pages": 168,
+    "coverage": 0.941,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202447/M_10438_10358171_2981_3.pdf"
+   },
+   {
+    "case_number": "M.10438",
+    "year": "2023",
+    "topic": "On-motorway and Off-motorway Stations",
+    "word_count": 201,
+    "pages": 168,
+    "coverage": 0.96,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202447/M_10438_10358171_2981_3.pdf"
+   },
+   {
+    "case_number": "M.10438",
+    "year": "2023",
+    "topic": "Retail Supply of Motor Fuels to B2B vs. B2C Customers",
+    "word_count": 266,
+    "pages": 168,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202447/M_10438_10358171_2981_3.pdf"
+   },
+   {
+    "case_number": "M.10438",
+    "year": "2023",
+    "topic": "Retail Sales of Automotive LPG",
+    "word_count": 43,
+    "pages": 168,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202447/M_10438_10358171_2981_3.pdf"
+   },
+   {
+    "case_number": "M.10438",
+    "year": "2023",
+    "topic": "Segmentation Between B2C and B2B Markets",
+    "word_count": 141,
+    "pages": 168,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202447/M_10438_10358171_2981_3.pdf"
+   },
+   {
+    "case_number": "M.5364",
+    "year": "2021",
+    "topic": "Prospective New Entrant",
+    "word_count": 74,
+    "pages": 11,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202435/M_5364_10211347_1373_3.pdf"
+   },
+   {
+    "case_number": "M.5364",
+    "year": "2021",
+    "topic": "Prospective New Entrant Definition",
+    "word_count": 74,
+    "pages": 11,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202435/M_5364_10211347_1373_3.pdf"
+   },
+   {
+    "case_number": "M.9929",
+    "year": "2020",
+    "topic": "Generation and wholesale supply of electricity",
+    "word_count": 98,
+    "pages": 10,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202046/m9929_186_7.pdf"
+   },
+   {
+    "case_number": "M.9929",
+    "year": "2020",
+    "topic": "Geographic market for the generation and wholesale supply of electricity",
+    "word_count": 74,
+    "pages": 10,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202046/m9929_186_7.pdf"
+   },
+   {
+    "case_number": "M.9929",
+    "year": "2020",
+    "topic": "Distribution of electricity",
+    "word_count": 78,
+    "pages": 10,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202046/m9929_186_7.pdf"
+   },
+   {
+    "case_number": "M.9929",
+    "year": "2020",
+    "topic": "Market definition for the distribution of electricity",
+    "word_count": 50,
+    "pages": 10,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/202046/m9929_186_7.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Wholesale supply of TV channels",
+    "word_count": 147,
+    "pages": 158,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Wholesale supply of TV channels - Linear TV channels vs Ancillary services",
+    "word_count": 60,
+    "pages": 158,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Wholesale supply of TV channels - Segmentation",
+    "word_count": 39,
+    "pages": 158,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Wholesale supply of TV channels - Infrastructure",
+    "word_count": 58,
+    "pages": 158,
+    "coverage": 0.846,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Wholesale supply of TV channels - Infrastructure",
+    "word_count": 179,
+    "pages": 158,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Wholesale supply of TV channels - Geographic market definition",
+    "word_count": 57,
+    "pages": 158,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Wholesale supply of TV channels - Geographic market definition",
+    "word_count": 36,
+    "pages": 158,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Retail supply of AV services - Market definition",
+    "word_count": 73,
+    "pages": 158,
+    "coverage": 0.882,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Retail supply of AV services - Market definition",
+    "word_count": 86,
+    "pages": 158,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Retail supply of AV services - Market definition",
+    "word_count": 27,
+    "pages": 158,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Retail supply of AV services - Market definition",
+    "word_count": 131,
+    "pages": 158,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Retail supply of AV services - Geographic market definition",
+    "word_count": 56,
+    "pages": 158,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Retail supply of AV services - Geographic market definition",
+    "word_count": 36,
+    "pages": 158,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Retail supply of fixed internet access services - Market definition",
+    "word_count": 52,
+    "pages": 158,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Retail supply of fixed internet access services - Market definition",
+    "word_count": 49,
+    "pages": 158,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Retail supply of fixed internet access services - Market definition",
+    "word_count": 75,
+    "pages": 158,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Retail supply of fixed internet access services - Geographic market definition",
+    "word_count": 22,
+    "pages": 158,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Retail supply of fixed internet access services - Geographic market definition",
+    "word_count": 35,
+    "pages": 158,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Provision of satellite transponder capacity - Market definition",
+    "word_count": 70,
+    "pages": 158,
+    "coverage": 0.9,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Provision of satellite transponder capacity - Market definition",
+    "word_count": 124,
+    "pages": 158,
+    "coverage": 1.0,
+    "band": "verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   },
+   {
+    "case_number": "M.9604",
+    "year": "2020",
+    "topic": "Provision of satellite transponder capacity - Geographic market definition",
+    "word_count": 60,
+    "pages": 158,
+    "coverage": 0.867,
+    "band": "near_verbatim",
+    "link": "https://ec.europa.eu/competition/mergers/cases1/20217/m9604_872_3.pdf"
+   }
+  ]
+ }
+}
