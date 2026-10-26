@@ -1,0 +1,555 @@
+\documentclass{IOS-Book-Article}
+
+% -----------------------------------------------------------------------------
+% Packages
+% -----------------------------------------------------------------------------
+\usepackage{mathptmx}
+\usepackage{soul}
+\setuldepth{article}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+
+% IOS Press template helper.
+\def\hb{\hbox to 11.5 cm{}}
+
+% -----------------------------------------------------------------------------
+% Document
+% -----------------------------------------------------------------------------
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Lextract: LLM-Based Extraction of Relevant Market Definitions from
+European Commission Decisions with Source-Grounded Quality Control}
+\runningtitle{Lextract: Market Definition Extraction with Source-Grounded Quality Control}
+
+\author{%
+  \fnms{Shriyan S.} \snm{Yamali}%
+  \orcid{0009-0002-4861-7264}%
+}
+\address{Independent Researcher, United States}
+\runningauthor{S.S. Yamali}
+
+\begin{abstract}
+Relevant market definitions are central to merger and antitrust analysis, but
+collecting them at scale from European Commission decisions is difficult because
+the decisions are numerous and heterogeneous in structure and wording. We present
+Lextract, an open-source pipeline that filters decision PDFs, uses Gemini 2.0
+Flash in two calls to locate the market-definition section and to isolate
+individual definitions, and stores the results as JSON. Applied to 600 cases, it
+produced 4,105 records that feed JurisMercatus, a semantic-search interface. We
+document prompts, settings, exclusion rules and thresholds, give a worked
+example from source text to record, and combine the model with symbolic quality
+control: a structural validity test derived from 50 manually checked
+definitions (76.6\% of records pass), a source-fidelity test that checks whether
+each record occurs verbatim in its decision, and a manual inspection of 100
+records. Checked against all 699 retrievable decisions, 79\% of the 4,067
+verifiable records are verbatim and 9\% near-verbatim; 12\% are absent from
+their source. Three quarters of the absent records come from short-form
+simplified-procedure decisions that evaded the phrase filter, after which the
+model fabricated plausible definitions, and 30 are copies of the prompt's own
+examples. The structural test accepts 71\% of the absent records and so cannot
+detect them; the fidelity test also caught one fabricated record in the
+manually checked reference set and yields a cleaned release of 3,607 records. We
+describe the fixes and state what remains unmeasured: a gold-standard
+precision/recall study and baseline comparisons, for which annotation sheets
+and scripts are provided.
+\end{abstract}
+
+\begin{keyword}
+legal information extraction\sep
+competition law\sep
+relevant market definition\sep
+large language models\sep
+quality control\sep
+European Commission
+\end{keyword}
+
+\end{frontmatter}
+
+% -----------------------------------------------------------------------------
+\section{Introduction}
+\label{sec:introduction}
+% -----------------------------------------------------------------------------
+
+Relevant market definition is a basic step in merger and antitrust analysis: it
+fixes the products and the geographic area within which market power is assessed
+\cite{marketnotice2024}. Practitioners and researchers therefore need to know how the European
+Commission has delineated a given market before: whether retail distribution of
+cars is national or EEA-wide, whether a product market was segmented or ``left
+open'', and how such findings changed over time. This is a concrete user
+problem: the Commission has published more than 6,000 merger and antitrust
+decisions \cite{bldr2024} and adds roughly 280 a year \cite{apdtsf2021}; the
+market-definition discussion sits under different headings and in different
+wording, so keyword search over PDFs is unreliable and manual collection is
+slow and hard to reproduce. The only dedicated resource we know of, the Caselex
+Market Definitions Module \cite{caselex}, is a paid, editorially curated web
+product without bulk or programmatic access.
+
+This paper presents \emph{Lextract},\footnote{\url{https://github.com/shriyanyamali/Lextract/tree/lda2026}}
+an open-source pipeline that extracts market-definition passages from
+Commission decision PDFs with a large language model (LLM) and stores them as
+structured records, and the 4,105-record collection behind
+\emph{JurisMercatus},\footnote{\url{https://jurismercatus.shriyanyamali.com}} a
+semantic-search interface. The design follows the hybrid view that LLMs are
+good at locating and copying legally relevant passages but that their output
+must be checked by deterministic means. An earlier version reported only a
+structural check and was rightly criticised for not measuring whether extracted
+passages are correct. This version contributes:
+\begin{itemize}
+  \item a complete description of the pipeline (prompts, model and settings,
+        exclusion phrases, thresholds) and a worked example from source text to
+        record (Sections~\ref{sec:pipeline}--\ref{sec:example});
+  \item a description of the released collection and of what researchers can
+        do with it (Section~\ref{sec:dataset});
+  \item a three-part evaluation: the structural validity test, a new
+        \emph{source-fidelity} test that checks whether each record occurs
+        verbatim in its decision, and a manual inspection of 100 records
+        (Sections~\ref{sec:evaluation}--\ref{sec:results});
+  \item an error analysis identifying two failure classes invisible to the
+        structural test, fabricated definitions for short-form decisions and
+        leakage of prompt examples, with the fixes adopted
+        (Section~\ref{sec:errors}), and a statement of what remains unmeasured
+        together with the annotation protocol and baseline scripts needed to
+        close the gap (Section~\ref{sec:limitations}).
+\end{itemize}
+
+% -----------------------------------------------------------------------------
+\section{Related Work and Existing Resources}
+\label{sec:related-work}
+% -----------------------------------------------------------------------------
+
+Legal information extraction combines deterministic, statistical and, more
+recently, generative methods. Agnoloni et al.\ presented the BO-ECLI Parser for
+extracting and linking legal references from European case law
+\cite{agnoloni2017boecli}; Darji et al.\ released annotated German
+legal-reference data and stressed the role of domain-specific gold data
+\cite{darji2023german}. Recent work moves to semantic structuring with LLMs:
+Janatian et al.\ turned legislation into structured pathways for expert systems
+\cite{janatian2023text}; Costa et al.\ extracted elements from Brazilian
+judicial decisions, evaluated them with precision and recall against expert
+annotations and published them with provenance \cite{costa2024semantic}; Spada
+et al.\ extracted events and dates from EU procurement notices with expert
+validation \cite{spada2025expert}; others address data scarcity and context
+\cite{nguyen2025data,bjbmmcmnthsktczmm2025,csfafemspsrdsc2024}. Lextract shares
+their pipeline view but targets complete market-definition passages and
+emphasises cheap deterministic checks of LLM output, which the hallucination
+literature motivates \cite{ktanovssze2025}.
+
+\paragraph{Relation to existing resources.} Caselex \cite{caselex} offers
+human-reviewed market definitions across many authorities and languages behind
+a subscription and a web interface only. Lextract is not a substitute for that
+editorial product; it offers a free, reproducible and updatable collection with
+programmatic access: the pipeline can be re-run on new decisions, every record
+carries case metadata and the decision URL, and an export tool writes CSV,
+JSONL, Parquet, SQLite, BibTeX and RIS. To our knowledge no openly licensed,
+machine-readable collection of Commission market definitions existed before.
+
+% -----------------------------------------------------------------------------
+\section{The Lextract Pipeline}
+\label{sec:pipeline}
+% -----------------------------------------------------------------------------
+
+Lextract is a sequence of six Python scripts driven by \texttt{run\_pipeline.py}.
+The prompts are reproduced verbatim in the repository
+(\texttt{docs/PROMPTS.md}) and summarised here.
+
+\subsection{Document Collection and Filtering}
+
+\emph{Step 1} reads the Excel export of the Commission's competition case-search
+portal and extracts, per case, the decision URL, case number, year and policy
+area (inferred from the URL path). \emph{Step 2} downloads each PDF and extracts
+its text with PyPDF2. A document is excluded if it has exactly three pages and
+contains one of five phrases from the closing recital of short-form decisions
+adopted under the simplified procedure \cite{simplified2013}: ``For the reasons
+set out in the Notice on a simplified'', ``European Commission has decided not
+to oppose the notified operation'', ``declare it compatible with the internal
+market'', ``This decision is adopted in application of Article 6(1)(b)'', and
+``Merger Regulation and Article 57 of the EEA Agreement''. Such clearances contain no
+market analysis, so any ``definition'' extracted from them would be spurious.
+Included documents are
+written to batch files with a metadata header and split into two groups at
+80,000 characters so that long decisions can be processed separately; no other
+length filter is applied. Section~\ref{sec:errors}
+shows that this phrase filter was too brittle; the released version normalises
+whitespace before matching and applies to documents of at most three pages.
+
+\subsection{Section Identification (LLM call 1)}
+
+\emph{Step 3} sends each batch file to Gemini 2.0 Flash
+(\texttt{gemini-2.0-flash} via the \texttt{google-generativeai} SDK with
+default generation settings: no temperature, top-$p$ or output-length
+override, no system instruction, no JSON mode). The prompt asks the model to
+find the first occurrence of the words ``market definition'', to start one line
+before it, to continue past sub-headings and to stop at the next heading of the
+same level (e.g.\ from ``IV. Market Definition'' to ``V.~\ldots''), excluding
+that heading, and to reproduce the metadata header unchanged; the output is the
+market-definition section as plain text.
+
+\subsection{Definition Extraction (LLM call 2)}
+
+\emph{Step 4} sends each section to the same model with a prompt that asks for a
+JSON array of objects with the fields \texttt{case\_number}, \texttt{year},
+\texttt{policy\_area}, \texttt{link}, \texttt{topic} and \texttt{text}. It
+instructs the model to extract ``the entirety of each individual market
+definition'' as ``a direct quote of the multiple paragraphs. Not a paraphrased
+or summarized version''; to treat ``left open'' passages as definitions; to
+drop paragraph numbers, footnote markers and footnotes; to re-join words split
+by PDF extraction; to invent a short \texttt{topic}; and it states that a
+definition ``is always at least 4 sentences long, but never longer than 12
+sentences''. It contains four worked examples
+(detergents, chemical intermediates, flame retardants, trimethylolpropane). The
+two-stage design assumes that the second call performs better on a few pages of
+relevant text than on a 50-page decision; this has not been tested against a
+single-call design (Section~\ref{sec:limitations}).
+
+\subsection{Cleaning and Merging}
+
+\emph{Step 5} strips Markdown code fences from the model's output and
+\emph{Step 6} concatenates all files into \texttt{data/output.json}. No
+de-duplication, truncation or editing of the text is performed, so the released
+records are exactly what the model returned.
+
+% -----------------------------------------------------------------------------
+\section{Worked Example}
+\label{sec:example}
+% -----------------------------------------------------------------------------
+
+\begin{table}[t]
+\caption{Worked example from Case M.9324. Top: PyPDF2 text of the decision
+(footnotes and later paragraphs omitted). Bottom: the record produced by
+Lextract.}
+\label{tab:example}
+\small
+\begin{tabular}{p{0.97\textwidth}}
+\toprule
+\textbf{Source text (decision PDF, Section 4)}\\
+\texttt{4. PRODUCT MARKET DEFINITION}\\
+\texttt{4.1.1. Wholesale distribution of ICT and CE products}\\
+\texttt{(12) In the precedents listed at paragraphs (13)-(15), the Commission assessed the possible product markets for wholesale distribution of IT products, telecommunication equipment and CE.}\\
+\texttt{(13) In Avnet/Magirus,8 Tech Data/Scribona,9 Tech Data/Avnet,10 the Commission has defined a market for the wholesale distribution of IT products, but left open the question whether the market should be further sub -segmented (i) by product categories (e.g. server, storage, PCs, etc.), (ii) by direct and indirect sales11 or (iii) by different distribution models (broadline vs value -added distribution ("VAD")).12}\\
+\texttt{(14) In Argues/SHC13 and ALSO/PCF,14 the Commission identified a separate market [\ldots]}\\
+\midrule
+\textbf{Extracted record}\\
+\texttt{\{"case\_number": "M.9324", "year": "2019", "policy\_area": "Merger",}\\
+\texttt{\ "link": "}\url{https://ec.europa.eu/competition/mergers/cases1/202048/m9324_479_3.pdf}\texttt{",}\\
+\texttt{\ "topic": "Wholesale distribution of IT products",}\\
+\texttt{\ "text": "In Avnet/Magirus, Tech Data/Scribona , Tech Data/Avnet , the Commission has defined a market for the wholesale distribution of IT products, but left open the question whether the market should be further sub -segmented (i) by product categories (e.g. server, storage, PCs, etc.), (ii) by direct and indirect sales or (iii) by different distribution models (broadline vs value -added distribution ("VAD"))."\}}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:example} follows one passage through the pipeline. The source is
+Case M.9324 \emph{ALSO / ABC Data Group} (12 June 2019), a 16-page Article
+6(1)(b) decision. Call 1 located the heading ``4. PRODUCT MARKET DEFINITION''
+and returned Section 4 up to, but excluding, ``5. COMPETITIVE ASSESSMENT''.
+Call 2 returned seven records; the one shown is paragraph (13). The model
+removed the paragraph number and footnote markers 8--12, kept the wording
+otherwise intact, including the extraction artefact ``sub -segmented'', and
+labelled the topic. The structural test accepts the
+record (63 words; learned phrase ``the commission has''; marker ``left open''),
+and the fidelity test finds it verbatim in the decision (coverage 1.0). The
+sibling record for paragraph (14) is only \emph{near}-verbatim (coverage 0.83)
+because in the PyPDF2 text that paragraph is interrupted by a page-break
+footnote block, which the model correctly skipped; the other five records for
+this decision are verbatim.
+
+% -----------------------------------------------------------------------------
+\section{The JurisMercatus Collection}
+\label{sec:dataset}
+% -----------------------------------------------------------------------------
+
+The collection (\texttt{data/jurismercatus\_definitions.json} in the
+repository) contains 4,105 records from 600 cases (578 merger, 22 antitrust)
+and 704 distinct decision documents dated 2016--2025 (Table~\ref{tab:years}).
+The documents were exported from
+the case-search portal in English; the exact export query of the original run
+was not recorded, which we note as a reproducibility gap, but the released
+links identify the processed documents exactly. Cases contribute 1 to 45 records
+(median 6); records range from 9 to 1,182 words (median 67, mean 91). The \texttt{topic} field holds 3,250
+distinct free-text labels. The collection is not de-duplicated: 117 records
+repeat the text of another record, 89 of them within the same case (one passage
+emitted under two topic labels). PDF-extraction artefacts such as ``in -house''
+survive in 30\% of records. A cleaned release
+(\texttt{data/jurismercatus\_definitions\_clean.json}; 3,607 records, 455
+cases) drops the records that the fidelity test (Section~\ref{sec:results})
+finds absent from their source and all records from documents of at most three
+pages.
+
+\begin{table}[t]
+\caption{Records per year and structural validity rate.}
+\label{tab:years}
+\small
+\centering
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{lrrrrrrrrrrr}
+\toprule
+Year & 2016 & 2017 & 2018 & 2019 & 2020 & 2021 & 2022 & 2023 & 2024 & 2025 & All\\
+\midrule
+Records   & 9  & 66 & 621 & 492 & 699 & 594 & 691 & 618 & 297 & 18 & 4,105\\
+Valid     & 3  & 45 & 467 & 421 & 551 & 477 & 509 & 472 & 184 & 14 & 3,143\\
+Rate (\%) & 33 & 68 & 75  & 86  & 79  & 80  & 74  & 76  & 62  & 78 & 76.6\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{What researchers can do with it.} Each record pairs a passage with
+its case number, year, policy area and decision URL, so it can be cited and
+checked. Through JurisMercatus, a query such as ``retail distribution of new
+passenger cars, geographic scope'' returns the passages in which the Commission
+discussed that question across cases, ranked by embedding similarity.
+Exported to a
+spreadsheet or SQLite database, the records support questions such as how often
+the Commission leaves a definition open by sector and year, or how geographic
+findings (national, EEA-wide, worldwide) are distributed.
+
+% -----------------------------------------------------------------------------
+\section{Evaluation Design}
+\label{sec:evaluation}
+% -----------------------------------------------------------------------------
+
+\subsection{Reference Set and Structural Validity Test}
+
+No gold standard listing all market definitions in a set of decisions exists,
+so we use three deliberately limited instruments and say what each measures.
+The reference set (\texttt{evaluation/reference.json}) holds 50 records that
+the author selected from the pipeline output and checked against the source
+PDFs: a convenience sample, not a random one, of 39 cases, all merger
+decisions, mostly 2022--2024, 33 to 557 words long (median 135). Re-examining
+it for this paper revealed one duplicated record, two case numbers without the
+``M.'' prefix (one mistyped) and, through the fidelity test, one record that
+does not occur in its source (Section~\ref{sec:results}).
+
+The structural test (\texttt{evaluate.py}) derives three checks from the
+reference set. \emph{Length}: 26 to 668 words, the reference range widened by
+20\% on each side. \emph{Legal phrase}: at least one of the 121 word $n$-grams
+($n=2$--5) that occur in at least 15\% of reference records (e.g.\ ``can be
+left open'', ``for the purposes of this decision''; many are function-word
+sequences such as ``of the''). \emph{Structural marker}: at least one of 18
+fixed markers: ``relevant market'', ``product market'', ``geographic market'',
+``market definition'', ``left open'', ``EEA-wide'', ``EEA wide'', ``national
+market'', ``Commission considers'', ``Commission found'', ``Commission has
+previously'', ``Notifying Party'', ``internal market'', ``serious doubts'',
+``plausible market'', ``exact scope'', ``for the purposes of'', ``cannot be
+excluded''. Seven of the 50 reference records fail the marker check
+themselves, so the markers are a strict rather than a lenient proxy.
+\emph{What it measures:} whether a record resembles a verified
+market-definition passage in length and phrasing. \emph{What it does not
+measure:} whether the text occurs in the decision (fabrication), whether its
+boundaries are right, whether it is the right passage, or whether definitions
+were missed. We report a \emph{structural validity rate}, not accuracy.
+
+\subsection{Source-Fidelity Test}
+
+The fidelity test (\texttt{verify\_fidelity.py}) asks whether a record is
+copied from its decision. Record and PyPDF2 decision text are normalised to
+lower-case letters only, which removes whitespace, digits and punctuation and so
+neutralises paragraph numbers, footnote markers and split-word artefacts. The
+record is cut into 40-letter windows at stride 20, and \emph{coverage} is the
+fraction of windows found in the source: \emph{verbatim} ($\ge 0.95$),
+\emph{near-verbatim} (0.80--0.95), \emph{partial} (0.50--0.80) or \emph{absent}
+($<0.50$). The test cannot distinguish a copy from text differing only in digits
+or punctuation, nor judge whether the copied passage is the \emph{right} one.
+It was run on every record whose decision could be fetched from the stored URL
+in October 2026: 699 of the 704 documents and 4,067 of the 4,105 records (four
+URLs of case M.11241 now redirect and one points to an HTML index page).
+
+\subsection{Manual Inspection}
+
+To learn what the structural test's verdicts mean, 50 passing and 50 failing
+records were drawn at random (seeded) and read. Each was labelled from the
+record text alone, without the decision, as A1: a market-definition statement
+(precedent, party submission, market-investigation finding or Commission
+conclusion on product or geographic scope); A2: reasoning within a
+market-definition analysis without a definitional claim; B: a fragment such as
+a bare heading; or C: not market definition (competitive assessment, remedies,
+party description, legal background). The labels are released with the sample
+(\texttt{evaluation/manual\_inspection\_sample.csv}). This is a
+single-annotator face-validity reading, not a gold standard, and borderline
+cases exist: a conclusion that a transaction raises no serious doubts
+``regardless of the exact product market definition'' was labelled C, a list
+of ``affected markets'' A1. Precision, recall and F1 require, for whole
+decisions, the list of every passage that counts as a definition, and what
+counts, at which unit (paragraph, sub-section, conclusion only), changes the
+scores. The repository contains an annotation protocol and a script that
+produces, for $N$ random decisions, a sheet listing every record next to the
+decision text with columns for true positive, boundary error, false positive
+and missed definition (Section~\ref{sec:limitations}).
+
+% -----------------------------------------------------------------------------
+\section{Results}
+\label{sec:results}
+% -----------------------------------------------------------------------------
+
+\subsection{Structural Validity}
+
+Of the 4,105 records, 3,143 (76.6\%) pass all three checks. The 962 failures
+decompose as 668 marker only, 185 length only, 80 length and marker, 19 phrase
+and marker, and 10 all three; of the 275 length failures, 261 are shorter than
+26 words and 14 longer than 668. The yearly rate (Table~\ref{tab:years}) lies
+between 68\% and 86\% in every year with more than 50 records except 2024
+(62\%); the 65 antitrust records also reach only 62\%. Among the 777 records without a marker,
+535 (69\%) still contain the word ``market'', 105 ``national'' and 65 ``EEA'',
+i.e.\ many express scope in wording the marker list does not cover (``the
+market is national in scope''); 242 (31\%) do not mention a market.
+
+\subsection{Source Fidelity}
+
+\begin{table}[t]
+\caption{Source-fidelity test on all retrievable records and on the reference
+set's source documents (five URLs, 38 records, were unretrievable).}
+\label{tab:fidelity}
+\small
+\centering
+\begin{tabular}{lrr}
+\toprule
+ & Collection & Reference set\\
+\midrule
+Documents checked (of which $\le$3 pages) & 699 (136) & 38 (1)\\
+Records checked & 4,067 & 48\\
+Verbatim (coverage $\ge$0.95) & 3,221 (79.2\%) & 44\\
+\quad of which exact match (1.0) & 2,985 (73.4\%) & --\\
+Near-verbatim (0.80--0.95) & 349 (8.6\%) & 3\\
+Partial (0.50--0.80) & 26 (0.6\%) & 0\\
+Absent ($<$0.50) & 471 (11.6\%) & 1\\
+Absent, from $\le$3-page documents & 353 of 380 & 1 of 1\\
+Absent, from longer documents & 118 of 3,687 & 0 of 47\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Of the 4,067 verifiable records (Table~\ref{tab:fidelity}), 3,221 (79.2\%) are
+verbatim, 349 (8.6\%) near-verbatim, 26 (0.6\%) partial and 471 (11.6\%)
+absent. Absence is
+concentrated in documents that contain no market analysis: 136 of the 699
+documents have at most three pages, and 353 of their 380 records are absent
+(the other 27 are copied boilerplate such as party descriptions). Of the 118
+absent records from longer documents, 26 are copies of the prompt's own
+examples (Section~\ref{sec:errors}); 32 come from twelve documents of four to
+seven pages, eleven of which yielded no copied record at all; and 60 come from
+19 longer documents: ancillary decisions that refer back to a main clearance
+decision, whose records restate the main decision's definitions in words that
+do not occur in the document, and a few long decisions whose records share only
+fragments with the text (coverage below 0.5). Of the 349 near-verbatim records, 292 have at most
+two missing windows, i.e.\ a single break; inspection of such cases in twelve
+documents found two causes, neither of them paraphrase: footnote text
+interleaved at a page break in the PyPDF2 text (as in the worked example), and
+a skipped intermediate paragraph (e.g.\ a party's submission between the
+Commission's precedent and its conclusion in M.10745).
+
+Of the 48 reference records whose documents could be retrieved, 44 are verbatim,
+three near-verbatim and one absent: the record for M.10993, a three-page short-form decision, consists of plausible
+telecommunications market-definition language that does not occur in the
+decision. The manual check behind the reference set thus missed one fabricated
+record. The structural test does not detect fabrication: 336 of the
+471 absent records pass it (71\%), close to the rate for verbatim records
+(2,475 of 3,221, 77\%); fabricated passages are, by construction, well-formed
+Commission prose.
+
+\subsection{Manual Inspection}
+
+Of the 50 records that pass the structural test, 49 were labelled A1 and one C
+(a competitive-assessment conclusion); one of the 49 is, however, a leaked
+prompt example (Section~\ref{sec:errors}): face-valid and well-formed, but not
+from the decision it is attributed to. Of the 50 failing records, 38 were
+labelled A1 and three A2, i.e.\ 41 (82\%; interval 69--90\%) are
+market-definition content; one is a bare heading (B) and eight (16\%) are not
+market definitions (C): remedies reasoning, a party description, Treaty text,
+and competitive assessment. Seven of the 41 are complete one-sentence scope
+statements below the 26-word minimum, such as ``For AIs, the Commission
+therefore takes the view that the markets are at least EEA-wide''; four of them
+fail on length alone. One is a coherent 727-word party submission that fails
+only the maximum. The structural test's failures are thus mostly wording and length
+mismatches, as reviewers suspected, and its passes mostly genuine definitions;
+neither verdict is evidence about fidelity.
+
+% -----------------------------------------------------------------------------
+\section{Error Analysis and Fixes}
+\label{sec:errors}
+% -----------------------------------------------------------------------------
+
+\paragraph{Short-form decisions that evade the filter.} Most absent records, 353
+of 471, come from simplified-procedure clearances. These contain the exclusion phrases, but
+PyPDF2 renders them with inserted spaces and line breaks (``on a simpli fied
+procedure'', ``Merger\,\,Regulation''), so exact matching fails: in a 40-document
+pilot sample, none of eight three-page documents matched a phrase, and the two-page document that did was not excluded because
+the rule applied only to three-page documents. The documents then reached call 1, whose prompt
+presupposes a market-definition section, and call 2, whose prompt says ``you
+will see many market definitions''. For a decision with no market analysis the
+model produced precedent-style passages that read like Commission text; eight
+records in the collection are the simplified-procedure recital itself. The released code normalises
+whitespace before matching and applies the rule to documents of at most three
+pages, which excludes all nine short-form documents of the pilot; the fidelity
+script drops absent records and, optionally, every record from documents of at
+most three pages, which produced the cleaned release.
+
+\paragraph{Prompt-example leakage.} The four example passages in the extraction
+prompt were emitted as records for decisions that are not their source: 30
+records across 11 cases reproduce example text verbatim. They pass the structural test and a face-validity reading; the
+fidelity test rejects all 30. The examples will be removed from the prompt; the
+effect on extraction quality is untested.
+
+\paragraph{Boundaries, duplicates and wording.} Near-verbatim records show the
+model splicing across footnotes and occasionally omitting a paragraph; length
+failures show the opposite boundary problem (261 records under 26 words, mostly
+single conclusion sentences and seven bare headings; 14 over 668 words); 117
+exact duplicates mostly reflect one passage emitted under two topics. These are
+segmentation issues, not fidelity failures, for a gold-standard study to score.
+Most remaining structural failures are genuine definitions in wording the 18
+markers do not cover, notably ``national in scope''; extending the marker list
+would raise the rate without changing the collection, so we report the manual
+inspection instead.
+
+% -----------------------------------------------------------------------------
+\section{Limitations and Future Work}
+\label{sec:limitations}
+% -----------------------------------------------------------------------------
+
+\emph{No gold standard.} Precision, recall and F1 against an independently
+annotated set of all definitions in a decision have not been measured: the
+fidelity test shows that 88\% of records are copied from their source, not
+that they are the right passages or that none were missed. The
+sheet and protocol in \texttt{make\_annotation\_sheet.py} are ready for an
+expert annotation of ten decisions. \emph{No baselines.} The two-stage
+design, the choice of Gemini 2.0 Flash (taken for its free-tier rate limits and
+long context) and the claim that rule-based extraction is brittle are stated,
+not demonstrated. A single-call variant and a heading-based rule baseline
+(\texttt{baselines/}) feed the same evaluation scripts, but neither they nor
+other LLMs have been run yet. \emph{Single
+annotation.} The manual inspection and the reference set were each labelled
+once, without a second, independent annotator. \emph{Scope.} Only English-language decisions of one authority were
+processed, and PDF text quality bounds output quality.
+
+% -----------------------------------------------------------------------------
+\section{Conclusion}
+\label{sec:conclusion}
+% -----------------------------------------------------------------------------
+
+Lextract turns heterogeneous Commission decisions into 4,105 structured
+market-definition records with a two-call LLM pipeline whose prompts, settings
+and filters are now fully documented. The joint lesson of the structural test,
+the fidelity test and the manual reading is the one the workshop's call
+anticipates: the LLM copies the right kind of passage most of the time (79\%
+verbatim, 9\% near-verbatim across the collection), but it also fabricates fluent
+definitions when handed a decision that has none and leaks prompt examples into
+the output, and a resemblance-based check sees neither failure. A deterministic
+check against the source text does, at negligible cost, and it also caught a
+fabricated record in a manually verified reference set. We regard such a test
+as a necessary component of any LLM extraction pipeline over legal documents.
+
+\paragraph{Acknowledgements.}
+The author is grateful to Professor Thibault Schrepel of Stanford Law School for
+his advisement and guidance, and to the JURIX 2026 reviewers. This research
+received no funding from any government agency, university, company, or
+non-profit organization.
+
+% -----------------------------------------------------------------------------
+% References
+% -----------------------------------------------------------------------------
+\bibliographystyle{vancouver}
+\bibliography{paper}
+
+\end{document}

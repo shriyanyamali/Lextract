@@ -1,0 +1,18 @@
+TITLE
+Lextract: LLM-Based Extraction of Relevant Market Definitions from European Commission Decisions with Source-Grounded Quality Control
+
+ABSTRACT
+Relevant market definitions are central to merger and antitrust analysis, but collecting them at scale from European Commission decisions is difficult because the decisions are numerous and heterogeneous in structure and wording. We present Lextract, an open-source pipeline that filters decision PDFs, uses Gemini 2.0 Flash in two calls to locate the market-definition section and to isolate individual definitions, and stores the results as JSON. Applied to 600 cases, it produced 4,105 records that feed JurisMercatus, a semantic-search interface. We document prompts, settings, exclusion rules and thresholds, give a worked example from source text to record, and combine the model with symbolic quality control: a structural validity test derived from 50 manually checked definitions (76.6% of records pass), a source-fidelity test that checks whether each record occurs verbatim in its decision, and a manual inspection of 100 records. Checked against all 699 retrievable decisions, 79% of the 4,067 verifiable records are verbatim and 9% near-verbatim; 12% are absent from their source. Three quarters of the absent records come from short-form simplified-procedure decisions that evaded the phrase filter, after which the model fabricated plausible definitions, and 30 are copies of the prompt's own examples. The structural test accepts 71% of the absent records and so cannot detect them; the fidelity test also caught one fabricated record in the manually checked reference set and yields a cleaned release of 3,607 records. We describe the fixes and state what remains unmeasured: a gold-standard precision/recall study and baseline comparisons, for which annotation sheets and scripts are provided.
+
+KEYWORDS (one per line)
+legal information extraction
+competition law
+relevant market definition
+large language models
+quality control
+European Commission
+
+AUTHOR (single author, corresponding)
+Shriyan S. Yamali
+Independent Researcher, United States
+ORCID 0009-0002-4861-7264
